@@ -1,5 +1,14 @@
 @charset "UTF-8";
 @import "https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Noto+Sans+JP:wght@100..900&display=swap";
+
+/*リンク（全般）設定
+---------------------------------------------------------------------------*/
+a {
+  transition: 0.5s; /*マウスオン時の移り変わるまでの時間設定。0.5秒。*/
+}
+a:hover {
+  opacity: 0.7;
+}
 .fixed[data-astro-cid-3ef6ksr2] {
   position: fixed;
   top: var(--scroll-y);
@@ -90,14 +99,26 @@ ul[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2] {
   gap: 0.25em;
   white-space: nowrap;
 }
-ul[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2]:after {
+ul[data-astro-cid-3ef6ksr2] .navListicon:after {
   content: "";
   display: block;
   width: 1em;
   height: 1em;
-  background-image: url(images/icon/icon_arrow_down_blue.svg);
+  background-image: url(/common/img/homepage/icon_arrow_down_blue.svg);
   background-size: contain;
 }
+ul[data-astro-cid-ttztgwaq]
+  li[data-astro-cid-ttztgwaq] .dropdowns:after {
+  content: "";
+  display: block;
+  width: 1em;
+  height: 1em;
+  background-image: url("data:image/svg+xml,%3c?xml%20version='1.0'?%3e%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cmask%20id='mask0_15_342'%20style='mask-type:alpha'%20maskUnits='userSpaceOnUse'%20x='0'%20y='0'%20width='16'%20height='16'%3e%3crect%20width='16'%20height='16'%20fill='%23D9D9D9'%20/%3e%3c/mask%3e%3cg%20mask='url(%23mask0_15_342)'%3e%3cpath%20d='M8%2010.2667L4%206.26668L4.93333%205.33334L8%208.40001L11.0667%205.33334L12%206.26668L8%2010.2667Z'%20fill='%230E4E9A'%20/%3e%3c/g%3e%3c/svg%3e");
+  background-size: contain;
+}
+.dropmenu li .dropmenuCon {
+  left: 25%;
+ }
 @media only screen and (max-width: 486px) {
   ul[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2] {
     font-size: 0.75em;
@@ -162,6 +183,82 @@ ul[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2].contact:before {
 }
 ul[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2].contact:hover {
   gap: 0.3em;
+}
+.dropmenu {
+  list-style-type: none;
+}
+
+.dropmenu:before,
+.dropmenu:after {
+  content: "";
+  display: table;
+}
+
+.dropmenu:after {
+  clear: both;
+}
+
+.dropmenu li {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.dropmenu li a {
+  display: block;
+  margin: 0;
+  background: #ffffff;
+  color: #333333;
+  font-size: 16px;
+  /* line-height: 40px; */
+  padding: 10px 4px;
+  text-decoration: none;
+}
+
+.dropmenu li ul {
+  display: none;
+  list-style: none;
+  position: absolute;
+  z-index: 9999;
+  top: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 140px;
+  animation: opa1 0.5s 0.1s both;
+}
+
+.dropmenu li:hover ul {
+  display: block;
+}
+nav[data-astro-cid-3ef6ksr2] ul[data-astro-cid-3ef6ksr2] ul{
+  position: absolute;
+  z-index: 100;
+}
+nav#gnav .mainNav.dropmenu li ul li {
+  width: 100%;
+  margin: 0;
+}
+
+.dropmenu li ul li a {
+  padding: 10px 20px;
+  /* border-radius: 100px; */
+  border-top: 1px solid #eeeeee;
+  background: #ffffff;
+  text-align: left;
+}
+.dropmenu li ul li a:hover{
+  /* text-decoration: underline; */
+  opacity: 1;
+  color: var(--primary_blue);
+  background: #ecf3fd; /*背景色*/
+}
+nav#gnav .dropmenu li:hover > a {
+  background: #ffffff;
+}
+#gnav .dropmenu li a:hover {
+  background: #ffffff;
 }
 .mokuzou-logo[data-astro-cid-3ef6ksr2] {
   width: 150px;
@@ -987,81 +1084,7 @@ article[data-astro-cid-5d2te5s5] {
     padding: 1em 0;
   }
 }
-.text[data-astro-cid-5d2te5s5] {
-  padding: 0 2em;
-  border-left: 4px solid var(--primary_blue);
-}
-@media screen and (max-width: 1241px) and (orientation: portrait) {
-  .text[data-astro-cid-5d2te5s5] {
-    border-left: 2px solid var(--primary_blue);
-    padding: 0 1.2em;
-  }
-}
-.text[data-astro-cid-5d2te5s5] h3[data-astro-cid-5d2te5s5] {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.5em;
-  color: var(--primary_blue);
-  font-weight: 700;
-  line-height: 135%;
-  margin-bottom: 0.7em;
-}
-@media only screen and (max-width: 1199px) {
-  .text[data-astro-cid-5d2te5s5] h3[data-astro-cid-5d2te5s5] {
-    font-size: 1.125em;
-  }
-}
-@media only screen and (max-width: 486px) and (max-width: 486px) {
-  .text[data-astro-cid-5d2te5s5] h3[data-astro-cid-5d2te5s5] {
-    font-size: 20px;
-    font-size: 5.1440329218vw;
-  }
-}
-@media only screen and (max-width: 486px) and (min-width: 487px) and (max-width: 768px) {
-  .text[data-astro-cid-5d2te5s5] h3[data-astro-cid-5d2te5s5] {
-    font-size: 20px;
-    font-size: 2.6041666667vw;
-  }
-}
-@media only screen and (max-width: 486px) and (min-width: 769px) {
-  .text[data-astro-cid-5d2te5s5] h3[data-astro-cid-5d2te5s5] {
-    font-size: 20px;
-  }
-}
-.text[data-astro-cid-5d2te5s5] ul[data-astro-cid-5d2te5s5] {
-  font-size: 1em;
-  font-weight: 400;
-  list-style-type: disc;
-  margin-left: 1em;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-}
-@media only screen and (max-width: 1199px) {
-  .text[data-astro-cid-5d2te5s5] ul[data-astro-cid-5d2te5s5] {
-    font-size: 0.875em;
-  }
-}
-@media only screen and (max-width: 486px) and (max-width: 486px) {
-  .text[data-astro-cid-5d2te5s5] ul[data-astro-cid-5d2te5s5] {
-    font-size: 14px;
-    font-size: 3.6008230453vw;
-  }
-}
-@media only screen and (max-width: 486px) and (min-width: 487px) and (max-width: 768px) {
-  .text[data-astro-cid-5d2te5s5] ul[data-astro-cid-5d2te5s5] {
-    font-size: 14px;
-    font-size: 1.8229166667vw;
-  }
-}
-@media only screen and (max-width: 486px) and (min-width: 769px) {
-  .text[data-astro-cid-5d2te5s5] ul[data-astro-cid-5d2te5s5] {
-    font-size: 14px;
-  }
-}
-/* .text[data-astro-cid-5d2te5s5] li[data-astro-cid-5d2te5s5] {
-  text-align: justify;
-} */
+
 figure[data-astro-cid-5d2te5s5] {
   width: 100%;
   aspect-ratio: 3.2/2.37;

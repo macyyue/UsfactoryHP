@@ -73,15 +73,19 @@
         />
       </a>
       <nav data-astro-cid-3ef6ksr2>
-        <ul data-astro-cid-3ef6ksr2>
+        <ul data-astro-cid-3ef6ksr2 class="dropmenu">
           <li data-astro-cid-3ef6ksr2>
             <a href="/" data-astro-cid-3ef6ksr2>TOP</a>
           </li>
           <li data-astro-cid-3ef6ksr2>
-            <a href="/robot/" data-astro-cid-3ef6ksr2>Info360</a>
+            <a href="/info360/" data-astro-cid-3ef6ksr2>Info360</a>
           </li>
-          <li data-astro-cid-3ef6ksr2>
-            <a href="/biforac/" data-astro-cid-3ef6ksr2>BI for AC</a>
+          <li data-astro-cid-3ef6ksr2 class="has-submenu">
+            <a href="/biforac/" data-astro-cid-3ef6ksr2 class="navListicon">BI for AC</a>
+            <ul class="dropdowns">
+              <li><a href="/biforac/">S造・RC造</a></li>
+              <li><a href="/mokuzou/">木造</a></li>
+              </ul>
           </li>
           <li data-astro-cid-3ef6ksr2>
             <a href="/news/" data-astro-cid-3ef6ksr2>NEWS</a>
@@ -909,19 +913,22 @@
           data-astro-cid-ttztgwaq
         />
       </a> -->
-      <ul data-astro-cid-ttztgwaq>
+      <ul data-astro-cid-ttztgwaq class="dropmenu">
         <li data-astro-cid-ttztgwaq>
           <a href="/" class="nav_link" data-astro-cid-ttztgwaq>TOP</a>
         </li>
         <li data-astro-cid-ttztgwaq>
-          <a href="/robot/" class="nav_link" data-astro-cid-ttztgwaq
+          <a href="/info360/" class="nav_link" data-astro-cid-ttztgwaq
             >Info360</a
           >
         </li>
         <li data-astro-cid-ttztgwaq>
-          <a href="/biforac/" class="nav_link" data-astro-cid-ttztgwaq
-            >BI for AC</a
-          >
+          <a href="/biforac/" class="dropdowns" data-astro-cid-ttztgwaq
+            >BI for AC</a>
+            <ul class="dropmenuCon">
+              <li><a href="/biforac/">S造・RC造</a></li>
+              <li><a href="/mokuzou/">木造</a></li>
+              </ul>
         </li>
         <li data-astro-cid-ttztgwaq>
           <a href="/news/" class="nav_link" data-astro-cid-ttztgwaq>NEWS</a>
@@ -1105,4 +1112,15 @@
   };
 
   dialog.addEventListener("keydown", handleKeydownDiaogContainer);
+
+    // ドロップダウンメニュー
+    document.addEventListener('DOMContentLoaded', function() {
+  var submenuItem = document.querySelector('.has-submenu');
+  submenuItem.addEventListener('click', function(event) {
+    if (!event.target.closest('ul.dropmenu')) {
+      event.preventDefault();
+      submenuItem.classList.toggle('active');
+    }
+  });
+});
 </script>
