@@ -1,0 +1,28 @@
+/*
+Theme Name: gakuのテーマ01
+Description: シンプルなテーマ01
+Author: gaku
+Version: 1.0
+*/
+body{
+    background: #f5f5f5;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+.main-box{
+    width: 1200px;
+    margin: 0 auto;
+}
+#list{
+    background: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px #ddd;
+}
+#list .date-line{
+    display: flex;
+    justify-content: space-between;
+}

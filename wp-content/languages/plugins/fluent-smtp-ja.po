@@ -1,0 +1,860 @@
+# Translation of Plugins - FluentSMTP &#8211; WP Mail SMTP, Amazon SES, SendGrid, MailGun, Postmark and Any SMTP Connector Plugin - Stable (latest release) in Japanese
+# This file is distributed under the same license as the Plugins - FluentSMTP &#8211; WP Mail SMTP, Amazon SES, SendGrid, MailGun, Postmark and Any SMTP Connector Plugin - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-12-16 00:53:12+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Plugins - FluentSMTP &#8211; WP Mail SMTP, Amazon SES, SendGrid, MailGun, Postmark and Any SMTP Connector Plugin - Stable (latest release)\n"
+
+#: includes/Core/Application.php:69
+msgid ""
+"FluentSMTP Plugin may not work properly. Looks like your Authentication unique keys and salts are changed.\n"
+"                                <a href=\"%1s\"><b>Reconfigure SMTP Settings</b></a>"
+msgstr ""
+"FluentSMTP プラグインが正しく動作しない可能性があります。 認証の一意のキーとソルトが変更されているようです。\n"
+"                                 <a href=\"%1s\"><b>SMTP 設定を再構成する</b></a>"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:233
+msgid "<b>FluentSMTP</b> is a free plugin & it will be always free %s. %s"
+msgstr "<b>FluentSMTP</b> は無料のプラグインであり、今後も常に無料です %s。 %s"
+
+#: app/Services/Mailer/Providers/config.php:217
+msgid "PHP mail()"
+msgstr "PHP mail()"
+
+#: app/Services/Mailer/Providers/config.php:198
+msgid "Outlook or Office 365"
+msgstr "Outlook または Office 365"
+
+#: app/Services/Mailer/Providers/config.php:133
+msgid "Netcore Email API, formerly Pepipost"
+msgstr "Netcore Email API、旧名 Pepipost"
+
+#: app/Services/Mailer/Providers/config.php:9
+msgid "SMTP server"
+msgstr "SMTP サーバー"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:286
+msgid "FluentSMTP needs to be configured for it to work."
+msgstr "FluentSMTP が機能するには設定する必要があります。"
+
+#: app/Services/Mailer/Providers/config.php:164
+msgid "Elastic Email"
+msgstr "Elastic Email"
+
+#: app/Hooks/filters.php:6
+msgid "SMTP/Mail Settings"
+msgstr "SMTP / メール設定"
+
+#: app/Services/Mailer/Providers/ElasticMail/ValidatorTrait.php:23
+msgid "Please define FLUENTMAIL_ELASTICMAIL_API_KEY in wp-config.php file."
+msgstr "wp-config.php ファイルで FLUENTMAIL_ELASTICMAIL_API_KEY を定義してください。"
+
+#: app/Services/Mailer/Providers/config.php:147
+msgid "Postmark"
+msgstr "消印"
+
+#: app/Services/Mailer/Providers/Postmark/ValidatorTrait.php:24
+msgid "Please define FLUENTMAIL_POSTMARK_API_KEY in wp-config.php file."
+msgstr "wp-config.php ファイルで FLUENTMAIL_POSTMARK_API_KEY を定義してください。"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:465
+msgid "Please configure your first email service provider connection"
+msgstr "最初にメールサービスプロバイダの接続を設定してください"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:511
+msgid "Sender Settings"
+msgstr "送信者の設定"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:516
+msgid "From Name"
+msgstr "送信者名"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:512
+msgid "From Email"
+msgstr "送信者メールアドレス"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:513
+msgid "Force From Email (Recommended Settings: Enable)"
+msgstr "送信者メールアドレス強制（推奨設定：有効）"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:514
+msgid "If checked, the From Email setting above will be used for all emails (It will check if the from email is listed to available connections)."
+msgstr "チェックすると、上記の送信者メールアドレスの設定がすべてのメールに使用されます（利用可能な接続先に送信者メールアドレスが表示されているかどうかがチェックされます）。"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:515
+msgid "Set the return-path to match the From Email"
+msgstr "送信者メールアドレスに合わせてリターンパスを設定する"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:517
+msgid "Force Sender Name"
+msgstr "送信者名強制"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:521
+msgid "When checked, the From Name setting above will be used for all emails, ignoring values set by other plugins."
+msgstr "チェックすると、他のプラグインで設定された値を無視して、上記の送信者名の設定がすべてのメールに使用されます。"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:518
+msgid "Save Connection Settings"
+msgstr "接続設定を保存"
+
+#: app/views/admin/digest_email.php:182
+msgid "Your email sending health is perfect"
+msgstr "メール送信の状態は完璧です"
+
+#: app/views/admin/digest_email.php:180
+msgid "Awesome! no failures! 🎉"
+msgstr "素晴らしい ! 失敗なし ! 🎉"
+
+#: app/views/admin/digest_email.php:165
+msgid "Failed Count"
+msgstr "失敗数"
+
+#: app/views/admin/digest_email.php:133
+msgid "If this is unusual you should probably check if your site is broken."
+msgstr "これが異常な場合は、サイトが壊れているかどうかを確認する必要があります。"
+
+#: app/views/admin/digest_email.php:131
+msgid "Looks like no email has been sent to the time period"
+msgstr "この期間にメールが送信されていないようです"
+
+#: app/Services/Mailer/Providers/Outlook/Handler.php:96
+msgid "Please define FLUENTMAIL_OUTLOOK_CLIENT_SECRET in wp-config.php file."
+msgstr "wp-config.php ファイルで FLUENTMAIL_OUTLOOK_CLIENT_SECRET を定義してください。"
+
+#: app/Services/Mailer/Providers/Gmail/Handler.php:318
+#: app/Services/Mailer/Providers/Outlook/Handler.php:192
+msgid "Token Validity"
+msgstr "トークンの有効性"
+
+#: app/Services/Mailer/Providers/config.php:213
+msgid "Outlook/Office365 is not recommended for sending mass marketing emails."
+msgstr "Outlook / Office365 は、マスマーケティングメールの送信には推奨しません。"
+
+#: app/Services/Mailer/Providers/config.php:68
+msgid "China (Ningxia)"
+msgstr "中国 (寧夏)"
+
+#: app/Services/Mailer/Providers/config.php:67
+msgid "Africa (Cape Town)"
+msgstr "アフリカ (ケープタウン)"
+
+#: app/Services/Mailer/Providers/config.php:57
+msgid "Europe (Milan)"
+msgstr "ヨーロッパ (ミラノ)"
+
+#: app/Http/Controllers/Controller.php:59
+msgid "Security Failed. Please reload the page"
+msgstr "セキュリティエラー、ページをリロードしてください。"
+
+#: app/Hooks/Handlers/SchedulerHandler.php:124
+msgid "Email Failures"
+msgstr "メールの失敗"
+
+#: app/Hooks/Handlers/SchedulerHandler.php:120
+#: app/views/admin/digest_email.php:115
+msgid "Emails Sent"
+msgstr "メールを送信しました"
+
+#: app/Hooks/Handlers/SchedulerHandler.php:114
+msgid "Showing %1$s of %2$s different subject lines failed in the past %3$s"
+msgstr "過去 %3$s で異なる件名行 %2$s のうち %1$s を表示できませんでした"
+
+#: app/Hooks/Handlers/SchedulerHandler.php:107
+msgid "Showing %1$s of %2$s different subject lines sent in the past %3$s"
+msgstr "過去 %3$s に送信された異なる件名行 %2$s のうち %1$s を表示しています"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:551
+msgid "No Emails will be sent from your WordPress."
+msgstr "WordPress からメールは送信されません。"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:550
+msgid "Disable sending all emails. If you enable this, no email will be sent."
+msgstr "すべてのメールの送信を無効にします。これを有効にすると、メールは送信されなくなります。"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:549
+msgid "Email Simulation"
+msgstr "メールシミュレーション"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:548
+msgid "Please add another connection to use fallback feature"
+msgstr "フォールバック機能を使用するには別の接続を追加してください"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:547
+msgid "Fallback Connection will be used if an email is failed to send in one connection. Please select a different connection than the default connection"
+msgstr "1つの接続でメールの送信に失敗した場合は、フォールバック接続を使用します。デフォルト接続とは異なる接続を選択してください"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:546
+msgid "Select which connection will be used for sending transactional emails from your WordPress. If you use multiple connection then email will be routed based on source from email address"
+msgstr "WordPress からトランザクションメールを送信するために使用する接続を選択します。複数の接続を使用する場合、メールはメールアドレス差出人に基づいてルーティングします。"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:545
+msgid "Fallback Connection"
+msgstr "フォールバック接続"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:544
+msgid "Default Connection"
+msgstr "デフォルト接続"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:543
+msgid "Select how many days, the logs will be saved. If you select 7 days, then logs older than 7 days will be deleted automatically."
+msgstr "ログを保存する日数を選択します。7日を選択した場合、7日より古いログは自動的に削除します。"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:542
+msgid "Delete Logs"
+msgstr "ログを削除"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:541
+msgid "FluentCRM Email Logging"
+msgstr "FluentCRM メールのログ"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:540
+msgid "Disable Logging for FluentCRM Emails"
+msgstr "FluentCRM メールのログを無効にする"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:539
+msgid "Log All Emails for Reporting"
+msgstr "レポート用にすべてのメールを記録する"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:538
+msgid "Save Settings"
+msgstr "設定を保存"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:537
+msgid "Notification Days"
+msgstr "通知日"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:536
+msgid "Email Address"
+msgstr "メールアドレス"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:519
+msgid "Please select your email service provider"
+msgstr "メールサービスプロバイダーを選択してください"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:510
+msgid "Search Results for"
+msgstr "検索結果"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:509
+msgid "Prev"
+msgstr "前"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:508
+msgid "Next"
+msgstr "次"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:507
+msgid "Attachments"
+msgstr "添付ファイル"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:506
+msgid "Email Body"
+msgstr "メール本文"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:505
+msgid "Resent Count"
+msgstr "再送信数"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:504
+msgid "Turn On"
+msgstr "有効化"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:503
+msgid "Resend"
+msgstr "再送信"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:502
+msgid "Retry"
+msgstr "再試行"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:501
+msgid "Actions"
+msgstr "操作"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:500
+msgid "Date-Time"
+msgstr "日付 / 時刻"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:499
+msgid "To"
+msgstr "To"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:498
+#: app/views/admin/digest_email.php:114 app/views/admin/digest_email.php:164
+msgid "Subject"
+msgstr "サブジェクト"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:497
+msgid "Type & press enter..."
+msgstr "入力して Enter キーを押す..."
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:535
+msgid "Notification Email Addresses"
+msgstr "通知用メール アドレス"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:534
+msgid "Enable Email Summary Notification"
+msgstr "メールサマリーの通知を有効化"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:533
+msgid "Enable Email Summary"
+msgstr "メールサマリーを有効化"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:532
+msgid "Your emails will be routed automatically based on From email address. No additional configuration is required."
+msgstr "あなたのメールは、差出人メールアドレスに基づいて自動的にルーティングします。追加の構成は必要ありません。"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:531
+msgid "Edit Connection"
+msgstr "接続を編集"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:530
+msgid "Add Connection"
+msgstr "接続を追加"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:528
+msgid "General Settings"
+msgstr "一般設定"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:527
+msgid "Close"
+msgstr "閉じる"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:526
+msgid "Connection Details"
+msgstr "接続の詳細"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:525
+msgid "Provider"
+msgstr "プロバイダー"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:524
+msgid "Add Another Connection"
+msgstr "別の接続を追加"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:523
+msgid "Active Email Connections"
+msgstr "アクティブなメール接続"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:522
+msgid "Validating Data. Please wait"
+msgstr "データを検証中。お待ちください"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:520
+msgid "Credential Verification Failed. Please check your inputs"
+msgstr "資格情報の検証に失敗しました。入力内容を確認してください"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:479
+msgid "By Date"
+msgstr "日付順"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:477
+msgid "Last month"
+msgstr "先月"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:476
+msgid "Last week"
+msgstr "先週"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:478
+msgid "Last 3 months"
+msgstr "直近3か月"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:475
+msgid "Subscribe To Updates"
+msgstr "アップデートを購読"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:474
+msgid "Days"
+msgstr "日間"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:473
+msgid "Delete Logs:"
+msgstr "ログを削除:"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:472
+msgid "Save Email Logs:"
+msgstr "メールログを保存:"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:471
+msgid "Active Senders:"
+msgstr "有効な差出人:"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:470
+msgid "Active Connections:"
+msgstr "有効な接続先:"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:469
+msgid "Email Failed:"
+msgstr "メール送信失敗:"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:468
+msgid "Total Email Sent (Logged):"
+msgstr "送信メール総数 (記録済):"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:467
+msgid "Quick Overview"
+msgstr "概略"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:466
+msgid "Sending Stats"
+msgstr "送信統計"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:464
+msgid "Thank you for installing FluentSMTP - The ultimate SMTP & Email Service Connection Plugin for WordPress"
+msgstr "FluentSMTP - WordPress 用の究極の SMTP & メールサービス接続プラグインをインストールしていただき、感謝します。"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:496
+msgid "Filter"
+msgstr "フィルター"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:495
+msgid "End date"
+msgstr "終了日"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:494
+msgid "Start date"
+msgstr "開始日"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:462
+msgid "Are you sure to delete this?"
+msgstr "本当にこれを削除してもよろしいですか ?"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:481
+msgid "Resend Selected Emails"
+msgstr "選択メールを再送信"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:463
+msgid "Welcome to FluentSMTP"
+msgstr "FluentSMTP へようこそ"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:493
+msgid "Select date and time"
+msgstr "日付と時刻を選択"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:484
+msgid "Enter Full Screen"
+msgstr "全画面表示"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:414
+msgid "Last 7 days"
+msgstr "直近7日間"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:407
+msgid "Today"
+msgstr "本日"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:480
+msgid "Apply"
+msgstr "申し込み"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:429
+#: app/Hooks/Handlers/AdminMenuHandler.php:487
+msgid "Date"
+msgstr "日付"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:430
+msgid "Sent"
+msgstr "送信済"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:459
+msgid "Docs"
+msgstr "ドキュメント"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:420
+msgid "All"
+msgstr "すべて"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:492
+msgid "Select date"
+msgstr "日付を選択"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:490
+msgid "Successful"
+msgstr "成功"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:489
+msgid "Select"
+msgstr "選択"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:488
+msgid "Date Range"
+msgstr "日付範囲"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:486
+msgid "Status"
+msgstr "ステータス"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:485
+msgid "Filter By"
+msgstr "フィルター条件"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:483
+msgid "Delete All"
+msgstr "すべて削除"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:482
+msgid "Bulk Action"
+msgstr "バルク操作"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:461
+msgid "confirm"
+msgstr "確認"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:460
+msgid "cancel"
+msgstr "キャンセル"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:458
+msgid "Support"
+msgstr "サポート"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:457
+msgid "Email Logs"
+msgstr "メールログ"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:456
+msgid "Email Test"
+msgstr "メールテスト"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:446
+msgid "View All"
+msgstr "すべて表示"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:431
+#: app/Hooks/Handlers/AdminMenuHandler.php:491
+msgid "Failed"
+msgstr "失敗した"
+
+#: app/Services/Mailer/Providers/Outlook/Handler.php:90
+msgid "Please define FLUENTMAIL_OUTLOOK_CLIENT_ID in wp-config.php file."
+msgstr "wp-config.php ファイルで FLUENTMAIL_OUTLOOK_CLIENT_ID を定義してください。"
+
+#: app/Services/Mailer/Providers/Gmail/Handler.php:131
+msgid "Please define FLUENTMAIL_GMAIL_CLIENT_SECRET in wp-config.php file."
+msgstr "wp-config.php ファイルで FLUENTMAIL_GMAIL_CLIENT_SECRET を定義してください。"
+
+#: app/Services/Mailer/Providers/Gmail/Handler.php:125
+msgid "Please define FLUENTMAIL_GMAIL_CLIENT_ID in wp-config.php file."
+msgstr "wp-config.php ファイルで FLUENTMAIL_GMAIL_CLIENT_ID を定義してください。"
+
+#: app/Services/Mailer/Providers/config.php:194
+msgid "Gmail/Google Workspace is not recommended for sending mass marketing emails."
+msgstr "Gmail / Google Workspace は、マスマーケティングメールの送信を推奨しません。"
+
+#: app/Services/Mailer/Providers/Gmail/Handler.php:121
+#: app/Services/Mailer/Providers/Outlook/Handler.php:86
+msgid "Application Client Secret key is required."
+msgstr "アプリケーションクライアントの秘密キーが必要です。"
+
+#: app/Services/Mailer/Providers/Gmail/Handler.php:117
+#: app/Services/Mailer/Providers/Outlook/Handler.php:82
+msgid "Application Cluent ID is required."
+msgstr "アプリケーションクライアント ID が必要です。"
+
+#: app/Services/Mailer/Providers/Gmail/Handler.php:177
+#: app/Services/Mailer/Providers/Outlook/Handler.php:133
+msgid "Please Provide Auth Token."
+msgstr "認証トークンを提供してください。"
+
+#: app/Services/Mailer/Providers/config.php:179
+msgid "Gmail or Google Workspace"
+msgstr "Gmail または Google Workspace"
+
+#: app/Functions/helpers.php:769
+msgid "Possible Conflict: "
+msgstr "考え得る衝突: "
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:311
+msgid "Email Disabled"
+msgstr "メールアドレスが無効です"
+
+#: app/Services/Mailer/Providers/Smtp/ValidatorTrait.php:29
+msgid "Please define FLUENTMAIL_SMTP_USERNAME in wp-config.php file."
+msgstr "wp-config.php ファイルで FLUENTMAIL_SMTP_USERNAME を定義してください。"
+
+#: app/Services/Mailer/Providers/Smtp/ValidatorTrait.php:33
+msgid "Please define FLUENTMAIL_SMTP_PASSWORD in wp-config.php file."
+msgstr "wp-config.php ファイルで FLUENTMAIL_SMTP_PASSWORD を定義してください。"
+
+#: app/Hooks/filters.php:18 app/Hooks/Handlers/AdminMenuHandler.php:455
+msgid "Settings"
+msgstr "設定"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:291
+msgid "Configure FluentSMTP"
+msgstr "FluentSMTP の設定"
+
+#: app/Hooks/filters.php:17
+msgid "Go to Fluent SMTP Settings page"
+msgstr "Fluent SMTP 設定ページへ"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:279
+msgid "WordPress version 5.5 or greater is required for FluentSMTP. You are using version %s currently. Please update your WordPress Core to use FluentSMTP Plugin."
+msgstr "FluentSMTP は WordPress バージョン 5.5 以上が必要です。現在、バージョン %s を使用しています。WordPress コアをアップデートして、FluentSMTP プラグインをご利用ください。"
+
+#: app/Hooks/Handlers/AdminMenuHandler.php:349
+msgid "Fluent SMTP"
+msgstr "Fluent SMTP"
+
+#: app/Http/Controllers/Controller.php:51
+msgid "You do not have permission to do this action"
+msgstr "この操作を行う権限がありません。"
+
+#: app/Http/Controllers/LoggerController.php:69
+msgid "Email sent successfully."
+msgstr "メールを送信しました。"
+
+#: app/Http/Controllers/SettingsController.php:336
+msgid "Plugin has been successfully installed."
+msgstr "プラグインのインストールが完了しました。"
+
+#: app/Http/Controllers/SettingsController.php:329
+msgid "Sorry, You can not install this plugin"
+msgstr "申し訳ありませんが、このプラグインはインストールできません"
+
+#: app/Http/Controllers/SettingsController.php:323
+msgid "Go to Ninja Tables Dashboard"
+msgstr "Ninja Tables ダッシュボードへ"
+
+#: app/Http/Controllers/SettingsController.php:319
+msgid "Go to FluentCRM Dashboard"
+msgstr "FluentCRM ダッシュボードへ"
+
+#: app/Http/Controllers/SettingsController.php:315
+msgid "Go to Fluent Forms Dashboard"
+msgstr "Fluent Forms ダッシュボードへ"
+
+#: app/Http/Controllers/SettingsController.php:215
+#: app/Http/Controllers/SettingsController.php:235
+#: app/Http/Controllers/SettingsController.php:273
+msgid "Sorry no connection found. Please reload the page and try again"
+msgstr "申し訳ありませんが、接続が見つかりませんでした。ページを再読み込みして再度お試しください"
+
+#: app/Http/Controllers/SettingsController.php:167
+msgid "Email delivered successfully."
+msgstr "メールが正常に配信されました。"
+
+#: app/Http/Controllers/SettingsController.php:156
+msgid "The email field is required."
+msgstr "メールフィールドは必須です。"
+
+#: app/Http/Controllers/SettingsController.php:140
+msgid "Settings saved successfully."
+msgstr "設定が正常に保存されました。"
+
+#: app/Http/Controllers/SettingsController.php:117
+msgid "General Settings has been updated"
+msgstr "一般設定が更新されました"
+
+#: app/Services/Mailer/Providers/SendInBlue/ValidatorTrait.php:23
+msgid "Please define FLUENTMAIL_SENDINBLUE_API_KEY in wp-config.php file."
+msgstr "wp-config.php ファイルで FLUENTMAIL_SENDINBLUE_API_KEY を定義してください。"
+
+#: app/Services/Mailer/Providers/SparkPost/ValidatorTrait.php:24
+msgid "Please define FLUENTMAIL_SPARKPOST_API_KEY in wp-config.php file."
+msgstr "wp-config.php ファイルで FLUENTMAIL_SPARKPOST_API_KEY を定義してください。"
+
+#: app/Services/Mailer/Providers/SendGrid/ValidatorTrait.php:24
+msgid "Please define FLUENTMAIL_SENDGRID_API_KEY in wp-config.php file."
+msgstr "wp-config.php ファイルで FLUENTMAIL_SENDGRID_API_KEY を定義してください。"
+
+#: app/Services/Mailer/Providers/Mailgun/ValidatorTrait.php:31
+#: app/Services/Mailer/Providers/TransMail/ValidatorTrait.php:31
+msgid "Please define FLUENTMAIL_MAILGUN_DOMAIN in wp-config.php file."
+msgstr "wp-config.php ファイルで FLUENTMAIL_MAILGUN_DOMAIN を定義してください。"
+
+#: app/Services/Mailer/Providers/Mailgun/ValidatorTrait.php:27
+#: app/Services/Mailer/Providers/TransMail/ValidatorTrait.php:27
+msgid "Please define FLUENTMAIL_MAILGUN_API_KEY in wp-config.php file."
+msgstr "wp-config.php ファイルで FLUENTMAIL_MAILGUN_API_KEY を定義してください。"
+
+#: app/Services/Mailer/Providers/Mailgun/ValidatorTrait.php:23
+#: app/Services/Mailer/Providers/TransMail/ValidatorTrait.php:23
+msgid "Domain name is required."
+msgstr "ドメイン名は必須です。"
+
+#: app/Services/Mailer/Providers/AmazonSes/ValidatorTrait.php:32
+msgid "Please define FLUENTMAIL_AWS_SECRET_ACCESS_KEY in wp-config.php file."
+msgstr "wp-config.php ファイルで FLUENTMAIL_AWS_SECRET_ACCESS_KEY を定義してください。"
+
+#: app/Services/Mailer/Providers/AmazonSes/ValidatorTrait.php:28
+msgid "Please define FLUENTMAIL_AWS_ACCESS_KEY_ID in wp-config.php file."
+msgstr "wp-config.php ファイルで FLUENTMAIL_AWS_ACCESS_KEY_ID を定義してください。"
+
+#: app/Services/Mailer/Providers/AmazonSes/ValidatorTrait.php:24
+msgid "Secret key is required."
+msgstr "シークレットキーは必須です。"
+
+#: app/Services/Mailer/Providers/AmazonSes/ValidatorTrait.php:20
+msgid "Access key is required."
+msgstr "アクセスキーは必須です。"
+
+#: app/Services/Mailer/Providers/Smtp/ValidatorTrait.php:41
+msgid "SMTP password is required."
+msgstr "SMTP パスワードは必須です。"
+
+#: app/Services/Mailer/Providers/Smtp/ValidatorTrait.php:37
+msgid "SMTP username is required."
+msgstr "SMTP ユーザー名は必須です。"
+
+#: app/Services/Mailer/Providers/Smtp/ValidatorTrait.php:23
+msgid "SMTP port is required."
+msgstr "SMTP ポートは必須です。"
+
+#: app/Services/Mailer/Providers/Smtp/ValidatorTrait.php:19
+msgid "SMTP host is required."
+msgstr "SMTP ホストは必須です。"
+
+#: app/Services/Mailer/Providers/config.php:228
+msgid "The Default option does not use SMTP or any Email Service Providers so it will not improve email delivery on your site."
+msgstr "デフォルトでは、SMTP やメールサービスプロバイダを使用しないため、サイトでのメール配信を改善することはできません。"
+
+#: app/Services/Mailer/Providers/config.php:119
+msgid "SparkPost"
+msgstr "SparkPost"
+
+#: app/Services/Mailer/Providers/config.php:91
+msgid "SendGrid"
+msgstr "SendGrid"
+
+#: app/Services/Mailer/Providers/config.php:74
+msgid "Mailgun"
+msgstr "Mailgun"
+
+#: app/Services/Mailer/Providers/config.php:66
+msgid "AWS GovCloud (US)"
+msgstr "AWS GovCloud (US)"
+
+#: app/Services/Mailer/Providers/config.php:65
+msgid "Middle East (Bahrain)"
+msgstr "中東（バーレーン）"
+
+#: app/Services/Mailer/Providers/config.php:63
+msgid "Asia Pacific (Tokyo)"
+msgstr "アジア太平洋（東京）"
+
+#: app/Services/Mailer/Providers/config.php:62
+msgid "Asia Pacific (Sydney)"
+msgstr "アジア太平洋（シドニー）"
+
+#: app/Services/Mailer/Providers/config.php:61
+msgid "Asia Pacific (Singapore)"
+msgstr "アジア太平洋（シンガポール）"
+
+#: app/Services/Mailer/Providers/config.php:60
+msgid "Asia Pacific (Seoul)"
+msgstr "アジア太平洋（ソウル）"
+
+#: app/Services/Mailer/Providers/config.php:59
+msgid "Asia Pacific (Mumbai)"
+msgstr "アジア太平洋（ムンバイ）"
+
+#: app/Services/Mailer/Providers/config.php:58
+msgid "Europe (Stockholm)"
+msgstr "ヨーロッパ（ストックホルム）"
+
+#: app/Services/Mailer/Providers/config.php:56
+msgid "EU (Frankfurt)"
+msgstr "EU（フランクフルト）"
+
+#: app/Services/Mailer/Providers/config.php:55
+msgid "Europe (Paris)"
+msgstr "ヨーロッパ（パリ）"
+
+#: app/Services/Mailer/Providers/config.php:54
+msgid "EU (London)"
+msgstr "EU（ロンドン）"
+
+#: app/Services/Mailer/Providers/config.php:53
+msgid "EU (Ireland)"
+msgstr "EU（アイルランド）"
+
+#: app/Services/Mailer/Providers/config.php:52
+msgid "Canada (Central)"
+msgstr "カナダ（セントラル）"
+
+#: app/Services/Mailer/Providers/config.php:50
+msgid "US West (N. California)"
+msgstr "アメリカ西部（北カルフォルニア）"
+
+#: app/Services/Mailer/Providers/config.php:51
+msgid "US West (Oregon)"
+msgstr "アメリカ西部（オレゴン）"
+
+#: app/Services/Mailer/Providers/config.php:49
+msgid "US East (Ohio)"
+msgstr "アメリカ東部（オハイオ）"
+
+#: app/Services/Mailer/Providers/config.php:48
+msgid "US East (N. Virginia)"
+msgstr "アメリカ東部（北バージニア）"
+
+#: app/Services/Mailer/Providers/PepiPost/ValidatorTrait.php:24
+msgid "Please define FLUENTMAIL_PEPIPOST_API_KEY in wp-config.php file."
+msgstr "wp-config.php ファイルで FLUENTMAIL_PEPIPOST_API_KEY を定義してください。"
+
+#: app/Services/Mailer/Providers/ElasticMail/ValidatorTrait.php:19
+#: app/Services/Mailer/Providers/Mailgun/ValidatorTrait.php:19
+#: app/Services/Mailer/Providers/PepiPost/ValidatorTrait.php:20
+#: app/Services/Mailer/Providers/Postmark/ValidatorTrait.php:20
+#: app/Services/Mailer/Providers/SendGrid/ValidatorTrait.php:20
+#: app/Services/Mailer/Providers/SendInBlue/ValidatorTrait.php:19
+#: app/Services/Mailer/Providers/SparkPost/ValidatorTrait.php:20
+#: app/Services/Mailer/Providers/TransMail/ValidatorTrait.php:19
+msgid "Api key is required."
+msgstr "API キーは必須です。"
+
+#: app/Services/Mailer/ValidatorTrait.php:20
+msgid "Invalid email address."
+msgstr "無効なメールアドレスです。"
+
+#: app/Services/Mailer/ValidatorTrait.php:16
+msgid "Sender email is required."
+msgstr "送信者のメールアドレスは必須です。"
+
+#. Author of the plugin
+#: fluent-smtp.php
+msgid "FluentSMTP & WPManageNinja Team"
+msgstr "FluentSMTP & WPManageNinja チーム"
+
+#. Description of the plugin
+#: fluent-smtp.php
+msgid "The Ultimate SMTP Connection Plugin for WordPress."
+msgstr "WordPress の究極の SMTP 接続プラグイン。"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: fluent-smtp.php
+msgid "https://fluentsmtp.com"
+msgstr "https://fluentsmtp.com"
+
+#. Plugin Name of the plugin
+#: fluent-smtp.php app/Hooks/Handlers/AdminMenuHandler.php:109
+msgid "FluentSMTP"
+msgstr "FluentSMTP"
+
+#: app/Services/Mailer/Providers/config.php:64
+msgid "South America (São Paulo)"
+msgstr "南米 (サンパウロ)"
+
+#: app/Functions/helpers.php:762
+msgid ""
+"The <strong>FluentSMTP</strong> plugin depends on\n"
+"                                <a target=\"_blank\" href=\"%1s\">wp_mail</a> pluggable function and\n"
+"                                plugin is not able to extend it. Please check if another plugin is using this and disable it for <strong>FluentSMTP</strong> to work!"
+msgstr "<strong>FluentSMTP</strong> プラグインは、<a target=\"_blank\" href=\"%1s\">wp_mail</a> プラガブル機能に依存し、これを拡張できません。<strong>FluentSMTP</strong> の動作のためには、これを使用している他のプラグインを探し、無効化してください。"
+
+#: app/Services/Mailer/Providers/config.php:105
+msgid "Sendinblue"
+msgstr "Sendinblue"
+
+#: app/Services/Mailer/Providers/config.php:33
+msgid "Amazon SES"
+msgstr "Amazon SES"

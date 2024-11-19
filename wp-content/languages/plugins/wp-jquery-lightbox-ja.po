@@ -1,0 +1,109 @@
+# Translation of Plugins - WP jQuery Lightbox - Stable (latest release) in Japanese
+# This file is distributed under the same license as the Plugins - WP jQuery Lightbox - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-12-29 13:21:14+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Plugins - WP jQuery Lightbox - Stable (latest release)\n"
+
+#: wp-jquery-lightbox.php:538
+msgid "Save Changes"
+msgstr "設定を保存"
+
+#: wp-jquery-lightbox.php:527
+msgid "Animation duration (in milliseconds) "
+msgstr "アニメーションの遅延(ミリ秒)"
+
+#: wp-jquery-lightbox.php:514
+msgid "Use custom stylesheet"
+msgstr "編集用のスタイルシートを使用する"
+
+#. Plugin URI of the plugin
+#: wp-jquery-lightbox.php
+msgid "http://wordpress.org/extend/plugins/wp-jquery-lightbox/"
+msgstr "http://wordpress.org/extend/plugins/wp-jquery-lightbox/"
+
+#: wp-jquery-lightbox.php:533
+msgid "Slideshow speed (in milliseconds). 0 to disable."
+msgstr "スライドショーの速度 (ミリ秒)。 0 で無効。"
+
+#: wp-jquery-lightbox.php:43
+msgid "Settings"
+msgstr "設定"
+
+#: wp-jquery-lightbox.php:238
+msgid "previous image"
+msgstr "前の画像"
+
+#: wp-jquery-lightbox.php:239
+msgid "next image"
+msgstr "次の画像"
+
+#: wp-jquery-lightbox.php:240
+msgid "close image gallery"
+msgstr "ギャラリーを閉じる"
+
+#: wp-jquery-lightbox.php:241 wp-jquery-lightbox.php:467
+msgid "Image "
+msgstr "画像 "
+
+#: wp-jquery-lightbox.php:242 wp-jquery-lightbox.php:467
+msgid " of "
+msgstr "の"
+
+#: wp-jquery-lightbox.php:243
+msgid "Download"
+msgstr "ダウンロード"
+
+#: wp-jquery-lightbox.php:352
+msgid "Cheatin&#8217; uh?"
+msgstr "間違えましたか？"
+
+#: wp-jquery-lightbox.php:366
+msgid "Let the plugin add necessary html to image links"
+msgstr "必要とするHTMLをイメージリンクに追加させる"
+
+#: wp-jquery-lightbox.php:366
+msgid "Auto-lightbox image links"
+msgstr "自動的に画像（イメージリンク）にLightbox効果を適応する"
+
+#: wp-jquery-lightbox.php:495
+msgid "Enable lightbox in comments (disables <a href=\"http://codex.wordpress.org/Nofollow\">the nofollow attribute!</a>)"
+msgstr "コメント欄でLightbox効果を有効にする（<a href=\"http://codex.wordpress.org/Nofollow\">nofollow属性</a>は無効になります。）"
+
+#: wp-jquery-lightbox.php:474
+msgid "Show download link"
+msgstr "ダウンロードリンクを表示"
+
+#: wp-jquery-lightbox.php:481
+msgid "Shrink large images to fit smaller screens"
+msgstr "スクリーンサイズに合わせて画像を縮小"
+
+#: wp-jquery-lightbox.php:245
+msgid "(Play Slideshow)"
+msgstr "(スライドショーを再生する)"
+
+#: wp-jquery-lightbox.php:460
+msgid "Show caption"
+msgstr "説明文を表示する"
+
+#: wp-jquery-lightbox.php:467
+msgid "Show image numbers:"
+msgstr "画像の番号を表示する"
+
+#: wp-jquery-lightbox.php:495
+msgid "Note: this will disable the nofollow-attribute of comment links, that otherwise interfere with the lightbox."
+msgstr "注: この操作を行うとコメントリンクの nofollow 属性が無効になります。そうしないと Lightbox に干渉します。"
+
+#: wp-jquery-lightbox.php:446
+msgid "Show title"
+msgstr "タイトルを表示"
+
+#: wp-jquery-lightbox.php:244
+msgid "(Pause Slideshow)"
+msgstr "(スライドショーを一時停止する)"

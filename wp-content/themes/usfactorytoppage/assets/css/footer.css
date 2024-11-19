@@ -1,0 +1,68 @@
+.footer {
+    min-width: 1390px;
+    background-color: rgb(221, 221, 221);
+
+}
+
+.wrapper {
+    display: flex;
+    height: 230px;
+    margin-top: 90px;
+}
+
+.usFactory {
+    flex: 1;
+    display: flex;
+    padding: 0 30px;
+    margin: 0 200px;
+}
+
+.bottom {
+    position: relative;
+    flex: 0.7;
+    padding: 20px;
+}
+
+.bottom p {
+    white-space: nowrap;
+}
+
+.compContent_01,
+.compContent_02 {
+    font-size: smaller;
+    margin-top: -2px;
+    padding: 20px;
+    flex: 0.3;
+}
+
+.usFactory .footerTitle a {
+    text-decoration: none;
+    color: #000;
+}
+
+.usFactory .footerTitle p {
+    margin: 5px;
+    white-space: nowrap;
+}
+
+.usFactory .footerTitle .FteSubTitle {
+    margin-left: 15px;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 25px;
+    left: 20px;
+}
+
+
+.compLogo {
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.compLogo img {
+    width: 290px;
+    height: auto;
+}

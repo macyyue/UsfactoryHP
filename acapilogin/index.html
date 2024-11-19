@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+            <p class="error" id="errorMsg"></p>
+            <p class="success" id="successMsg"></p>
+        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('loginForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const fixedUsername = 'admin';
+                const fixedPassword = '123456';
+
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+
+                const errorMsg = document.getElementById('errorMsg');
+                const successMsg = document.getElementById('successMsg');
+
+                if (username === fixedUsername && password === fixedPassword) {
+                    errorMsg.textContent = '';
+                    successMsg.textContent = 'Login successful!';
+                } else {
+                    successMsg.textContent = '';
+                    errorMsg.textContent = 'Invalid username or password';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

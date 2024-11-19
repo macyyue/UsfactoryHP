@@ -1,0 +1,42 @@
+<?php include($_SERVER['DOCUMENT_ROOT'] ."/temp/header.php") ?>
+
+<article class="mainContents inquiryWrap">
+<!-- <h2><img src="/common/img/inquiry/title.jpg" width="760" height="250" alt=""></h2> -->
+ <!-- <h2>資料請求TitleImg</h2> -->
+<h3 class="infrequest"><span>資料請求フォーム</span></h3>
+<div class="formArea">
+<form method="post" name="sfm-form" id="sfm-form" action="<?php echo $sfm_script; ?>">
+<dl class="formList">
+<dt>◯氏名<span class="required-icon"><i class="fas fa-asterisk"></i> 必須</span></dt><dd><input type="text" name="cname" id="cname" /></dd>
+<dt>◯部署名</dt><dd><input type="text" name="ckana" id="ckana" /></dd>
+<dt>◯会社名<span class="required-icon"><i class="fas fa-asterisk"></i> 必須</span></dt><dd class="namebox"><input type="text" name="name_s" id="name" /></dd>
+<dt>◯所在地<span class="required-icon"><i class="fas fa-asterisk"></i> 必須</span></dt>
+<dd><input type="text" name="location_s" id="location" /></dd>
+<dt>◯電話番号<span class="required-icon"><i class="fas fa-asterisk"></i> 必須</span></dt><dd class="telbox"><input type="text" name="tel01_s" id="tel01" />-<input type="text" name="tel02_s" id="tel02" />-<input type="text" name="tel03_s" id="tel03" /></dd>
+<dt>◯メールアドレス<span class="required-icon"><i class="fas fa-asterisk"></i> 必須</span></dt><dd><input type="text" name="email_s" id="email" /></dd>
+<dt>◯資料(パンフレット等)</dt><dd><select name="subject_s" class="text-box" id="subject">
+<option value="※お選びください">※お選びください</option>
+<option value="INFO360">Info360</option>
+<option value="BI for AC">BI for AC</option>
+<option value="3D点群計測">3D点群計測</option>
+<option value="AI-Structure">AI-Structure</option>
+<option value="求人について">求人について</option>
+<option value="その他">その他</option>
+</select>
+</dd>
+<dt>◯お問い合わせ内容（操作に関するご質問は担当者にご連絡お願いします）</dt><dd><textarea name="message_s" cols="30" rows="5" id="message"></textarea></dd>
+<p id="confirm-button" class="submit-container"><span>
+<input type="hidden" name="mailToNum" id="mailToNum" value="3" />
+<input name="autoReply" type="hidden" value="1" />
+<input type="hidden" name="mode" id="mode" value="CONFIRM" />
+<input type="submit" style=" " value="お問い合わせ内容を確認" />
+<p>
+</form>
+</div>
+</article>
+
+
+
+</div>
+
+<?php include($_SERVER['DOCUMENT_ROOT'] ."/temp/footer.php") ?>

@@ -1,0 +1,379 @@
+.Main__body {
+  min-width: 1390px;
+}
+
+.Main__content {
+  max-width: 1264px;
+  margin: 0 auto;
+}
+
+.Info360__intro-inner {
+  margin: 0 auto;
+}
+
+.contentTitle {
+  display: flex;
+  margin: 45px 0;
+  margin-top: 60px;
+  padding: 10px 29px;
+  background: rgb(218, 233, 241);
+  border: 1px solid rgb(100, 94, 94, .3);
+  box-shadow: 1px 1px 1px 1px rgba(46, 45, 45, 0.1);
+}
+
+.titleLogo {
+  margin-top: -20px;
+}
+
+.intro-text {
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.intro-text p {
+  font-size: 1.8em;
+  margin: 0;
+  text-wrap: nowrap;
+}
+
+.bimTitle {
+  margin: 100px 15px;
+  padding: 10px 29px;
+  background: #f9f9f9;
+  border: 1px solid rgb(100, 94, 94, .3);
+  box-shadow: 1px 1px 1px 1px rgba(46, 45, 45, 0.1);
+}
+
+.bimSubtitle {
+  color: #0962a8;
+  margin: 0;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.bimContent {
+  font-size: 0.8em;
+}
+
+.bimContent p {
+  margin: 0;
+}
+
+.heading1-v2 {
+  margin: 1.6em 0;
+}
+
+[data-col-pc]:not([data-col-pc="1"]) {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+[data-col-pc="2"]>:nth-child(odd) {
+  margin-left: 0 !important;
+}
+
+[data-col-pc="2"]>:nth-child(-n+2) {
+  margin-top: 0 !important;
+}
+
+[data-col-pc="2"]>* {
+  width: calc((103% - 37px)/2 - .1px);
+}
+
+.column {
+  margin: 2em 0 0;
+}
+
+.heading2 {
+  border-bottom: 2px solid;
+  border-color: #CC3A26;
+  margin: 0 0 1em;
+
+}
+
+.heading2__title {
+  font-size: 1.5rem;
+  line-height: 1.4em;
+  font-weight: 700;
+  margin: 0;
+  font-family: 游明朝体, Yu Mincho, YuMincho, ヒラギノ明朝 Pro, Hiragino Mincho Pro, MS P明朝, MS PMincho, serif;
+  color: #CC3A26;
+}
+
+.image__caption02 {
+  line-height: 1.6em;
+  text-align: left;
+  margin: 15em 0 0;
+  font-size: 0.9rem;
+}
+
+a.button__type {
+  padding: 1em 20px 1em 20px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #333;
+  background-color: #333;
+  color: #fff;
+  line-height: 1.4em;
+  text-decoration: none;
+}
+
+.sol_environment__list.type01 {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.sol_environment__list.type01 li {
+  width: 48.91667%;
+  padding: 6px;
+  list-style-type: none;
+
+}
+
+.sol_environment__list.type01 li a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+
+}
+
+.sol_environment__list.type01 li .ph {
+  border: 1px solid rgb(100, 94, 94, .3);
+  box-shadow: 1px 1px 1px 1px rgba(46, 45, 45, 0.1);
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.sol_environment__list.type01 li .ph img {
+  width: 100%;
+  height: auto;
+}
+
+.sol_environment__list li:hover .ph::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(253, 250, 250, 0.733);
+  pointer-events: none;
+}
+
+.sol_environment__list li a:link,
+a:visited {
+  color: #333;
+  text-decoration: none;
+}
+
+a {
+  transition: all .25s cubic-bezier(.4, 0, .2, 1) 0s;
+}
+
+.override-link-style {
+  color: #333;
+  text-decoration: none;
+}
+
+.heading2 {
+  border-bottom: 2px solid;
+  border-color: #CC3A26;
+  margin: 0 0 1em;
+  /* padding: 0 1.4em; */
+}
+
+.news_list_con {
+  max-width: 1264px;
+  margin: 34px auto;
+  color: #CC3A26;
+  display: flex;
+}
+
+/* .news_list_con h2 {
+  height: 60px;
+} */
+
+/* .news_list_con h2 span {
+  height: 50px;
+  line-height: 1.4;
+  font-family: "Montserrat", YuGothic, "Noto Sans Japanese", "游ゴシック", Verdana, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-weight: 600;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+} */
+
+.override-link-style {
+  text-decoration: none;
+  color: #333;
+}
+
+.news__article {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.news .news__type,
+.news .news__type--blank,
+.news .news__type--excel,
+.news .news__type--modal,
+.news .news__type--nolink,
+.news .news__type--pdf,
+.news .news__type--powerpoint,
+.news .news__type--rss,
+.news .news__type--video,
+.news .news__type--word,
+.news .news__type--zip {
+  padding: 0.2em 0;
+  display: flex;
+  background-color: #fff;
+
+}
+
+.news__type,
+.news__type--blank {
+  color: #454545;
+  text-decoration: none;
+}
+
+.news__caption:hover {
+  text-decoration-line: underline;
+}
+
+.news[data-news-pc=row] .news__body {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: baseline;
+}
+
+.news__body {
+  flex: 1 1;
+  order: 1;
+}
+
+.news__property {
+  display: flex;
+  align-items: baseline;
+}
+
+.news__date {
+  min-width: 9em;
+  color: #999;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.news[data-news-pc=row] .news__category {
+  flex-direction: column;
+  margin-right: 26px;
+}
+
+.news__category {
+  display: inline-flex;
+  flex-flow: row wrap;
+  margin-bottom: -.83333em;
+}
+
+.util-badge--csr,
+.util-badge--events,
+.util-badge--ir,
+.util-badge--news,
+.util-badge--other,
+.util-badge--release {
+  background-color: #454545;
+}
+
+[class*=util-badge--] {
+  background-color: #454545;
+  color: #fff;
+}
+
+.news[data-news-pc=row] .news__category>* {
+  margin-right: 0;
+}
+
+[class*=util-badge--] {
+  min-width: 104px;
+  height: 25px;
+  padding: 1px 10px 0;
+  font-size: 0.8rem;
+  line-height: 19px;
+}
+
+.util-badge,
+[class*=util-badge--] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.news__caption {
+  flex: 1 1;
+}
+
+.news .news__type .news__title {
+  position: relative;
+  line-height: 1.3em;
+}
+
+.news__title {
+  font-size: 1rem;
+}
+
+.news__title {
+  margin: 0;
+  font-weight: 400;
+}
+
+.Main__content>:first-child,
+.Main__content>[class^=list-wrap]>:first-child,
+.Main__content>section:first-child>:first-child {
+  margin-top: 0 !important;
+}
+
+.Main__content>:last-child {
+  margin-bottom: 0 !important;
+}
+
+.news-past {
+  text-align: right;
+}
+
+.news-past a {
+  text-decoration: none;
+  text-align: right;
+  font-family: "Montserrat", YuGothic, "Noto Sans Japanese", "游ゴシック", Verdana, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #CC3A26;
+}
+
+
+.news-past a:hover {
+  color: #CC3A26;
+  text-decoration: underline;
+}
+
+.news {
+  flex: 0.6;
+}
+
+.media,
+.company {
+  flex: 0.3;
+}
+
+.news,
+.media,
+.company {
+  margin: 10px;
+}

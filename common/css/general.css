@@ -1,0 +1,3079 @@
+@charset "UTF-8";
+
+/*
+	--------------------------------
+	更新日: 2012-12-25
+	--------------------------------
+*/
+
+/*Font Awesomeの読み込み
+---------------------------------------------------------------------------*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
+
+/*Google Fontsの読み込み
+---------------------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Murecho:wght@100..900&display=swap");
+
+/*slick.cssの読み込み
+---------------------------------------------------------------------------*/
+@import url("https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css");
+
+/*テンプレート専用cssファイルの読み込み
+---------------------------------------------------------------------------*/
+@import url("slide01.css");
+/* indexbannerタイル用 */
+@import url("inview.css");
+
+/* --------------------------------
+	body
+-------------------------------- */
+html,
+body {
+  background-color: var(--body-bg);
+  /* color: var(--common-text); */
+  font-family: Noto Sans JP, sans-serif;
+  /* padding-top: 50px; */
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  /* background: linear-gradient(to bottom, #fafcff, #ecf3fd) */
+}
+
+/*opa1のキーフレーム設定（汎用的）
+---------------------------------------------------------------------------*/
+@keyframes opa1 {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+:root {
+  --body-bg: #ffffff;
+  --common-text: #6e6e6e;
+  --text-sub-gray: #666666;
+  --button-bg-brown: #e8e6df;
+  --primary_blue: #0e4e9a;
+  --primary_blue__50: rgb(14 78 154 / 50%);
+  --white: #ffffff;
+  --header-height: 80px;
+  --light-gray: #e6e6e6;
+}
+
+/*slide1のキーフレーム設定（footer背景に使用）
+---------------------------------------------------------------------------*/
+@keyframes slide1 {
+  0% {
+    background-position: center bottom;
+  }
+  50% {
+    background-position: 50px bottom;
+  }
+  100% {
+    background-position: center bottom;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  :root {
+    --header-height: 7.5vw;
+  }
+}
+@media only screen and (max-width: 486px) {
+  :root {
+    --header-height: 12.5vw;
+  }
+}
+
+/* --------------------------------
+	コンテナ
+-------------------------------- */
+
+article#all_container {
+  height: 100%;
+}
+article#sub_container {
+  height: 100%;
+}
+
+/* --------------------------------
+	ヘッダ
+-------------------------------- */
+
+@import "https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Noto+Sans+JP:wght@100..900&display=swap";
+.fixed[data-astro-cid-3ef6ksr2] {
+  position: fixed;
+  top: var(--scroll-y);
+  left: 0;
+  width: 100%;
+  height: 110%;
+  overflow: hidden;
+}
+button[data-astro-cid-3ef6ksr2],
+[data-astro-cid-3ef6ksr2][role="button"] {
+  cursor: pointer;
+}
+header {
+  /* overflow: hidden; */
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  background: var(--white);
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: var(--header-height);
+  padding: 0 1em;
+  gap: 3em;
+  top: 0;
+}
+@media only screen and (max-width: 830px) {
+  header{
+    gap: 2.5vw;
+    padding: 0 2.5vw;
+  }
+}
+.header_logo[data-astro-cid-3ef6ksr2] {
+  height: 80%;
+  width: 150px;
+  margin-left: 1.5em;
+  transition: opacity 0.3s ease-in-out;
+}
+.header_logo[data-astro-cid-3ef6ksr2] img[data-astro-cid-3ef6ksr2] {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+}
+@media only screen and (max-width: 830px) {
+  .header_logo[data-astro-cid-3ef6ksr2] {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 486px) {
+  .header_logo[data-astro-cid-3ef6ksr2] {
+    margin-left: 0;
+    width: 30vw;
+  }
+}
+
+.header_logo[data-astro-cid-3ef6ksr2]:hover {
+  opacity: 0.5;
+}
+
+nav[data-astro-cid-3ef6ksr2] {
+  display: block;
+}
+
+ul[data-astro-cid-3ef6ksr2] {
+  display: flex;
+  /* justify-content: center; */
+  gap: 1em;
+  align-items: center;
+}
+
+nav[data-astro-cid-3ef6ksr2] ul[data-astro-cid-3ef6ksr2] ul{
+  position: absolute;
+  z-index: 100;
+}
+
+ul[data-astro-cid-3ef6ksr2] li:last-child {
+  margin-left: auto; 
+}
+
+ul[data-astro-cid-3ef6ksr2] li[data-astro-cid-3ef6ksr2]:not(:last-child) {
+  text-align: center;
+  margin: 0 2.5em;
+}
+
+@media screen and (max-width: 1241px) and (orientation: portrait) {
+  ul[data-astro-cid-3ef6ksr2] {
+    justify-content: flex-end;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  ul[data-astro-cid-3ef6ksr2] li[data-astro-cid-3ef6ksr2]:not(:last-of-type) {
+    display: none;
+  }
+  
+}
+
+@media screen and (max-width: 1241px) and (orientation: portrait) {
+  ul[data-astro-cid-3ef6ksr2] li[data-astro-cid-3ef6ksr2]:not(:last-of-type) {
+    display: none;
+  }
+}
+
+ul[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2] {
+  color: var(--primary_blue);
+  font-weight: 700;
+  font-size: 1em;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+  white-space: nowrap;
+}
+
+ul[data-astro-cid-3ef6ksr2] .navListicon:after {
+  content: "";
+  display: block;
+  width: 1em;
+  height: 1em;
+  background-image: url(/common/img/homepage/icon_arrow_down_blue.svg);
+  background-size: contain;
+}
+
+@media only screen and (max-width: 486px) {
+  ul[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2] {
+    font-size: 0.75em;
+  }
+}
+ul[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2]:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: 12px;
+  left: 0;
+  border-top: 1px solid var(--primary_blue);
+  transform-origin: center center;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+ul[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2]:hover:before {
+  transform: scaleX(1);
+}
+
+ul[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2].contact {
+  background-color: #cc3a26;
+  border: 1px solid #cc3a26;
+  width: 12.5em;
+  justify-content: center;
+  color: var(--white);
+  text-align: center;
+  padding: 0.5em 1.5em;
+  border-radius: 999px;
+  transition: all 0.2s ease-in-out;
+}
+/*  ここから下は画面幅1025px以上のナビ指定 */
+@media only screen and (max-width: 1025px) {
+  ul[data-astro-cid-3ef6ksr2] {
+    justify-content: space-between;
+  }
+
+  ul[data-astro-cid-3ef6ksr2] li[data-astro-cid-3ef6ksr2] {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  ul[data-astro-cid-3ef6ksr2] li[data-astro-cid-3ef6ksr2]:last-child {
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+ul[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2].contact:after {
+  content: "";
+  display: block;
+  width: 1em;
+  height: 1em;
+  background-image: url(/common/img/homepage/icon_open_in_new_white.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.2s ease-in-out;
+}
+ul[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2].contact:before {
+  display: none;
+}
+ul[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2].contact:hover {
+  gap: 0.3em;
+}
+.mokuzou-logo[data-astro-cid-3ef6ksr2] {
+  width: 150px;
+  height: 80%;
+}
+.mokuzou-logo[data-astro-cid-3ef6ksr2] img[data-astro-cid-3ef6ksr2] {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+@media only screen and (max-width: 1025px) {
+  .mokuzou-logo[data-astro-cid-3ef6ksr2] {
+    display: none;
+  }
+}
+@media screen and (max-width: 1241px) and (orientation: portrait) {
+  .mokuzou-logo[data-astro-cid-3ef6ksr2] {
+    display: none;
+  }
+}
+.nav_open_btn[data-astro-cid-3ef6ksr2] {
+  display: none;
+  transition: opacity 0.3s ease-in-out;
+}
+@media only screen and (max-width: 1025px) {
+  .nav_open_btn[data-astro-cid-3ef6ksr2] {
+    display: block;
+    height: 70%;
+    aspect-ratio: 1/1;
+  }
+  .nav_open_btn[data-astro-cid-3ef6ksr2] img[data-astro-cid-3ef6ksr2] {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 1241px) and (orientation: portrait) {
+  .nav_open_btn[data-astro-cid-3ef6ksr2] {
+    display: block;
+    height: 70%;
+    aspect-ratio: 1/1;
+  }
+  .nav_open_btn[data-astro-cid-3ef6ksr2] img[data-astro-cid-3ef6ksr2] {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
+  }
+}
+.nav_open_btn[data-astro-cid-3ef6ksr2]:hover {
+  opacity: 0.5;
+}
+*:where(
+    :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
+  ) {
+  all: unset;
+  display: revert;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+a,
+button {
+  cursor: revert;
+}
+ol,
+ul,
+menu {
+  list-style: none;
+}
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+table {
+  border-collapse: collapse;
+}
+input,
+textarea {
+  -webkit-user-select: auto;
+}
+textarea {
+  white-space: revert;
+}
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+:where(pre) {
+  all: revert;
+}
+::placeholder {
+  color: unset;
+}
+
+::marker {
+  content: initial;
+}
+
+:where([hidden]) {
+  display: none;
+}
+
+:where([contenteditable]:not([contenteditable="false"])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+:where([draggable="true"]) {
+  -webkit-user-drag: element;
+}
+
+:where(dialog:modal) {
+  all: revert;
+}
+/*詳細ページのサムネイル切り替えブロック
+---------------------------------------------------------------------------*/
+
+/*サムネイル画像*/
+.slick-slide img {
+  cursor: pointer; /*リンクタグではないが、クリックできる事をわかりやすくする為にリンクと同じポインターにしておきます。*/
+  transition: 0.5s; /*マウスオンまでにかける時間。3秒。*/
+}
+.slick-slide img:hover {
+  opacity: 0.8; /*マウスオン時に80%だけ色を出す。つまり薄くなります。*/
+}
+/*スライドショー（slickを使用）
+---------------------------------------------------------------------------*/
+.mainimg {
+  position: relative;
+  top: 20px;
+  margin: 0 0 81px;
+}
+
+/*丸いページナビボタン全体を囲むブロック*/
+.slick-dots {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  position: absolute;
+  bottom: 0px; /*下からの配置場所指定*/
+}
+
+/*丸いページナビボタン１個あたりの設定*/
+.slick-dots li {
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+/*buttonタグ*/
+.slick-dots li button {
+  display: block;
+  padding: 0;
+  border: none;
+  border: 1px solid #555; /*枠線の幅、線種、色*/
+  text-indent: -9999px; /*デフォルトで文字が出るので画面の外に追い出す指定*/
+  width: 12px; /*ボタンの幅*/
+  height: 12px; /*ボタンの高さ*/
+  border-radius: 50%; /*丸くする指定*/
+  background: #fff; /*背景色。白。*/
+}
+
+/*buttonのアクティブ時（現在表示されている画像を示すボタン）*/
+.slick-dots li.slick-active button {
+  background: #555; /*色*/
+}
+/* スローガン ループ Slogan Loop */
+.eng[data-astro-cid-utstonhj] {
+  position: absolute;
+  font-family: Barlow, sans-serif;
+  font-weight: 700;
+  font-size: 8.75em;
+  letter-spacing: .02em;
+  color: var(--primary_blue);
+  opacity: .1;
+  display: flex;
+  gap: .5em;
+  width: 100%;
+  height: 1.5em;
+  overflow: hidden
+}
+
+.eng[data-astro-cid-utstonhj] span[data-astro-cid-utstonhj] {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  overflow: hidden
+}
+
+.eng[data-astro-cid-utstonhj] span[data-astro-cid-utstonhj]:nth-of-type(odd) {
+  padding-left: 1em;
+  padding-right: 1em;
+  animation: loop 50s -25s linear infinite
+}
+
+.eng[data-astro-cid-utstonhj] span[data-astro-cid-utstonhj]:nth-of-type(2n) {
+  padding-right: 1em;
+  padding-left: 1em;
+  animation: loop2 50s linear infinite
+}
+@keyframes loop {
+  0% {
+      transform: translate(100%)
+  }
+
+  to {
+      transform: translate(-100%)
+  }
+}
+
+@keyframes loop2 {
+  0% {
+      transform: translate(0)
+  }
+
+  to {
+      transform: translate(-200%)
+  }
+}
+@media only screen and (max-width: 1025px)  {
+  .eng[data-astro-cid-utstonhj]  {
+      font-size: 80px;
+  }
+}
+@media only screen and (max-width: 900px)  {
+  .eng[data-astro-cid-utstonhj]  {
+      font-size: 50px;
+  }
+}
+@media only screen and (max-width: 486px) {
+  .eng[data-astro-cid-utstonhj]  {
+      font-size: 40px;
+  }
+}
+
+/*containerブロック
+---------------------------------------------------------------------------*/
+#container {
+  margin: 0 auto;
+  max-width: 1412px; /*最大幅。これ以上広がらない。*/
+}
+/*mainブロック設定
+---------------------------------------------------------------------------*/
+/*mainブロックの設定*/
+main {
+  padding: 50px 0px; /*上下、左右へのブロック内の余白*/
+}
+
+/*mainブロック内のh2タグ*/
+main h2 {
+  position: relative;
+  margin: 0;
+  margin: 0 0 20px; /*上、左右、下に空けるスペース*/
+  letter-spacing: 0.1em; /*文字間隔を少しだけ広くとる設定*/
+  font-size: 2.2em; /*文字サイズ。親要素の220%に。*/
+  /* border-bottom: 1px solid; */
+  color: var(--primary_blue);
+}
+
+/*h2タグ内のspaタグ。飾り文字用。*/
+main h2 span {
+  display: block;
+  font-size: 0.5em; /*文字サイズ。親要素の50%に。*/
+  color: #162f80; /*文字色*/
+}
+
+/*mainブロック内のh3タグ*/
+main h3 {
+  padding: 5px 20px; /*上下、左右への余白*/
+  margin: 0 0 20px; /*上、左右、下に空けるスペース*/
+  background: #f7f7f7; /*背景色*/
+  border-radius: 5px; /*角を丸くする指定*/
+  border: 1px solid #ddd; /*枠線の幅、線種、色*/
+}
+
+/*mainブロックのpタグ*/
+main p {
+  margin: 0 0 30px; /*上、左右、下へ空けるスペース*/
+}
+
+main p + p {
+  margin-top: -10px;
+}
+
+/*.mainのsectionのpaddingを一旦リセット*/
+.main section {
+  padding: 0;
+}
+
+/*１つ目以外のsectionの上部に空ける余白。section同士の上下間にとる余白です。*/
+.main section:not(:nth-of-type(1)) {
+  padding-top: 3%;
+}
+
+/*main（※頭にドット「.」のない「main」とは全く異なります。）*/
+.main {
+  order: 2; /*表示させる順番。数字が小さい方が最初に表示されます。*/
+}
+/*listブロック
+---------------------------------------------------------------------------*/
+/*listブロック全体を囲むブロック（※.list-squareでも使用しています）*/
+.list-container {
+  display: flex; /*flexボックスを使う指定*/
+  flex-wrap: wrap; /*折り返す指定*/
+}
+
+/*１個あたりのボックス設定*/
+.list {
+  display: flex; /*flexボックスを使う指定*/
+  flex-direction: column; /*子要素を縦並びにする*/
+  justify-content: space-between; /*並びかたの種類の指定*/
+  margin-bottom: 30px; /*ボックス同士の上下間に空けるスペース*/
+  padding: 20px; /*ボックス内の余白*/
+  background: #fff; /*背景色*/
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2); /*ボックスの影。右へ、下へ、ぼかし幅、0,0,0は黒の事で0.1は色が10%出た状態。*/
+  border-radius: 10px;
+  overflow: hidden;
+  width: 48%; /*幅*/
+  margin-right: 2%; /*右側に空けるスペース*/
+}
+@media screen and (max-width: 420px) {
+  .list{
+    width: auto;
+    margin: 15px;
+  } 
+  }
+/*２の倍数のlistブロックへの追加設定*/
+/* .list:nth-of-type(2n) {
+  margin-right: 0; 
+} */
+
+/*ボックス内のfigure画像*/
+.list figure {
+  margin: -20px -20px 0; /*上の.listで設定しているpadding分を相殺して画像をブロックいっぱいに出す*/
+}
+.list figure img{
+  width: 100%;
+
+}
+/*ボックス内のh4タグ*/
+.list h4 {
+  font-weight: bold;
+  margin: 1em 0 0.5em; /*上、左右、下への余白*/
+}
+.trademark {
+  font-size: 0.7em; /* 缩小符号 */
+  vertical-align: super; /* 向上对齐 */
+}
+/*ボックス内のtextブロック*/
+.list .text {
+  flex: 1;
+}
+
+/*ボックス内のpタグ*/
+.list p {
+  margin: 0;
+  font-size: 0.8em; /*文字サイズを80%に*/
+}
+
+/*list2ブロック
+---------------------------------------------------------------------------*/
+.list2 {
+  display: flex; /*flexボックスを使う指定*/
+  margin-bottom: 30px; /*ボックス同士の上下間に空けるスペース*/
+  padding: 10px; /*ボックス内の余白*/
+  background: #fff; /*背景色*/
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1); /*ボックスの影。右へ、下へ、ぼかし幅、0,0,0は黒の事で0.1は色が10%出た状態。*/
+}
+
+/*ボックス内のfigure画像*/
+.list2 figure {
+  width: 30%; /*幅*/
+  margin: -10px 10px -10px -10px; /*上の.list2で設定しているpadding分を相殺して画像をブロックいっぱいに出す*/
+}
+
+/*ボックス内のtextブロック*/
+.list2 .text {
+  flex: 1;
+  display: flex; /*flexボックスを使う指定*/
+  flex-direction: column; /*子要素を縦並びにする*/
+  justify-content: space-between; /*並びかたの種類の指定*/
+}
+
+/*ボックス内のh4タグ*/
+.list2 h4 {
+  margin: 0 0 0.5em; /*上、左右、下への余白*/
+}
+
+/*ボックス内のpタグ*/
+.list2 p {
+  margin: 0;
+  font-size: 0.8em; /*文字サイズを80%に*/
+}
+
+/*list2内でのbtn*/
+.list2 p:not(.btn) {
+  flex: 1;
+}
+
+/*list-squareブロック
+---------------------------------------------------------------------------*/
+/*１個あたりのボックス設定*/
+.list-square {
+  width: 33.3%; /*幅*/
+}
+
+/*ボックス内のtextブロック*/
+.list-square .text {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /*背景色。0,0,0は黒の事で0.5は色が50%出た状態*/
+  color: #fff; /*文字色*/
+  padding: 10px 20px; /*上下、左右へのボックス内の余白*/
+}
+
+/*ボックス内のh4タグとpタグ*/
+.list-square h4,
+.list-square p {
+  margin: 0;
+  font-size: 0.8em; /*文字サイズを親要素の80%に*/
+}
+
+/*小さな端末では説明文は非表示に。表示させてしまうと画像がかなり隠れてしまう可能性があります。*/
+.list-square p {
+  display: none;
+}
+
+/*list,list2,list-squareの共通設定
+---------------------------------------------------------------------------*/
+.list,
+.list2,
+.list-square {
+  position: relative; /*子要素でabsolute(絶対配置)を使うための指定*/
+}
+
+/*左上の丸いアイコン*/
+.list .icon,
+.list2 .icon,
+.list-square .icon {
+  display: flex; /*flexボックスを使う指定*/
+  justify-content: center; /*並びかたの種類の指定*/
+  align-items: center; /*垂直揃えの指定。上下中央に配置されるように。*/
+  font-size: 0.6em; /*文字サイズ*/
+  background: #ff0000; /*背景色*/
+  color: #fff; /*文字色*/
+  width: 60px; /*幅*/
+  height: 60px; /*高さ*/
+  line-height: 1.5; /*行間*/
+  border-radius: 50%; /*角丸のサイズ。円形になります。*/
+  text-align: center; /*テキストをセンタリング*/
+  position: absolute; /*親のrelativeに対して絶対配置させる指示*/
+  left: -10px; /*listブロックに対して左からの配置場所の指定*/
+  top: -10px; /*listブロックに対して上からの配置場所の指定*/
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /*ボックスの影。右へ、下へ、ぼかし幅。0,0,0は黒の事で0.3は色が30%出た状態。*/
+}
+/*btnの設定
+---------------------------------------------------------------------------*/
+p.btn {
+  margin: 0;
+}
+
+/*ボタンを囲むブロック*/
+.btn {
+  text-align: center; /*内容をセンタリング*/
+}
+
+/*ボタン*/
+.btn a,
+.btn input {
+  text-decoration: none;
+  border: none;
+  display: block;
+  font-size: 1em;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /*ボックスの影。右へ、下へ、ぼかし幅の順。0,0,0は黒の事で0.2は色が20%出た状態。*/
+  background: var(--primary_blue); /*背景色*/
+  letter-spacing: 0.1em; /*文字間隔を少し広くする指定*/
+  color: #fff; /*文字色*/
+  transition: 0.3s; /*hoverまでにかける時間。0.3秒。*/
+  padding: 0.7em 1em; /*上下、左右へのボタン内の余白*/
+  margin-top: 2em; /*ボタンの上に１文字分のスペースを空ける*/
+  border-radius: 5px;
+}
+
+/*ボタンのマウスオン時*/
+.btn a:hover,
+.btn input:hover {
+  cursor: pointer; /*inputタグを使う場合に「手」のマークになるように。リンクと同じ表示になるようにという事です。*/
+  opacity: 1; /*一番上のリンク設定でhoverにopacityを指定しているので、適用されないようにする。*/
+  filter: brightness(1.2); /*少しだけ明るくする。*/
+  transform: scale(1.02); /*実寸の102%に拡大*/
+}
+
+/*ボタン内にiタグを使った場合*/
+.btn i {
+  margin-left: 15px; /*テキストとの間に空ける余白*/
+  opacity: 0.5; /*透明度。色が50%でた状態。*/
+  transform: scale(1.4); /*サイズを1.4倍にする*/
+}
+/*---------------------------------------------------------------------------
+ここから下は画面幅400px以下の追加指定
+ハンバーガーメニューがコンテンツが少し重なってしまいますが、画面が狭いのでコンテンツが見える範囲を優先しました。
+---------------------------------------------------------------------------*/
+@media screen and (max-width: 400px) {
+  /*sectionタグ、詳細ページ、２カラム利用時、フッターメニューブロックの共通設定
+  ---------------------------------------------------------------------------*/
+  section,
+  main > article,
+  .c2,
+  #footermenu {
+    padding: 3% 10px; /*上下、左右へのボックス内の余白*/
+  }
+
+  /*　※注意！　下の閉じカッコ　}　はこのブロックに必要なので、削除しないで下さい。　*/
+}
+
+/*---------------------------------------------------------------------------
+  ここから下は画面幅600px以上の追加指定
+  ---------------------------------------------------------------------------*/
+@media screen and (min-width: 600px) {
+  /*header（ロゴなどが入った最上段のブロック）
+  ---------------------------------------------------------------------------*/
+  /*トップページのロゴ*/
+  .home header #logo {
+    width: 20%; /*ロゴの幅*/
+    bottom: -20%; /*ヘッダーに対して、下からの配置場所の指定*/
+    left: 40%; /*ヘッダーに対して、左からの配置場所の指定*/
+  }
+
+  /*ヘッダー下のメニュー
+  ---------------------------------------------------------------------------*/
+  /*メニューブロック全体*/
+  #header-menu ul {
+    font-size: 1em;
+  }
+
+  /*トップページのみ。２つ目メニューの右側に余白を作る。ロゴとの横並びのバランスをここで調整して下さい。*/
+  .home #header-menu ul li:nth-of-type(2) {
+    margin-right: 20%;
+  }
+
+
+  /*　※注意！　下の閉じカッコ　}　はこのブロックに必要なので、削除しないで下さい。　*/
+}
+
+/*---------------------------------------------------------------------------
+  ここから下は画面幅900px以上の追加指定
+  ---------------------------------------------------------------------------*/
+@media screen and (min-width: 900px) {
+  /*全体の設定
+  ---------------------------------------------------------------------------*/
+  /* html,
+  body {
+    font-size: 16px; 
+  } */
+
+  /*sectionタグ、詳細ページ、２カラム利用時、フッターメニューブロックの共通設定
+  ---------------------------------------------------------------------------*/
+  section,
+  main > article,
+  .c2 {
+    padding: 3% 80px; /*上下、左右へのボックス内の余白*/
+  }
+
+  /*header（ロゴなどが入った最上段のブロック）
+  ---------------------------------------------------------------------------*/
+  /*ロゴ画像（※トップページ以外）*/
+  body:not(.home) header #logo img {
+    height: 75px; /*画像の高さ。ハンバーガーメニューとの配置バランスがあるのでここでは高さで指定しました。*/
+  }
+
+  /*ヘッダー下のメニュー
+  ---------------------------------------------------------------------------*/
+  /*メニューブロック全体*/
+  #header-menu ul {
+    font-size: 1.2em; /*文字サイズ。親要素の120%に。*/
+  }
+
+  /*メニューブロック設定
+  ---------------------------------------------------------------------------*/
+  #menubar {
+    width: 40%; /*ブロックの幅。*/
+  }
+
+  /*３本バー（ハンバーガー）アイコン設定
+  ---------------------------------------------------------------------------*/
+  /*３本バーとMENUテキストを囲むブロック*/
+  #menubar_hdr {
+    transform: scale(1); /*小さな端末用で60%にしているのを原寸大に戻す*/
+  }
+
+  /*「MENU」の文字*/
+  #menubar_hdr p {
+    display: block; /*表示させる*/
+    margin: 10px 0 0; /*上、左右、下へのマージン*/
+    font-size: 0.7em; /*文字サイズ。親要素の70%に。*/
+  }
+
+  /*「MENU」の文字をトップページ以外は非表示にする*/
+  body:not(.home) #menubar_hdr p {
+    display: none;
+  }
+
+  /*h2タグの装飾（kazari1）*/
+  main h2.flag::before,
+  main h2.flag::after {
+    width: 150px; /*画像の幅*/
+    height: 150px; /*画像の高さ*/
+  }
+
+  /*2カラムの場合
+  ---------------------------------------------------------------------------*/
+  /*2カラム（.mainと.sub）を囲むブロック*/
+  .c2 {
+    flex-direction: row; /*子要素を横並びにする*/
+    justify-content: space-between; /*並びかたの種類の指定*/
+  }
+
+  /*main（※頭にドット「.」のない「main」とは全く異なります。）*/
+  .main {
+    width: calc(
+      100% - 250px
+    ); /*幅。250pxというのは、下のsubのwidthの値に余白分を加えた数字です。ちょうど200pxにしてしまうとキツキツになるので。*/
+  }
+
+  /*sub*/
+  .sub {
+    width: 200px; /*幅。変更する際は上の.mainのwidthも調整して下さい。*/
+  }
+
+  /*「お知らせ」ブロック
+  ---------------------------------------------------------------------------*/
+  /*日付(dt)設定*/
+  #new dt {
+    width: 14em; /*幅。14文字(em)分。*/
+    display: flex; /*flexボックスを使う指定*/
+    justify-content: space-between; /*日付とアイコンをそれぞれ端に寄せる*/
+  }
+
+  /*日付の横のマーク（共通設定）*/
+  #new dt span {
+    display: inline-block; /*表示させる*/
+    width: 7.5em; /*幅。7.5文字(em)分。*/
+    background: #999; /*背景色*/
+    color: #fff; /*文字色*/
+    font-size: 0.8em; /*文字サイズを80%に。*/
+    text-align: center; /*文字をセンタリング*/
+    margin-right: 1em; /*アイコンの右側に空けるスペース*/
+    align-self: flex-start; /*高さを間延びさせない指定*/
+    line-height: 1.8; /*行間を少し狭く*/
+    position: relative;
+    top: 0.4em; /*上下の配置バランスの微調整*/
+  }
+
+  /*icon-bg1設定。サンプルテンプレートでは「イベント」と書いてあるマーク*/
+  #new dt span.icon-bg1 {
+    background: #162f80; /*背景色*/
+  }
+
+  /*icon-bg2設定。サンプルテンプレートでは「お買い物」と書いてあるマーク*/
+  #new dt span.icon-bg2 {
+    background: #c86e03; /*背景色*/
+  }
+
+  /*記事(dd)設定*/
+  #new dd {
+    width: calc(100% - 14em); /*「14em」は上の「#new dt」のwidthの値です。*/
+  }
+
+  /*listブロック
+  ---------------------------------------------------------------------------*/
+  /*１個あたりのボックス設定*/
+  .list {
+    width: 24%; /*幅*/
+    margin-right: 1.33%; /*右側に空けるスペース*/
+  }
+
+  /*２の倍数のlistブロックへの追加設定。小さな端末用で0と指定しているので、改めて大きな端末用のマージンを指定。*/
+  .list:nth-of-type(2n) {
+    margin-right: 1.33%;
+  }
+
+  /*４の倍数のlistブロックへの追加設定*/
+  .list:nth-of-type(4n) {
+    margin-right: 0; /*右側の余白をなくす*/
+  }
+
+  /*list2ブロック
+  ---------------------------------------------------------------------------*/
+  .list2 {
+    padding: 30px; /*ボックス内の余白*/
+  }
+
+  /*ボックス内のfigure画像*/
+  .list2 figure {
+    width: 30%; /*幅*/
+    margin: -30px 30px -30px -30px; /*上の.listで設定しているpadding分を相殺して画像をブロックいっぱいに出す*/
+  }
+
+  /*list-squareブロック
+  ---------------------------------------------------------------------------*/
+  /*小さな端末で非表示にした説明文を表示させる。*/
+  .list-square p {
+    display: block;
+  }
+
+  /*テーブル
+  ---------------------------------------------------------------------------*/
+  /*テーブル１行目に入った見出し部分（※caption）*/
+  .ta1 caption {
+    padding: 5px 15px; /*上下、左右へのボックス内の余白*/
+  }
+
+  /*th（左側）、td（右側）の共通設定*/
+  .ta1 th,
+  .ta1 td {
+    padding: 20px 15px; /*上下、左右へのボックス内の余白*/
+  }
+
+  /*th（左側）のみの設定*/
+  .ta1 th {
+    width: 20%; /*幅*/
+  }
+
+  /*その他
+  ---------------------------------------------------------------------------*/
+  .ws {
+    width: 48%;
+    display: inline;
+  }
+  .sh {
+    display: none;
+  }
+  /*　※注意！　下の閉じカッコ　}　はこのブロックに必要なので、削除しないで下さい。　*/
+}
+
+/* --------------------------------
+	グロナビ
+-------------------------------- */
+
+nav#gnav .mainNav li.gnav01 span {
+  color: #0962a8;
+  font-weight: 700;
+  font-size: x-large;
+}
+nav#gnav .mainNav li.gnav02 span {
+  color: #cc3a26;
+  font-weight: 700;
+  font-size: x-large;
+}
+nav#gnav {
+  /* width: 1000px; */
+  margin: 20px auto 0;
+  border-top: 1px solid #000000;
+  padding: 10px 0 0;
+}
+
+ul#dMenu {
+  margin-left: 34px;
+}
+
+nav#gnav .mainNav li {
+  padding: 0;
+  float: left;
+  margin: 0 13px 40px 0;
+}
+
+nav#gnav .mainNav li:hover span {
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
+}
+
+/*ドロップメニュー設定
+---------------------------------------------------------------------------*/
+.dropmenu {
+  list-style-type: none;
+}
+
+.dropmenu:before,
+.dropmenu:after {
+  content: "";
+  display: table;
+}
+
+.dropmenu:after {
+  clear: both;
+}
+
+.dropmenu li {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.dropmenu li a {
+  display: block;
+  margin: 0;
+  background: #ffffff;
+  color: #333333;
+  font-size: 16px;
+  /* line-height: 40px; */
+  padding: 10px 4px;
+  text-decoration: none;
+}
+
+.dropmenu li ul {
+  display: none;
+  list-style: none;
+  position: absolute;
+  z-index: 9999;
+  top: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 140px;
+  animation: opa1 0.5s 0.1s both;
+}
+.dropmenu li .dropmenuCon {
+ left: 25%;
+}
+
+.dropmenu li:hover ul {
+  display: block;
+}
+nav#gnav .mainNav.dropmenu li ul li {
+  width: 100%;
+  margin: 0;
+}
+
+.dropmenu li ul li a {
+  padding: 10px 20px;
+  /* border-radius: 100px; */
+  border-top: 1px solid #eeeeee;
+  background: #ffffff;
+  text-align: left;
+}
+.dropmenu li ul li a:hover{
+  /* text-decoration: underline; */
+  opacity: 1;
+  color: var(--primary_blue);
+  background: #ecf3fd; /*背景色*/
+}
+nav#gnav .dropmenu li:hover > a {
+  background: #ffffff;
+}
+#gnav .dropmenu li a:hover {
+  background: #ffffff;
+}
+
+#dMenu li ul li {
+  overflow: hidden;
+  height: 0;
+  transition: 0.2s;
+}
+
+#dMenu li:hover ul li {
+  overflow: visible;
+  height: 40px;
+}
+.topTitle {
+  text-align: center;
+
+}
+.topTitle h1 {
+  font-weight: bold;
+  font-size: 3em;
+  margin-top: 90px;
+}
+/* --------------------------------
+ 1024px以下のナビ
+-------------------------------- */
+
+.fixed[data-astro-cid-ttztgwaq] {
+  position: fixed;
+  top: var(--scroll-y);
+  left: 0;
+  width: 100%;
+  height: 110%;
+  overflow: hidden;
+}
+
+button[data-astro-cid-ttztgwaq],
+[data-astro-cid-ttztgwaq][role="button"] {
+  cursor: pointer;
+}
+
+section[data-astro-cid-ttztgwaq] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100vh;
+  background-color: #7d7d7db3;
+  backdrop-filter: blur(10px);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.2s ease-out;
+}
+
+section[data-astro-cid-ttztgwaq].__hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-out;
+}
+
+.dialog__bglayer[data-astro-cid-ttztgwaq] {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+button[data-astro-cid-ttztgwaq] {
+  height: calc(var(--header-height) * 0.5);
+  width: calc(var(--header-height) * 0.5);
+  position: absolute;
+  top: calc(var(--header-height) * 0.25);
+  right: calc(var(--header-height) * 0.25);
+  max-width: 30px;
+  min-height: 30px;
+  z-index: 1001;
+  aspect-ratio: 1/1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+button[data-astro-cid-ttztgwaq] img[data-astro-cid-ttztgwaq] {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: center center;
+}
+
+button[data-astro-cid-ttztgwaq]:hover {
+  opacity: 0.5;
+}
+
+.dialog__container[data-astro-cid-ttztgwaq] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  max-width: 85%;
+  max-height: 100vh;
+  height: 100vh;
+  z-index: 1000;
+}
+
+nav[data-astro-cid-ttztgwaq] {
+  background: var(--white);
+  filter: drop-shadow(-1em 1em 1em rgba(0, 0, 0, 0.1));
+  padding: 4em 1em 1em;
+  flex-grow: 1;
+  flex-basis: 0;
+  overflow-y: scroll;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: strech;
+  align-items: center;
+  gap: 3em;
+}
+
+.brand_logo_link[data-astro-cid-ttztgwaq] {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  flex-basis: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.brand_logo_link[data-astro-cid-ttztgwaq]:hover {
+  opacity: 0.5;
+}
+
+.brand_logo[data-astro-cid-ttztgwaq] {
+  margin: 0 auto;
+  display: block;
+  width: 65%;
+  height: 100%;
+  object-fit: contain;
+}
+
+ul[data-astro-cid-ttztgwaq] {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  overflow: visible;
+}
+
+ul[data-astro-cid-ttztgwaq]
+  li[data-astro-cid-ttztgwaq]
+  a[data-astro-cid-ttztgwaq] {
+  position: relative;
+  color: var(--primary_blue);
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25em;
+}
+
+ul[data-astro-cid-ttztgwaq]
+  li[data-astro-cid-ttztgwaq] .dropdowns:after {
+  content: "";
+  display: block;
+  width: 1em;
+  height: 1em;
+  background-image: url("data:image/svg+xml,%3c?xml%20version='1.0'?%3e%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cmask%20id='mask0_15_342'%20style='mask-type:alpha'%20maskUnits='userSpaceOnUse'%20x='0'%20y='0'%20width='16'%20height='16'%3e%3crect%20width='16'%20height='16'%20fill='%23D9D9D9'%20/%3e%3c/mask%3e%3cg%20mask='url(%23mask0_15_342)'%3e%3cpath%20d='M8%2010.2667L4%206.26668L4.93333%205.33334L8%208.40001L11.0667%205.33334L12%206.26668L8%2010.2667Z'%20fill='%230E4E9A'%20/%3e%3c/g%3e%3c/svg%3e");
+  background-size: contain;
+}
+
+ul[data-astro-cid-ttztgwaq]
+  li[data-astro-cid-ttztgwaq]
+  a[data-astro-cid-ttztgwaq]:before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  bottom: -0.25em;
+  left: 25%;
+  border-top: 1px solid var(--primary_blue);
+  transform-origin: center center;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+ul[data-astro-cid-ttztgwaq]
+  li[data-astro-cid-ttztgwaq]
+  a[data-astro-cid-ttztgwaq]:hover:before {
+  transform: scaleX(1);
+}
+
+ul[data-astro-cid-ttztgwaq]
+  li[data-astro-cid-ttztgwaq]
+  a[data-astro-cid-ttztgwaq].contact {
+  background-color: #cc3a26;
+  color: var(--white);
+  text-align: center;
+  padding: 0.5em 1.5em;
+  border-radius: 999px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  flex-basis: 300px;
+  width: 300px;
+}
+
+ul[data-astro-cid-ttztgwaq]
+  li[data-astro-cid-ttztgwaq]
+  a[data-astro-cid-ttztgwaq].contact
+  em[data-astro-cid-ttztgwaq] {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  font-size: 1.2em;
+}
+
+ul[data-astro-cid-ttztgwaq]
+  li[data-astro-cid-ttztgwaq]
+  a[data-astro-cid-ttztgwaq].contact
+  span[data-astro-cid-ttztgwaq] {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  font-size: 0.75em;
+}
+
+ul[data-astro-cid-ttztgwaq]
+  li[data-astro-cid-ttztgwaq]
+  a[data-astro-cid-ttztgwaq].contact:after {
+  content: "";
+  grid-column: 2/3;
+  grid-row: 1/3;
+  display: block;
+  width: 1em;
+  height: 1em;
+  background-image: url("data:image/svg+xml,%3c?xml%20version='1.0'?%3e%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cmask%20id='mask0_15_362'%20style='mask-type:alpha'%20maskUnits='userSpaceOnUse'%20x='0'%20y='0'%20width='16'%20height='16'%3e%3crect%20width='16'%20height='16'%20fill='%23D9D9D9'%20/%3e%3c/mask%3e%3cg%20mask='url(%23mask0_15_362)'%3e%3cpath%20d='M3.33333%2014C2.96667%2014%202.65278%2013.8694%202.39167%2013.6083C2.13056%2013.3472%202%2013.0333%202%2012.6667V3.33333C2%202.96667%202.13056%202.65278%202.39167%202.39167C2.65278%202.13056%202.96667%202%203.33333%202H8V3.33333H3.33333V12.6667H12.6667V8H14V12.6667C14%2013.0333%2013.8694%2013.3472%2013.6083%2013.6083C13.3472%2013.8694%2013.0333%2014%2012.6667%2014H3.33333ZM6.46667%2010.4667L5.53333%209.53333L11.7333%203.33333H9.33333V2H14V6.66667H12.6667V4.26667L6.46667%2010.4667Z'%20fill='white'%20/%3e%3c/g%3e%3c/svg%3e");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+ul[data-astro-cid-ttztgwaq]
+  li[data-astro-cid-ttztgwaq]
+  a[data-astro-cid-ttztgwaq].contact:before {
+  display: none;
+}
+@media screen and (max-width:1025px) {
+  .topTitle h1 {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width:690px) {
+  .topTitle h1 {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width:414px) {
+  .topTitle h1 {
+    font-size: 1em;
+  }
+}
+/* --------------------------------
+	サイドナビ
+-------------------------------- */
+
+nav#snav {
+  width: 260px;
+  float: right;
+  margin-top: 20px;
+}
+nav#snav dl {
+  padding: 0 0 20px;
+}
+
+/* --------------------------------
+	メインラップ
+-------------------------------- */
+article#mainWrap {
+  background-color: #fff;
+}
+article#mainVI {
+  /* width: 1000px; */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+article#mainVI ul {
+  /* width: 1000px; */
+  display: flex; /* 使用 Flexbox 布局 */
+  flex-wrap: wrap; /* 允许换行 */
+  justify-content: space-between; /* 平均分布 */
+  width: 100%;
+  margin: 0 auto;
+}
+article#mainVI ul li {
+  flex: 1;
+  /* width: 490px; */
+  float: left;
+  margin-bottom: 20px;
+}
+article#mainVI ul li:hover a {
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
+}
+article#mainVI ul li:nth-child(2) {
+  width: 490px;
+  float: right;
+}
+/* 追加 */
+.service__list li:nth-child(2n) {
+  margin: 0 10px;
+}
+
+#contents {
+  flex: 1;
+}
+
+/* --------------------------------
+	サブラップ
+-------------------------------- */
+article#subWrap {
+  margin: 20px 0 40px;
+  clear: both;
+}
+
+/* --------------------------------
+	topラップ
+-------------------------------- */
+
+/* --------------------------------
+
+	コンテンツラップ 
+-------------------------------- */
+/* 削除しないで */
+/* article#contentsWrap {
+  max-width: 1000px;
+  clear: both;
+  margin: 0 auto 20px;
+} */
+/* article#contentsWrap.topWrap { width:1251px;}  */
+
+/* article#sub_container article#contentsWrap { width:1251px; clear:both;margin:0 auto 20px; } */
+article#contentsWrap #contents {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  padding: 20px;
+  justify-content: center;
+}
+
+/* 追加 */
+.newsWrap dl,
+.releaseWrap dl,
+.medialistWrap dl {
+  padding: 5.8px 10px;
+  clear: both;
+  border-bottom: 1px solid #ccc;
+}
+.newsWrap dl dt,
+.releaseWrap dl dt,
+.medialistWrap dl dt {
+  display: inline-block;
+  margin-right: 10px;
+}
+.newsWrap dl dd,
+.releaseWrap dl dd,
+.medialistWrap dl dd {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* 追加 */
+.newsWrap,
+.releaseWrap,
+.medialistWrap {
+  /* background-color: #fff; */
+  padding: 0em 0em 4px 0;
+}
+
+main #mainWrap {
+  flex: 1;
+}
+/*ニュース sub 画面幅900px以上の追加指定*/
+@media screen and (min-width: 900px) {
+  /*カラムで使う為の指定*/
+  main #mainWrap {
+    display: flex; /*横並びにする*/
+    justify-content: space-between; /*並びかたの種類の指定*/
+    gap: 2rem; /*main-contentsとsub-contentsの間のマージン的な隙間*/
+  }
+
+  /*contentsブロック*/
+  article #contents {
+    margin-bottom: 0;
+    flex: 1;
+  }
+
+  /*sub-contentsブロック共通*/
+  .submenu {
+    order: 1;
+  }
+} /*追加指定ここまで*/
+
+/*リンク（全般）設定
+---------------------------------------------------------------------------*/
+a {
+  transition: 0.5s; /*マウスオン時の移り変わるまでの時間設定。0.5秒。*/
+}
+a:hover {
+  opacity: 0.7;
+}
+
+.submenu a:hover {
+  color: var(--primary_blue); /*マウスオン時の文字色*/
+  text-decoration: none; /*マウスオン時に下線を消す設定。残したいならこの１行削除。*/
+}
+/*subコンテンツ
+---------------------------------------------------------------------------*/
+/*subブロック全体の設定*/
+#sub {
+  font-size: 14px; /*文字サイズ*/
+  line-height: 1.5;
+  width: 300px;
+}
+#sub h2 {
+  font-size: 18px; /*文字サイズ*/
+  color: #fff;
+}
+#sub h2::first-letter {
+  border-left: 3px solid var(--primary_blue);
+  padding-left: 10px;
+}
+#sub .box h2::first-letter {
+  border-left: 3px solid #fff;
+}
+/*---------------------------------------------------------------------------
+  ここから下は画面幅900px以上の追加指定
+  ---------------------------------------------------------------------------*/
+@media screen and (max-width: 900px) {
+  #sub {
+    float: none;
+    width: auto;
+    overflow: hidden;
+  }
+}
+/*メニューブロック
+---------------------------------------------------------------------------*/
+/*メニューブロック全体*/
+.submenu {
+  overflow: hidden;
+  border-radius: 10px; /*角丸のサイズ*/
+  border: 5px solid var(--primary_blue); /*枠線の幅、線種、色*/
+  margin-bottom: 20px; /*ブロックの下に空けるスペース*/
+}
+/*メニュー１個あたりの設定*/
+.submenu li {
+  text-align: center; /*文字をセンタリング*/
+  border-top: 1px solid #ccc; /*上の線の幅、線種、色*/
+  font-size: 18px; /*文字サイズ*/
+}
+.submenu li a {
+  display: block;
+  text-decoration: none;
+  padding: 15px 5px; /*上下、左右へのメニュー内の余白*/
+  background: #fff; /*背景色*/
+}
+/*マウスオン時*/
+.submenu li a:hover {
+  background: #ecf3fd; /*背景色*/
+}
+/*１つ目のメニューへの追加指定*/
+.submenu li:first-child {
+  border: none; /*上の線を消す*/
+}
+/*飾り文字*/
+.submenu li span {
+  display: block;
+  font-size: 11px; /*文字サイズ*/
+  font-weight: normal; /*文字を太字でなく標準に戻す設定*/
+  letter-spacing: 0.2em; /*文字間隔を少しあける設定*/
+  color: var(--primary_blue); /*文字色*/
+}
+/*sidebarコンテンツ内のbox
+---------------------------------------------------------------------------*/
+#sidebar .box {
+  background: var(--primary_blue); /*背景色*/
+  color: #fff; /*文字色*/
+  padding: 20px; /*ボックス内の余白*/
+  border-radius: 10px; /*角丸の指定*/
+  margin-bottom: 20px; /*ボックスの下(外側)に空けるスペース*/
+}
+/*リンクテキストの文字色*/
+#sidebar .box a {
+  color: #fff;
+  display: block;
+  text-align: center;
+
+}
+#sidebar .box img {
+  max-width: 100%;
+}
+/*sidebarコンテンツ内のaddress
+---------------------------------------------------------------------------*/
+#sidebar address {
+  font-style: normal; /*デフォルトで斜体になるのでノーマルに*/
+}
+.releaseWrap .sectionHeader span,
+.newsWrap .sectionHeader span,
+.medialistWrap .sectionHeader span {
+  margin-left: -6px;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.newsWrap .viewMore,
+.releaseWrap .viewMore,
+.medialistWrap .viewMore {
+  text-align: right;
+  font-weight: bold;
+  /* background-color: #ccc; */
+  padding: 0.55em 0.5em;
+}
+
+/* 追加 */
+/* #sidebar{ flex: 0 0 34%;} */
+/* .topLinkBox  { width:320px;  padding:7px 0 20px; float:right;}
+.topLinkBox ul  { width:320px; list-style: none; padding: 0;}
+.topLinkBox ul li  { width:320px;margin:0 0 20px 0; margin-bottom: 10px;}
+.topLinkBox ul li img { width:100%;height: auto;}
+.topLinkBox ul li:hover img { opacity: 0.5; transition: opacity 0.5s ease;}
+.topLinkBox ul li:nth-last-child(1)  { width:320px;margin:0 0 0 0;}
+.topLinkBox {
+    overflow: hidden;
+}
+
+.topLinkBox:after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 1px;
+    overflow: hidden;
+} */
+
+/*\*/
+* html .topLinkBox {
+  height: 1em;
+  overflow: visible;
+}
+/**/
+
+/* --------------------------------
+	ページラップ
+-------------------------------- */
+.mainContents {
+  /* width: 760px;
+  margin: 0 0; */
+  /* float: right; */
+  width: 100%;
+  max-width: 760px;
+}
+.mainContents p {
+  font-size: 87.5%;
+  line-height: 2.5em;
+  vertical-align: baseline;
+  padding: 0 0 20px;
+}
+
+.mainContents .phArea {
+  width: 0 3%;
+}
+.mainContents .phArea img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.mainContents iframe {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.sideWrap {
+  /* width: 200px;
+  margin: 0 0;
+  float: left; */
+  width: 100%; 
+  max-width: 200px;
+  margin: 0 10px 0 10px;
+
+}
+.sideWrap dl {
+  width: 100%;
+  padding: 0 0 20px;
+}
+.sideWrap dl dt {
+  width: 100%;
+  background-color: #116cb5;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0 10px 6px 10px;
+  border-top: 10px solid #116cb5;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 6px 12px rgba(0, 0, 0, 0.3);
+
+}
+.sideWrap dl .biforacTitle{
+  background-color: #cc3a26;
+  border-top: 10px solid #cc3a26;
+}
+.sideWrap dl dd {
+  border: 1px solid #dddddd;
+  line-height: 2.5em;
+  padding: 0 0;
+  font-size: 87.5%;
+  background: #ffffff; /* Old browsers */
+
+  background: -moz-linear-gradient(top, #ffffff 0%, #e8e8e8 100%); /* FF3.6+ */
+
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #ffffff),
+    color-stop(100%, #e8e8e8)
+  ); /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(
+    top,
+    #ffffff 0%,
+    #e8e8e8 100%
+  ); /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(
+    top,
+    #ffffff 0%,
+    #e8e8e8 100%
+  ); /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #ffffff 0%, #e8e8e8 100%); /* IE10+ */
+
+  background: linear-gradient(to bottom, #ffffff 0%, #e8e8e8 100%); /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-9 */
+}
+.sideWrap dl dd a {
+  display: block;
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+.sideWrap ul {
+  border-top: 1px solid #000000;
+  padding: 20px 0;
+  margin: 20px 0;
+}
+.sideWrap ul li {
+  padding: 10px 0;
+  font-size: 87.5%;
+}
+.sideWrap ul li a {
+  text-decoration: none;
+}
+
+@media (max-width: 1040px) {
+
+  .sideWrap {
+    max-width: 760px;
+    /* margin: 0; */
+  }
+  .sideWrap dl dt , .sideWrap dl dd{
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .mainContents {
+    padding: 0 10px;
+  }
+
+  .sideWrap {
+    max-width: 100%;
+    /* margin: 0; */
+  }
+}
+
+@media (max-width: 480px) {
+  .mainContents p {
+    font-size: 85%;
+  }
+}
+.subWrap h2 {
+  width: 100%;
+  padding: 0 0 0;
+}
+@media screen and (max-width:1024px) {
+  .subWrap h2 img{
+    display: none;
+  }
+}
+.subWrap h3 {
+  line-height: 2em;
+  color: #ffffff;
+  border-bottom: 1px solid #000000;
+  padding: 40px 0 5px;
+  margin: 0 0 20px;
+}
+.subWrap .infrequest {
+  padding: 0 0 5px;
+}
+.subWrap h3 span {
+  background: #000000;
+  line-height: 2em;
+  padding: 5px 20px 5px 10px;
+  font-size: 125%;
+}
+
+.companyWrap dl {
+  width: 100%;
+  font-size: 87.5%;
+  padding: 0 0 40px;
+}
+.companyWrap dl dt {
+  width: 6em;
+  float: left;
+  margin: 5px 0;
+}
+.companyWrap dl dd {
+  padding: 5px 0 5px 8em;
+}
+.companyWrap dl {
+  overflow: hidden;
+}
+
+.companyWrap dl :after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 1px;
+  overflow: hidden;
+}
+
+/*\*/
+* html .companyWrap dl {
+  height: 1em;
+  overflow: visible;
+}
+/**/
+
+.recruitWrap h2 {
+  font-size: 125%;
+  font-weight: bold;
+  background: #116cb5;
+  border-radius: 5px;
+  line-height: 2em;
+  text-indent: 0.5em;
+  color: #ffffff;
+}
+.recruitWrap h3 {
+  font-size: 150%;
+  color: #000000;
+  font-weight: bold;
+  border-bottom: none;
+  margin: 0 0 0;
+  line-height: 1.2em;
+}
+.recruitWrap h3 span {
+  font-size: 75%;
+  font-weight: bold;
+  color: #000000;
+  background: none;
+}
+.recruitWrap h5 {
+  clear: both;
+  font-size: 100%;
+  font-weight: bold;
+  background: #074c84;
+  line-height: 2em;
+  text-indent: 0.5em;
+  color: #ffffff;
+  -webkit-border-radius: 5px 5px 0px 0px / 5px 5px 0px 0px;
+  -moz-border-radius: 5px 5px 0px 0px / 5px 5px 0px 0px;
+  border-radius: 5px 5px 0px 0px / 5px 5px 0px 0px;
+}
+.recruitWrap .mark {
+  width: 100%;
+}
+.recruitWrap .mark li {
+  display: inline-block;
+  background: #dc3b21;
+  border-radius: 3px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  padding: 5px 10px;
+  font-size: 10px;
+}
+
+.recruitWrap table {
+  width: 100%;
+  font-size: 87.5%;
+  padding: 0 0 40px;
+}
+.recruitWrap table tr {
+}
+.recruitWrap table th {
+  width: 12em;
+  padding: 15px 0 15px 15px;
+  line-height: 1.6em;
+  font-weight: bold;
+  background: #116cb5;
+  color: #ffffff;
+  vertical-align: top;
+  border-bottom: 1px solid #eeeeee;
+}
+.recruitWrap table th i {
+  font-size: 125%;
+  margin-right: 5px;
+  background: #ffffff;
+  border-radius: 50%;
+  color: #116cb5;
+  padding: 5px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+}
+.recruitWrap table th span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.recruitWrap table td {
+  padding: 15px 0 15px 15px;
+  line-height: 1.6em;
+  border-bottom: 1px solid #eeeeee;
+}
+.recruitWrap dl {
+  overflow: hidden;
+}
+
+.recruitWrap dl :after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 1px;
+  overflow: hidden;
+}
+
+/*\*/
+* html .recruitWrap dl {
+  height: 1em;
+  overflow: visible;
+}
+/**/
+
+.recruitHead {
+  width: 100%;
+  clear: both;
+  padding-top: 20px;
+}
+.recruitHead figure img {
+  width: 35%;
+  float: left;
+}
+.recruitHead figure figcaption {
+  width: 60%;
+  float: right;
+}
+
+.recruitWrap .recruitPhL img,
+.recruitWrap .recruitPhR img {
+  width: 100%;
+  height: auto;
+}
+.recruitWrap .recruitPhL {
+  width: 48%;
+  float: left;
+  padding: 0 1%;
+  margin-bottom: 20px;
+}
+.recruitWrap .recruitPhR {
+  width: 48%;
+  float: right;
+  padding: 0 1%;
+  margin-bottom: 20px;
+}
+.recruitWrap .recruitPhL figcaption {
+  width: 98%;
+  font-size: 75%;
+  padding: 5px 1%;
+}
+.recruitWrap .recruitPhR figcaption {
+  width: 98%;
+  font-size: 75%;
+  padding: 5px 1%;
+}
+.recruitWrap .linkBtn {
+  width: 50%;
+  padding-top: 20px;
+  margin-bottom: 60px;
+}
+.recruitWrap .linkBtn a {
+  display: block;
+  border: 1px solid #777;
+  padding: 4px 10px;
+  color: #fff;
+  cursor: pointer;
+  background: #428ec9;
+  border-radius: 5px;
+  font-size: 125%;
+}
+.inquiryWrap {
+}
+.inquiryWrap dl.formList {
+  padding: 0 0 10px;
+}
+.inquiryWrap dl.formList dt {
+  padding: 30px 0 5px;
+  display: flex;
+  align-items: center;
+}
+.required-icon {
+  display: inline-block;
+  background-color: #d73b26;
+  color: white;
+  padding: 2px 2px;
+  border-radius: 2px;
+  font-size: 11px;
+  margin: 0 6px;
+}
+.inquiryWrap dl.formList dt:first-child {
+  padding: 0 0 5px;
+}
+.inquiryWrap dl.formList dd input {
+  border: 1px solid #ccc;
+  padding: 5px;
+  color: #999;
+  background: #fff;
+  border-radius: 5px;
+  font-size: 125%;
+}
+.inquiryWrap dl.formList dd select {
+  border: 1px solid #ccc;
+  padding: 5px;
+  color: #999;
+  background: #fff;
+  border-radius: 5px;
+  font-size: 100%;
+}
+.inquiryWrap dl.formList dd textarea {
+  border: 1px solid #ccc;
+  padding: 5px;
+  color: #999;
+  background: #fff;
+  border-radius: 5px;
+  font-size: 125%;
+}
+.inquiryWrap input[type="submit"] {
+  border: 1px solid #777;
+  padding: 4px 10px;
+  color: #fff;
+  cursor: pointer;
+  background: #428ec9;
+  border-radius: 5px;
+  font-size: 125%;
+
+  /* Webkit */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#99c9e5),
+    to(#428ec9)
+  );
+  -webkit-border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 1px #fff;
+
+  /* Firefox */
+  background: -moz-linear-gradient(top, #99c9e5, #428ec9);
+  -moz-border-radius: 5px;
+  -moz-box-shadow: 1px 1px 1px #fff;
+
+  /* IE */
+  filter: progid:DXImageTransform.Microsoft.gradient
+        (startColorstr=#ff99c9e5,endColorstr=#ff428ec9);
+  zoom: 1;
+}
+
+.inquiryWrap input[type="button"] {
+  border: 1px solid #777;
+  padding: 4px 10px;
+  color: #fff;
+  cursor: pointer;
+  background: #428ec9;
+  border-radius: 5px;
+  font-size: 125%;
+
+  /* Webkit */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#99c9e5),
+    to(#428ec9)
+  );
+  -webkit-border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 1px #fff;
+
+  /* Firefox */
+  background: -moz-linear-gradient(top, #99c9e5, #428ec9);
+  -moz-border-radius: 5px;
+  -moz-box-shadow: 1px 1px 1px #fff;
+
+  /* IE */
+  filter: progid:DXImageTransform.Microsoft.gradient
+        (startColorstr=#ff99c9e5,endColorstr=#ff428ec9);
+  zoom: 1;
+}
+
+.confirm dl.formList {
+  padding: 30px 0 5px;
+}
+.confirm dl.formList dt {
+  padding: 30px 0 5px;
+  border-bottom: 1px dashed #dddddd;
+  margin-bottom: 10px;
+}
+.confirm p#confirm-button {
+  padding: 30px 0 5px;
+  clear: both;
+}
+
+.robotWrap iframe {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+
+.biWrap iframe {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+.biWrap h4 {
+  color: #ff0004;
+  font-size: 125%;
+  border-bottom: 1px solid #ff0004;
+  padding: 40px 0 10px;
+}
+.biWrap img {
+  display: block;
+  margin: 0 auto;
+}
+
+.interview {
+}
+.interview .intTitle {
+}
+.interview .intTitleL {
+  width: 340px;
+  float: left;
+}
+.interview .intTitleR {
+  width: 405px;
+  float: right;
+}
+.interview p.mainTxt {
+  clear: both;
+  padding: 10px;
+}
+.interview dl.faq {
+}
+.interview dl.faq dt {
+  font-size: 110%;
+  color: #e10000;
+  font-weight: bold;
+  padding: 30px 0 0;
+}
+.interview dl.faq dd {
+  padding: 10px 1em 30px;
+  border-bottom: 1px dotted #dddddd;
+}
+
+.linkBtn {
+  margin: 20px auto;
+  padding: 0 0;
+  text-align: center;
+  clear: both;
+}
+.linkBtn a {
+  text-decoration: none;
+  border: 1px solid #777;
+  padding: 10px 10px;
+  color: #fff;
+  cursor: pointer;
+  background: #428ec9;
+  border-radius: 5px;
+  font-size: 125%;
+
+  /* Webkit */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#99c9e5),
+    to(#428ec9)
+  );
+  -webkit-border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 1px #fff;
+
+  /* Firefox */
+  background: -moz-linear-gradient(top, #99c9e5, #428ec9);
+  -moz-border-radius: 5px;
+  -moz-box-shadow: 1px 1px 1px #fff;
+  /* IE */
+  filter: progid:DXImageTransform.Microsoft.gradient
+        (startColorstr=#ff99c9e5,endColorstr=#ff428ec9);
+  zoom: 1;
+}
+
+.accessWrap h2 {
+  font-size: 125%;
+  font-weight: bold;
+  background: #116cb5;
+  border-radius: 5px;
+  line-height: 2em;
+  text-indent: 0.5em;
+  color: #ffffff;
+}
+
+.policyWrap h2 {
+  font-size: 125%;
+  font-weight: bold;
+  background: #116cb5;
+  border-radius: 5px;
+  line-height: 2em;
+  text-indent: 0.5em;
+  color: #ffffff;
+}
+.policyWrap h4 {
+  font-size: 110%;
+  font-weight: bold;
+  color: #116cb5;
+}
+
+.newslistWrap {
+}
+.newslistWrap h2 {
+  font-size: 125%;
+  font-weight: bold;
+  background: #116cb5;
+  border-radius: 5px;
+  line-height: 2em;
+  text-indent: 0.5em;
+  color: #ffffff;
+}
+.newslistWrap h4 {
+  font-size: 125%;
+  font-weight: bold;
+  color: #116cb5;
+}
+.newslistWrap h4 a {
+  color: #116cb5;
+}
+.newslistWrap .newsListBox {
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.mediaWrap {
+}
+.mediaWrap h2 {
+  font-size: 125%;
+  font-weight: bold;
+  background: #116cb5;
+  border-radius: 5px;
+  line-height: 2em;
+  text-indent: 0.5em;
+  color: #ffffff;
+}
+.mediaWrap h4 {
+  font-size: 125%;
+  font-weight: bold;
+  color: #116cb5;
+}
+.mediaWrap h4 a {
+  color: #116cb5;
+}
+.mediaWrap .mediaBox {
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+/* 追加 */
+.releaselistWrap {
+}
+.releaselistWrap h2 {
+  font-size: 125%;
+  font-weight: bold;
+  background: #116cb5;
+  border-radius: 5px;
+  line-height: 2em;
+  text-indent: 0.5em;
+  color: #ffffff;
+}
+.releaselistWrap h4 {
+  font-size: 125%;
+  font-weight: bold;
+  color: #116cb5;
+}
+.releaselistWrap h4 a {
+  color: #116cb5;
+}
+.releaselistWrap .releaselistBox {
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.pdflistWrap {
+}
+.pdflistWrap h2 {
+  font-size: 125%;
+  font-weight: bold;
+  background: #116cb5;
+  border-radius: 5px;
+  line-height: 2em;
+  text-indent: 0.5em;
+  color: #ffffff;
+}
+.pdflistWrap h4 {
+  font-size: 125%;
+  font-weight: bold;
+  color: #116cb5;
+}
+.pdflistWrap h4 a {
+  color: #116cb5;
+}
+.pdflistWrap .pdfListBoxCon {
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+.pdflistWrap .pdfListBox a {
+  text-decoration: none;
+}
+.pdflistWrap .pdfListBox p {
+  padding: 10px 0;
+}
+.pdflistWrap .pdfListBox a:hover {
+  text-decoration: underline;
+}
+.pdflistWrap .pdfListBox .fas {
+  color: #d73b26;
+  padding: 5px;
+}
+.pdfwrap h2 {
+  width: 760px;
+  padding: 0 0 0;
+}
+.pdfwrap h3 {
+  line-height: 2em;
+  color: #ffffff;
+  padding: 40px 0 5px;
+  margin: 0 0 20px;
+}
+.pdflistWrap .pdfListBoxCon h3 span {
+  position: relative;
+  line-height: 2em;
+  padding: 6px 0 6px 15px;
+}
+.pdflistWrap .pdfListBoxCon h3 span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #116cb5;
+  border-radius: 3px;
+}
+.bloglistWrap {
+}
+.bloglistWrap h2 {
+  font-size: 125%;
+  font-weight: bold;
+  background: #0e4e9a;
+  border-radius: 5px;
+  line-height: 2em;
+  text-indent: 0.5em;
+  color: #ffffff;
+}
+.bloglistWrap .blogListBox h2 {
+  font-size: 125%;
+  font-weight: bold;
+  background: none;
+  border-radius: none;
+  line-height: 2em;
+  text-indent: 0.5em;
+  color: #000;
+  width: auto;
+}
+.bloglistWrap h4 {
+  font-size: 125%;
+  font-weight: bold;
+  color: #116cb5;
+}
+.bloglistWrap h4 a {
+  color: #116cb5;
+}
+.bloglistWrap .blogListBox {
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.inquiryWrap dl.formList dd {
+  width: 90%;
+}
+.inquiryWrap dl.formList dd input {
+  width: 90%;
+}
+.inquiryWrap dl.formList dd.telbox {
+  width: auto;
+}
+.inquiryWrap dl.formList dd.namebox input {
+  width: auto;
+}
+.inquiryWrap dl.formList dd.telbox input {
+  width: 20%;
+}
+
+@media only screen and (max-width: 768px) {
+  .inquiryWrap dl.formList dd {
+    width: 90%;
+  }
+  .inquiryWrap dl.formList dd input {
+    width: 90%;
+  }
+}
+/* 画面サイズが480px以下の場合に適用 */
+@media only screen and (max-width: 480px) {
+  .inquiryWrap dl.formList dd {
+    width: 90%;
+  }
+  .inquiryWrap dl.formList dd input {
+    width: 90%;
+  }
+}
+
+/* --------------------------------
+	ページャー
+-------------------------------- */
+.pager {
+  text-align: center;
+}
+a.page-numbers,
+.pager .current {
+  background: rgba(0, 0, 0, 0.02);
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 5px 8px;
+  margin: 0 2px;
+}
+.pager .current {
+  background: rgba(0, 0, 0, 1);
+  border: solid 1px rgba(0, 0, 0, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+/* --------------------------------
+	パンくず
+-------------------------------- */
+
+div#bread {
+  padding: 21px 0 0 23px;
+}
+
+/* --------------------------------
+	アンカー
+-------------------------------- */
+
+article#content .rel {
+  margin: 11px 0 0 0;
+  padding: 2px 0 2px 13px;
+  background: url(../img/arrow_02.gif) no-repeat 0 5px;
+}
+article#content ul.rel {
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+article#content ul.rel li {
+  padding: 2px 0 2px 13px;
+  background: url(/common/img/arrow_02.gif) no-repeat 0 5px;
+}
+article#content .blank a {
+  padding: 0 19px 0 0;
+  background: url(../img/ancr_blank_01.gif) no-repeat top right;
+}
+article#content .pdf a {
+  padding: 2px 19px 0 0;
+  background: url(../img/ancr_pdf_01.gif) no-repeat top right;
+}
+
+/* --------------------------------
+	ページトップ
+-------------------------------- */
+
+article#content section#cnt_pagetop {
+  clear: both;
+  padding: 18px 39px 0 39px;
+}
+article#content section#cnt_pagetop p {
+  text-align: right;
+}
+article#content section#cnt_pagetop p a:hover img {
+  filter: alpha(opacity=60);
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+}
+
+/* --------------------------------
+	ページャ
+-------------------------------- */
+
+section#pager {
+  clear: both;
+  position: relative;
+  margin: 30px 0 0 0;
+  font-size: 75%;
+  line-height: 1.417;
+}
+section#pager p.prev {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+section#pager p.prev a {
+  padding: 0 0 0 13px;
+  background: url(../img/arrow_03.gif) no-repeat left 0.25em;
+}
+section#pager table {
+  margin: 0 auto 0 auto;
+}
+section#pager table td {
+  padding: 0 1px 0 2px;
+  background: url(../img/dt_v_03.gif) repeat-y left top;
+}
+section#pager table td.first {
+  background: none;
+}
+section#pager table td a,
+section#pager table td span {
+  display: block;
+  padding: 3px 8px 3px 8px;
+}
+section#pager table td a:hover {
+  background: #74b20d;
+  color: #fff;
+}
+section#pager table td span {
+  color: #488902;
+  font-weight: bold;
+}
+section#pager p.next {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+section#pager p.next a {
+  padding: 0 13px 0 0;
+  background: url(../img/arrow_02.gif) no-repeat right 0.25em;
+}
+
+/* --------------------------------
+	フッタ
+-------------------------------- */
+
+footer {
+  clear: both;
+  padding-top: 50px;
+  margin: 0 auto;
+  position: relative;
+  background: var(--primary_blue);
+  color: #fff;
+}
+footer h5 {
+  padding: 0 0 20px;
+}
+footer p.credit {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  text-align: center;
+  padding: 1em;
+  font-size: .75em;
+  letter-spacing: .05em;
+}
+/* 追加 */
+footer .footerItem {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  max-width: 1264px;
+  margin: 0 auto;
+}
+#sub_container footer {
+  clear: both;
+  padding-top: 20px;
+  border-top: 1px dotted #333;
+  margin: 0 auto;
+  /* width: 1000px; */
+}
+/* div.ftBox {
+  margin: 0 0 0 0;
+  padding: 20px 0 40px;
+} */
+div.ftBoxL {
+  width: 300px;
+  float: left;
+  /* grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  align-self: center;
+  padding: 2em 0; */
+}
+div.ftBoxL h6 {
+  font-size: 75%;
+}
+div.ftBoxL p.ftTel {
+  font-size: 200%;
+  font-weight: bold;
+}
+div.ftBoxL p.time {
+  font-size: 75%;
+}
+div.ftBoxR {
+  /* width: 680px;
+  float: right;
+  margin-top: 0; */
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  gap: 1em;
+}
+div.ftBoxR dl {
+  float: left;
+  font-size: 81.3%;
+}
+div.ftBoxR dl dd {
+  text-indent: 0.5em;
+}
+div.ftBoxR dl.ftLink01 {
+  width: 100px;
+}
+div.ftBoxR dl.ftLink02 {
+  width: 200px;
+}
+div.ftBoxR dl.ftLink03 {
+  width: 180px;
+}
+div.ftBoxR dl.ftLink04 {
+  width: 180px;
+}
+
+div.ftBox {
+  overflow: hidden;
+}
+
+div.ftBox:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 1px;
+  overflow: hidden;
+}
+
+/*\*/
+* html div.ftBox {
+  height: 1em;
+  overflow: visible;
+}
+/**/
+@media screen and (max-width: 1241px) and (orientation: portrait) {
+  footer .footerItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .ftBoxL{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.5em;
+  }
+  .ftBoxR {
+    width: 100%;
+    margin-bottom: 1.5em;
+  }
+
+  .ftBoxR dl {
+    margin-bottom: 1em;
+  }
+}
+/* --- ページトップ ------ */
+#page-top {
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9999;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 77%;
+}
+#page-top a {
+  width: 10vw;
+  max-width: 65px;
+  aspect-ratio: 1 / 1;
+  position: fixed;
+  z-index: 998;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#page-top a img{
+  width: 100%;
+  flex-basis: 100%;
+  height: 100%;
+}
+
+footer article#ftr_pagetop p a:hover {
+  filter: alpha(opacity=60);
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+}
+
+/* --- クレジット ------ */
+footer article#ftr_credit {
+  margin: 20px 0 20px 0;
+  text-align: right;
+  font-size: 62.5%;
+  clear: both;
+}
+footer article#ftr_credit .container {
+  margin: 0 auto 0 auto;
+  padding: 0 10px 0 10px;
+}
+footer article#ftr_credit p.copy {
+  padding: 0 0 0 0;
+}
+
+#floatLink {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 77%;
+}
+#floatLink a.reserve {
+  text-decoration: none;
+  width: 100px;
+  text-align: center;
+  display: block;
+  margin: 10px 0;
+}
+
+#floatLink a.inquiry {
+  text-decoration: none;
+  width: 100px;
+  text-align: center;
+  display: block;
+}
+
+/* --------------------------------
+	GET ADOBE READER
+-------------------------------- */
+
+#get_reader {
+  margin: 30px 0 0 0;
+  padding: 12px 2em 12px 2em;
+  background: #f9f9f9;
+}
+#get_reader .container {
+  margin: 0 auto 0 auto;
+  width: 97%;
+}
+#get_reader .sub {
+  padding: 0 17px 0 0;
+  width: 158px;
+  float: left;
+}
+#get_reader .sub p {
+}
+#get_reader .main {
+  float: left;
+}
+#get_reader .main p {
+  padding: 3px 0 0 0;
+}
+
+.pageWrap div#trust-form.contact-form table th {
+  padding: 10px 0;
+  border-bottom: 1px dotted #eee;
+  text-align: left;
+  vertical-align: top;
+  font-weight: bold;
+}
+.pageWrap div#trust-form.contact-form table td {
+  padding: 10px 0;
+  border-bottom: 1px dotted #eee;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.companyBox dt {
+  width: 10em;
+  float: left;
+  font-size: 87.5%;
+  line-height: 1.357;
+  margin: 10px 0;
+  line-height: 2em;
+}
+.companyBox dd {
+  padding: 10px 0 10px 12em;
+  font-size: 87.5%;
+  line-height: 1.357;
+  border-bottom: 1px dotted #eee;
+  line-height: 2em;
+}
+
+ul.sitemap {
+  padding: 10px 20px;
+}
+ul.sitemap li {
+  padding: 5px 0;
+  font-size: 87.5%;
+  line-height: 1.357;
+}
+ul.sitemap li.low {
+  text-indent: 20px;
+}
+
+/* --------------------------------
+	ブログ
+-------------------------------- */
+
+.blog p {
+  padding: 0 0;
+}
+
+.columnList {
+}
+.columnList ul {
+}
+.columnList li {
+  width: 142px;
+  float: left;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.columnList {
+  overflow: hidden;
+}
+
+.columnList:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 1px;
+  overflow: hidden;
+}
+
+/*\*/
+* html .columnList {
+  height: 1em;
+  overflow: visible;
+}
+/**/
+
+/* --------------------------------
+	ギャラリー
+-------------------------------- */
+#galleria {
+  height: 660px;
+}
+
+/* --------------------------------
+	イメージ
+-------------------------------- */
+.aboutBox {
+  width: 660px;
+  margin-top: 20px;
+}
+.aboutBox ul {
+  width: 660px;
+}
+.aboutBox li {
+  width: 150px;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.aboutBox li:nth-child(4n) {
+  width: 150px;
+  float: left;
+  margin-right: 0;
+}
+
+.intWrap {
+}
+.intHeadWrap {
+  width: 100%;
+}
+.int01 .intHeadWrap {
+  background: url("/common/img/int/intBg01.jpg") no-repeat center center;
+  background-size: cover;
+  border-radius: 10px;
+  line-height: 12em;
+  margin: 20px 0;
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 150%;
+}
+
+figure.intTitle {
+  width: 100%;
+  position: relative;
+}
+figure.intTitle > img {
+  position: absolute;
+  top: -100px;
+  width: 120px;
+  left: 20px;
+  border: 3px solid #ffffff;
+  border-radius: 10px;
+}
+figure.intTitle figcaption h3 {
+  padding-left: 160px;
+  padding-top: 0px;
+}
+figure.intTitle figcaption h3 span {
+  font-size: 60%;
+  padding: 0 0 0 0;
+}
+figure.intTitle figcaption p {
+  font-size: 80%;
+  padding: 0 0 0 0;
+  line-height: 1.8em;
+}
+
+.beforeAfter {
+  background: #fafafa;
+  margin: 20px 0;
+}
+.intWrap .before {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.intWrap .before dt {
+  background: #ffffff;
+  padding: 5px;
+  border: 1px solid #ff0000;
+  color: #ff0000;
+  width: 3em;
+  text-align: center;
+  font-size: 80%;
+}
+.intWrap .before dd {
+  padding: 5px;
+  font-size: 80%;
+}
+.intWrap .after {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10px 10px;
+}
+.intWrap .after dt {
+  background: #ffffff;
+  padding: 5px;
+  border: 1px solid #116cb5;
+  color: #116cb5;
+  width: 3em;
+  text-align: center;
+  font-size: 80%;
+}
+.intWrap .after dd {
+  padding: 5px;
+  font-size: 80%;
+}
+
+.interviewWrap {
+  width: 100%;
+}
+.interviewWrap .interviewBox {
+  border-top: 1px solid #eeeeee;
+  margin: 20px auto;
+}
+.interviewWrap .interviewBox video {
+  margin: 20px auto;
+  display: block;
+}
+.interviewWrap .interviewBox h2 {
+  font-size: 120%;
+  font-weight: bold;
+  background: none;
+  color: #000000;
+  text-indent: 0;
+  margin: 20px auto 10px;
+  width: 95%;
+}
+.interviewWrap .interviewBox p {
+  margin: 0 auto 20px;
+  width: 95%;
+}
+.interviewWrap .interviewBox h2 i {
+  color: #116cb5;
+  margin-right: 10px;
+}

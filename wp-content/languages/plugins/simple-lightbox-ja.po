@@ -1,0 +1,283 @@
+# Translation of Plugins - Simple Lightbox - Development (trunk) in Japanese
+# This file is distributed under the same license as the Plugins - Simple Lightbox - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-03-30 06:32:45+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.0-alpha.3\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Plugins - Simple Lightbox - Development (trunk)\n"
+
+#. translators: 1: Plugin name. 2: PHP version requirement. 3: Plugin
+#. requirements link.
+#: includes/class-requirements-check.php:163
+msgid "%1$s requires PHP %2$s or higher.  Please have your hosting provider update PHP to enable Simple Lightbox. (%3$s)"
+msgstr "%1$s にはPHP %2$s 以上が必要です。 Simple Lightbox を有効化するには、ホスティングプロバイダーに PHP を更新してもらってください (%3$s)。"
+
+#. translators: Plugin requirements link text.
+#: includes/class-requirements-check.php:158
+msgid "Learn More"
+msgstr "詳細を読む"
+
+#. translators: 1: Plugin name
+#: includes/class-requirements-check.php:156
+msgid "Learn more about %1$s's requirements"
+msgstr "%1$s の必須要件についてさらに詳しく読む"
+
+#: controller.php:573
+msgid "Are you sure you want to reset Simple Lightbox's settings?"
+msgstr "Simple Lightbox の設定をリセットしてよいですか ?"
+
+#: controller.php:418
+msgid "Group menu items separately"
+msgstr "グループメニュー項目を別々にする"
+
+#: controller.php:393
+msgid "Enable for Menus"
+msgstr "メニューで有効にする"
+
+#: includes/class.admin.php:584
+msgid "Feedback &amp; Support"
+msgstr "フィードバックとサポート"
+
+#. Author URI of the plugin
+msgid "http://archetyped.com"
+msgstr "https://archetyped.com"
+
+#. Author of the plugin
+msgid "Archetyped"
+msgstr "Archetyped"
+
+#. Description of the plugin
+msgid "The highly customizable lightbox for WordPress"
+msgstr "高いカスタマイズ性の WordPress 用 Lightbox"
+
+#. Plugin URI of the plugin
+msgid "http://archetyped.com/tools/simple-lightbox/"
+msgstr "https://archetyped.com/tools/simple-lightbox/"
+
+#. Plugin Name of the plugin
+#: main.php:27
+msgid "Simple Lightbox"
+msgstr "Simple Lightbox"
+
+#: includes/class.themes.php:86
+msgid "Default (Dark)"
+msgstr "デフォルト (ダーク)"
+
+#: includes/class.themes.php:76
+msgid "Default (Light)"
+msgstr "デフォルト (ライト)"
+
+#: includes/class.themes.php:65
+msgid "Baseline"
+msgstr "ベースライン"
+
+#: includes/class.themes.php:40
+msgid "Theme"
+msgstr "テーマ"
+
+#: includes/class.options.php:224
+msgid "Default"
+msgstr "デフォルト"
+
+#: includes/class.option.php:119
+msgid "Disabled"
+msgstr "無効"
+
+#: includes/class.option.php:119
+msgid "Enabled"
+msgstr "有効"
+
+#: includes/class.fields.php:120
+msgid "Inline wrapper"
+msgstr "インラインのラッパー"
+
+#: includes/class.fields.php:108
+msgid "Select tag"
+msgstr "Select タグ"
+
+#: includes/class.fields.php:102
+msgid "Hidden Field"
+msgstr "隠しフィールド"
+
+#: includes/class.fields.php:71
+msgid "Text Box"
+msgstr "テキストボックス"
+
+#: includes/class.fields.php:63
+msgid "Default Input Element"
+msgstr "デフォルトの入力エレメント"
+
+#: includes/class.fields.php:55
+msgid "Default Element (Closed Tag)"
+msgstr "デフォルトの要素 (閉じタグ)"
+
+#: includes/class.fields.php:43
+msgid "Default Element"
+msgstr "デフォルトの要素"
+
+#: includes/class.admin.php:671 includes/class.admin_action.php:45
+#: includes/class.admin_page.php:142
+msgid "Access Denied"
+msgstr "アクセスが拒否されました"
+
+#. translators: 1: Notice CSS class
+#: includes/class.admin.php:670
+msgid "<strong class=\"%1$s\">Notice:</strong> This update is a <strong class=\"%1$s\">Beta version</strong>. It is highly recommended that you test the update on a test server before updating the plugin on a production server."
+msgstr "<strong class=\"%1$s\">通知:</strong> このアップデートは <strong class=\"%1$s\">ベータバージョン</strong> です。本番サーバーに適応する前にテストサーバーにアップロードしテストすることを推奨します。"
+
+#: includes/class.admin.php:668
+msgid "The settings have been reset"
+msgstr "設定をリセットしました"
+
+#: controller.php:589
+msgid "Get Support &amp; Provide Feedback"
+msgstr "サポートを受ける &amp; フィードバックを提供"
+
+#: controller.php:585
+msgid "<p>Simple Lightbox thrives on your feedback!</p><p>Click the button below to <strong>get help</strong>, <strong>request a feature</strong>, or <strong>provide some feedback</strong>!</p>"
+msgstr "<p>Simple Lightbox はあなたのフィードバックで成長しています。</p><p>下の <strong>ヘルプを受ける</strong> か <strong>新機能の要望</strong>、<strong>フィードバックを提供</strong> ボタンをクリックしてください。</p>"
+
+#: controller.php:575
+msgid "Settings were not reset"
+msgstr "設定をリセットしませんでした"
+
+#: controller.php:574
+msgid "Settings have been reset"
+msgstr "設定をリセットしました"
+
+#: controller.php:572
+msgid "Reset"
+msgstr "リセット"
+
+#: controller.php:567
+msgid "Feedback & Support"
+msgstr "フィードバックとサポート"
+
+#: controller.php:558
+msgid "Settings"
+msgstr "設定"
+
+#: controller.php:557
+msgid "Lightbox Settings"
+msgstr "Lightbox 設定"
+
+#: controller.php:556
+msgid "Lightbox"
+msgstr "Lightbox"
+
+#: controller.php:503
+msgid "Slideshow status format"
+msgstr "スライドショーステータスのフォーマット"
+
+#: controller.php:498
+msgid "Stop Slideshow button"
+msgstr "スライドショー停止ボタン"
+
+#: controller.php:493
+msgid "Start Slideshow button"
+msgstr "スライドショー開始ボタン"
+
+#: controller.php:488
+msgid "Previous Item button"
+msgstr "前の項目へのボタン"
+
+#: controller.php:483
+msgid "Next Item button"
+msgstr "次の項目へのボタン"
+
+#: controller.php:478
+msgid "Close button"
+msgstr "閉じるボタン"
+
+#: controller.php:473
+msgid "Loading indicator"
+msgstr "ローディング時のプログレスバー"
+
+#: controller.php:467
+msgid "Enable default title"
+msgstr "デフォルトのタイトルを有効にする"
+
+#: controller.php:457
+msgid "Overlay Opacity (0 - 1)"
+msgstr "オーバーレイの透明度 (0 - 1)"
+
+#: controller.php:451
+msgid "Loop through items"
+msgstr "項目をループさせる"
+
+#: controller.php:441
+msgid "Slide Duration (Seconds)"
+msgstr "スライドまでの時間 (秒)"
+
+#: controller.php:435
+msgid "Start Slideshow Automatically"
+msgstr "スライドショーを自動的に再生する"
+
+#: controller.php:429
+msgid "Enable animations"
+msgstr "アニメーションを有効にする"
+
+#: controller.php:423
+msgid "Resize lightbox to fit in window"
+msgstr "ウィンドウサイズに合うように Lightbox のサイズを調整する"
+
+#: controller.php:413
+msgid "Group widget items separately"
+msgstr "ウィジェット項目を別々にする"
+
+#: controller.php:408
+msgid "Group gallery items separately"
+msgstr "ギャラリー項目を別々にする"
+
+#: controller.php:403
+msgid "Group items by Post (e.g. on pages with multiple posts)"
+msgstr "項目を投稿ごとにグループ化 (例: 複数の投稿のあるページ上で)"
+
+#: controller.php:398
+msgid "Group items (for displaying as a slideshow)"
+msgstr "項目をグループ化する (スライドショー表示用)"
+
+#: controller.php:388
+msgid "Enable for Widgets"
+msgstr "ウィジェットで有効化"
+
+#: controller.php:383
+msgid "Enable on Archive Pages (tags, categories, etc.)"
+msgstr "アーカイブページ (タグやカテゴリーなど) で有効にする"
+
+#: controller.php:378
+msgid "Enable on Pages"
+msgstr "固定ページで有効にする"
+
+#: controller.php:373
+msgid "Enable on Single Posts"
+msgstr "投稿ページで有効にする"
+
+#: controller.php:368
+msgid "Enable on Home page"
+msgstr "ホームページで有効にする"
+
+#: controller.php:363
+msgid "Enable Lightbox Functionality"
+msgstr "Lightbox 機能を有効にする"
+
+#: controller.php:357
+msgid "Labels"
+msgstr "ラベル"
+
+#: controller.php:353
+msgid "UI"
+msgstr "UI"
+
+#: controller.php:349
+msgid "Grouping"
+msgstr "グループ化"
+
+#: controller.php:345
+msgid "Activation"
+msgstr "有効化"

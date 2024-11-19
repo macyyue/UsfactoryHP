@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+
+
+/*
+	--------------------------------
+	更新日: 2012-02-22
+	--------------------------------
+*/
+
+
+
+/* --------------------------------
+	余白
+-------------------------------- */
+
+body,
+h1, h2, h3, h4, h5, h6,
+p, address, blockquote, pre, div,
+dl, dt, dd, ol, ul, li,
+th, td,
+form, fieldset, input, textarea { margin:0 0 0 0; padding:0 0 0 0; }
+
+select { margin:0 0 0 0; }
+
+
+
+/* --------------------------------
+	アピアランス
+-------------------------------- */
+
+html { height:100%; overflow-y:scroll; }
+
+body { height:100%; }
+
+abbr, acronym { border:0 none; }
+
+q:before, q:after { content:""; }
+
+ol, ul { list-style:none; }
+
+img { border:0 none; vertical-align:bottom; }
+
+object { outline:none; }
+
+table { border-spacing:0; }
+*:first-child+html table { border-collapse:collapse; }/* IE 7 */
+* html table { border-collapse:collapse; }/* IE 6 */
+caption { text-align:left; }
+th,
+td { text-align:left; vertical-align:middle; empty-cells:show; }
+
+hr { display:none; }
+
+fieldset { border:0 none; }
+label { cursor:default; }
+
+iframe { border:0 none; overflow:auto; }
+
+
+
+/* --------------------------------
+	タイポグラフィ
+-------------------------------- */
+
+h1, h2, h3, h4, h5, h6 { font-style:normal; font-weight:normal; font-size:100%; }
+
+p, address, blockquote, pre, div,
+abbr, acronym, dfn, cite, q, code, kbd, samp, var,
+dl, ol, ul,
+caption, th { font-weight:normal; font-style:normal; }
+
+em, strong { font-weight:bold; font-style:normal; }
+
+
+
+/* --------------------------------
+	HTML5
+-------------------------------- */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display:block; margin:0 0 0 0; padding:0 0 0 0; }
+
+
+
+
+
+
+
+

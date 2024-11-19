@@ -1,0 +1,17 @@
+/*
+Theme Name: homepage
+Theme URI: http://example.com
+Author: gaku
+Author URI: http://example.com
+Description: This is homepage
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Tags: light, two-columns, responsive-layout, etc.
+Text Domain: homepage
+*/
+
+@import url('assets/css/header.css');
+@import url('assets/css/footer.css');
+@import url('assets/css/content.css');
+
