@@ -5,7 +5,7 @@ html,
 body {
   background-color: var(--body-bg);
   /* color: var(--common-text); */
-  font-family: Noto Sans JP, sans-serif;
+  /* font-family: Noto Sans JP, sans-serif; */
   /* padding-top: 50px; */
   font-optical-sizing: auto;
   font-weight: 500;
@@ -3033,7 +3033,7 @@ html,
 body {
   background-color: var(--body-bg);
   /* color: var(--common-text); */
-  font-family: Noto Sans JP, sans-serif;
+  /* font-family: Noto Sans JP, sans-serif; */
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
