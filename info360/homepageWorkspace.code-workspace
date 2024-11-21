@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+"workbench.colorCustomizations": {
+    "activityBar.background": "#CFE8E8",      // 活动栏背景（柔和蓝绿）
+    "activityBar.foreground": "#2C5F5F",      // 活动栏前景（深蓝绿，适中对比）
+    "activityBarBadge.background": "#A0C4C4", // 活动栏徽章背景（柔和的浅蓝绿）
+    "activityBar.border": "#B7D5D5",          // 活动栏边框（淡蓝绿）
+
+    "statusBar.background": "#A0C4C4",        // 状态栏背景（浅蓝绿）
+    "statusBar.foreground": "#2C5F5F",        // 状态栏前景（深蓝绿）
+    "statusBar.noFolderBackground": "#CFE8E8",// 无文件夹状态栏背景（柔和蓝绿）
+    "statusBar.noFolderForeground": "#2C5F5F",// 无文件夹状态栏前景（深蓝绿）
+
+    "titleBar.activeBackground": "#CFE8E8",   // 标题栏背景（柔和蓝绿）
+    "titleBar.activeForeground": "#2C5F5F"    // 标题栏前景（深蓝绿）
+}
+	}
+}

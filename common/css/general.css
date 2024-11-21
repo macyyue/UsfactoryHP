@@ -336,6 +336,7 @@ ul[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2].contact:hover {
     object-fit: contain;
     object-position: center center;
   }
+
 }
 .nav_open_btn[data-astro-cid-3ef6ksr2]:hover {
   opacity: 0.5;
@@ -426,6 +427,25 @@ meter {
   top: 20px;
   margin: 0 0 81px;
 }
+@media screen and (max-width:1025px) {
+  .mainimg {
+    margin: 0 auto; 
+    width: 142%; 
+    left: 29%;
+    transform: translateX(-50%); 
+    position: relative; 
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden; /* 防止整个页面产生水平滚动条 */
+  }
+
+  .slick-dots {
+    left: 10%; /* 调整位置，适配主图片居中的宽度变化 */
+  }
+
+}
 
 /*丸いページナビボタン全体を囲むブロック*/
 .slick-dots {
@@ -462,6 +482,7 @@ meter {
 .slick-dots li.slick-active button {
   background: #555; /*色*/
 }
+
 /* スローガン ループ Slogan Loop */
 .eng[data-astro-cid-utstonhj] {
   position: absolute;
@@ -495,6 +516,7 @@ meter {
   padding-left: 1em;
   animation: loop2 50s linear infinite
 }
+
 @keyframes loop {
   0% {
       transform: translate(100%)
@@ -514,16 +536,19 @@ meter {
       transform: translate(-200%)
   }
 }
+
 @media only screen and (max-width: 1025px)  {
   .eng[data-astro-cid-utstonhj]  {
       font-size: 80px;
   }
 }
+
 @media only screen and (max-width: 900px)  {
   .eng[data-astro-cid-utstonhj]  {
       font-size: 50px;
   }
 }
+
 @media only screen and (max-width: 486px) {
   .eng[data-astro-cid-utstonhj]  {
       font-size: 40px;
@@ -536,6 +561,7 @@ meter {
   margin: 0 auto;
   max-width: 1412px; /*最大幅。これ以上広がらない。*/
 }
+
 /*mainブロック設定
 ---------------------------------------------------------------------------*/
 /*mainブロックの設定*/
