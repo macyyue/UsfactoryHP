@@ -12,7 +12,7 @@
 <dd><a href="https://lms.us-factory.jp/mypage/login">ログイン</a></dd>
 </dl>
 <ul>
-<li><a href="/news/">NEWS</a></li>
+<li class="newTitle"><a href="/news/">NEWS</a></li>
 <li><a href="/media/">実績・メディア掲載</a></li>
 <li><a href="/company/">会社概要</a></li>
 <li><a href="/access/">アクセス</a></li>

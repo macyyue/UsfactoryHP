@@ -27,7 +27,7 @@ var
 	// Map over jQuery in case of overwrite
 	_jQuery = window.jQuery,
 
-	// Map over the $ in case of overwrite
+	// Map over the $ in case of overwrites
 	_$ = window.$,
 
 	// [[Class]] -> type pairs

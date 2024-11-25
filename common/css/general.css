@@ -438,11 +438,11 @@ meter {
   }
 
   body {
-    overflow-x: hidden; /* 防止整个页面产生水平滚动条 */
+    overflow-x: hidden;
   }
 
   .slick-dots {
-    left: 10%; /* 调整位置，适配主图片居中的宽度变化 */
+    left: 16%; 
   }
 
 }
@@ -1187,6 +1187,9 @@ nav#gnav .dropmenu li:hover > a {
   overflow: visible;
   height: 40px;
 }
+/* --------------------------------
+ ホームページ　タイトル
+-------------------------------- */
 .topTitle {
   text-align: center;
 
@@ -1196,6 +1199,7 @@ nav#gnav .dropmenu li:hover > a {
   font-size: 3em;
   margin-top: 90px;
 }
+
 /* --------------------------------
  1024px以下のナビ
 -------------------------------- */
@@ -1571,7 +1575,7 @@ main #mainWrap {
   .submenu {
     order: 1;
   }
-} /*追加指定ここまで*/
+} 
 
 /*リンク（全般）設定
 ---------------------------------------------------------------------------*/
@@ -1690,31 +1694,9 @@ a:hover {
 .medialistWrap .viewMore {
   text-align: right;
   font-weight: bold;
-  /* background-color: #ccc; */
   padding: 0.55em 0.5em;
 }
 
-/* 追加 */
-/* #sidebar{ flex: 0 0 34%;} */
-/* .topLinkBox  { width:320px;  padding:7px 0 20px; float:right;}
-.topLinkBox ul  { width:320px; list-style: none; padding: 0;}
-.topLinkBox ul li  { width:320px;margin:0 0 20px 0; margin-bottom: 10px;}
-.topLinkBox ul li img { width:100%;height: auto;}
-.topLinkBox ul li:hover img { opacity: 0.5; transition: opacity 0.5s ease;}
-.topLinkBox ul li:nth-last-child(1)  { width:320px;margin:0 0 0 0;}
-.topLinkBox {
-    overflow: hidden;
-}
-
-.topLinkBox:after {
-    content: "";
-    display: block;
-    clear: both;
-    height: 1px;
-    overflow: hidden;
-} */
-
-/*\*/
 * html .topLinkBox {
   height: 1em;
   overflow: visible;
@@ -1783,7 +1765,7 @@ a:hover {
   background-color: #cc3a26;
   border-top: 10px solid #cc3a26;
 }
-.sideWrap dl dd {
+.sideWrap dl dd , .sideWrap ul li{
   border: 1px solid #dddddd;
   line-height: 2.5em;
   padding: 0 0;
@@ -1823,19 +1805,24 @@ a:hover {
   padding: 0 10px;
   text-decoration: none;
 }
-
-.sideWrap ul {
-  border-top: 1px solid #000000;
-  padding: 20px 0;
-  margin: 20px 0;
-}
-.sideWrap ul li {
-  padding: 10px 0;
-  font-size: 87.5%;
+.sideWrap ul .newTitle{
+  border-top: 1px solid #eeeeee;
+  border-radius: 10px 10px 0 0;
 }
 .sideWrap ul li a {
   text-decoration: none;
+  padding: 0 10px;
+  display: block;
 }
+/* .sideWrap ul {
+  border-top: 1px solid #000000;
+  padding: 20px 0;
+  margin: 20px 0;
+} */
+/* .sideWrap ul li {
+  padding: 10px 0;
+  font-size: 87.5%;
+} */
 
 @media (max-width: 1040px) {
 
