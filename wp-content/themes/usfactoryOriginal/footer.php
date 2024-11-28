@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The template for displaying the footer.
  *
@@ -8,7 +7,6 @@
  * @package usfactory
  */
 ?>
-
 <footer>
 	<div class="footerItem">
 		<div class="ftBoxL">
@@ -43,7 +41,7 @@
 		<p class="credit">Copyright©2013-2024　U’sFactory All Rights Reserved.</p>
 	</div>
 </footer>
-<!-- /#all_container --></article>
+<!-- /#all_container --></article>                                                                                                                              
 <p id="page-top">
 	<a href="#top"><img src="/common/img/homepage/backtop.Phc7XCNW_Z67Kf1.svg" alt=""></a>
 </p>
@@ -53,8 +51,6 @@ $(function() {
 		var showFlag = false; 
 		var topBtn = $('#page-top'); 
 		topBtn.css({'opacity': '0', 'visibility': 'hidden'}); 
-
-	
 		$(window).scroll(function() {
 			if ($(this).scrollTop() > 100) {
 				if (showFlag == false) {
@@ -71,10 +67,7 @@ $(function() {
 			}
 		});
 	});
-	
 </script>
 <?php wp_footer(); ?>
-
 </body>
-
 </html>

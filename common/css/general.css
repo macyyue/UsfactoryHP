@@ -1461,15 +1461,14 @@ article#mainVI {
 }
 article#mainVI ul {
   /* width: 1000px; */
-  display: flex; /* 使用 Flexbox 布局 */
-  flex-wrap: wrap; /* 允许换行 */
-  justify-content: space-between; /* 平均分布 */
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
   margin: 0 auto;
 }
 article#mainVI ul li {
   flex: 1;
-  /* width: 490px; */
   float: left;
   margin-bottom: 20px;
 }
@@ -1506,14 +1505,6 @@ article#subWrap {
 
 	コンテンツラップ 
 -------------------------------- */
-/* 削除しないで */
-/* article#contentsWrap {
-  max-width: 1000px;
-  clear: both;
-  margin: 0 auto 20px;
-} */
-/* article#contentsWrap.topWrap { width:1251px;}  */
-
 /* article#sub_container article#contentsWrap { width:1251px; clear:both;margin:0 auto 20px; } */
 article#contentsWrap #contents {
   display: flex;
@@ -1670,7 +1661,6 @@ a:hover {
   color: #fff;
   display: block;
   text-align: center;
-
 }
 #sidebar .box img {
   max-width: 100%;
@@ -1688,7 +1678,6 @@ a:hover {
   font-weight: bold;
   font-size: larger;
 }
-
 .newsWrap .viewMore,
 .releaseWrap .viewMore,
 .medialistWrap .viewMore {
@@ -1814,15 +1803,6 @@ a:hover {
   padding: 0 10px;
   display: block;
 }
-/* .sideWrap ul {
-  border-top: 1px solid #000000;
-  padding: 20px 0;
-  margin: 20px 0;
-} */
-/* .sideWrap ul li {
-  padding: 10px 0;
-  font-size: 87.5%;
-} */
 
 @media (max-width: 1040px) {
 
@@ -1830,7 +1810,7 @@ a:hover {
     max-width: 760px;
     /* margin: 0; */
   }
-  .sideWrap dl dt , .sideWrap dl dd{
+  .sideWrap dl dt , .sideWrap dl dd ,.sideWrap ul li{
     text-align: center;
   }
 }
@@ -1842,6 +1822,9 @@ a:hover {
   .sideWrap {
     max-width: 100%;
     /* margin: 0; */
+  }
+  article#contentsWrap #contents{
+    margin-top: 0;
   }
 }
 
@@ -1925,6 +1908,11 @@ a:hover {
   margin: 0 0 0;
   line-height: 1.2em;
 }
+@media screen and (max-width:480px) {
+  .recruitWrap h3 {
+    font-size: 90%;
+  }
+}
 .recruitWrap h3 span {
   font-size: 75%;
   font-weight: bold;
@@ -1933,12 +1921,13 @@ a:hover {
 }
 .recruitWrap h5 {
   clear: both;
-  font-size: 100%;
+  font-size: 125%;
   font-weight: bold;
-  background: #074c84;
+  background: #116cb5;
   line-height: 2em;
   text-indent: 0.5em;
   color: #ffffff;
+  border-bottom: 1px solid #eeeeee;
   -webkit-border-radius: 5px 5px 0px 0px / 5px 5px 0px 0px;
   -moz-border-radius: 5px 5px 0px 0px / 5px 5px 0px 0px;
   border-radius: 5px 5px 0px 0px / 5px 5px 0px 0px;
@@ -1957,10 +1946,23 @@ a:hover {
   font-size: 10px;
 }
 
-.recruitWrap table {
-  width: 100%;
+.recruitContent {
+  width: 127%;
   font-size: 87.5%;
   padding: 0 0 40px;
+}
+@media screen and (max-width: 768px) {
+  .recruitContent {
+    width: 100%; 
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .recruitContent {
+    width: 100%; 
+    padding: 0 5px;
+  }
 }
 .recruitWrap table tr {
 }
@@ -2008,8 +2010,12 @@ a:hover {
   height: 1px;
   overflow: hidden;
 }
-
-/*\*/
+@media screen and (max-width:430px) {
+  .recruitWrap table th{
+    width: 8em;
+  }
+}
+/*　採用情報ページ詳細設定*/
 * html .recruitWrap dl {
   height: 1em;
   overflow: visible;
@@ -2029,7 +2035,6 @@ a:hover {
   width: 60%;
   float: right;
 }
-
 .recruitWrap .recruitPhL img,
 .recruitWrap .recruitPhR img {
   width: 100%;
@@ -2068,7 +2073,7 @@ a:hover {
   padding: 4px 10px;
   color: #fff;
   cursor: pointer;
-  background: #428ec9;
+  background: #116cb5;
   border-radius: 5px;
   font-size: 125%;
 }

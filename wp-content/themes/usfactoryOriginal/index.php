@@ -24,9 +24,9 @@ get_header(); ?>
   <div><img src="/common/img/homepage/top-page_04.png" alt="" /></div>
 </div>
 <!-- <div class="eng" role="presentation" data-astro-cid-utstonhj>
-          <span data-astro-cid-utstonhj>建築・建設業のお悩みをDXで解決します！</span>
-          <span data-astro-cid-utstonhj>建築・建設業のお悩みをDXで解決します！</span>
-        </div> -->
+ <span data-astro-cid-utstonhj>建築・建設業のお悩みをDXで解決します！</span>
+ <span data-astro-cid-utstonhj>建築・建設業のお悩みをDXで解決します！</span>
+</div> -->
 <div id="container">
   <main>
     <!-- service -->
@@ -156,7 +156,7 @@ get_header(); ?>
           <div id="sub">
           <address class="box">
               <!-- <h2>BIM建設講座</h2> -->
-              <a href="https://events.teams.microsoft.com/event/d2f041f0-2124-4e4d-ad6f-16f1ae81e6f8@9143b3f8-6101-47ea-bf82-d9e923b6a88e" target="_blank">
+              <a href="">
                 <img src="common/img/20241128_05_webinar.png" />
               </a>
               <a href="/inquiry/" target="_blank">
