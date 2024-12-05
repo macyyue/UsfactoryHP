@@ -1510,7 +1510,7 @@ article#contentsWrap #contents {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 100px;
+  margin-top: 60px;
   padding: 20px;
   justify-content: center;
 }
@@ -1823,9 +1823,6 @@ a:hover {
     max-width: 100%;
     /* margin: 0; */
   }
-  article#contentsWrap #contents{
-    margin-top: 0;
-  }
 }
 
 @media (max-width: 480px) {
@@ -1910,7 +1907,7 @@ a:hover {
 }
 @media screen and (max-width:480px) {
   .recruitWrap h3 {
-    font-size: 90%;
+    font-size: 80%;
   }
 }
 .recruitWrap h3 span {
@@ -1945,13 +1942,16 @@ a:hover {
   padding: 5px 10px;
   font-size: 10px;
 }
-
+.recruitWrap table {
+  width: 100%;
+  padding: 0 0 40px;
+}
 .recruitContent {
   width: 127%;
   font-size: 87.5%;
   padding: 0 0 40px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1040px) {
   .recruitContent {
     width: 100%; 
     padding: 0 10px;
@@ -1964,8 +1964,7 @@ a:hover {
     padding: 0 5px;
   }
 }
-.recruitWrap table tr {
-}
+
 .recruitWrap table th {
   width: 12em;
   padding: 15px 0 15px 15px;
