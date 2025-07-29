@@ -63,7 +63,7 @@
 <!-- <p class="discription"><span>ゼネコン・サブコン様における熟練技術者不足の問題を解決する会社</span></p> -->
 <header>
 	<a
-        href="https://us-factory.jp/"
+        href="/"
         target="_blank"
         class="header_logo"
         data-astro-cid-3ef6ksr2
@@ -85,7 +85,7 @@
           <!-- 開閉ブロック -->
            <li data-astro-cid-3ef6ksr2  class="has-submenu">
             <a href="" data-astro-cid-3ef6ksr2 class="navListicon">BI for AC</a>
-            <ul class="dropmenuCon">
+            <ul class="dropmenus">
               <li><a href="/biforac/">S造・RC造</a></li>
               <li><a href="/mokuzou/">木造</a></li>
               </ul>

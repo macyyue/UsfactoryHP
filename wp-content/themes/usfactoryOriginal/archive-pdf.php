@@ -35,7 +35,7 @@ $query = new WP_Query($args);
 <div class="pdfListBox">
     <?php if ($pdf_url) : ?>
             <p>
-                <a href="<?php echo esc_url($pdf_url); ?>" target="_blank"><?php the_title(); ?><i class="fas fa-file-pdf"></i></a>
+            <a href="<?php echo esc_url($pdf_url); ?>" target="_blank"><?php the_title(); ?><i class="fas fa-file-pdf"></i></a>
         </p>
     <?php else : ?>
             <h4><?php the_title(); ?></h4>
@@ -54,7 +54,6 @@ if (function_exists('mainpagination')) {
 }
 ?>
 </article>
-
 <?php get_sidebar(); ?>
 
 </article>

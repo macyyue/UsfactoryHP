@@ -79,7 +79,6 @@
 <header>
 	<a
         href="/"
-        target="_blank"
         class="header_logo"
         data-astro-cid-3ef6ksr2
       >
@@ -89,7 +88,7 @@
           data-astro-cid-3ef6ksr2
         />
       </a>
-   <nav data-astro-cid-3ef6ksr2>
+   <nav class="main-nav" data-astro-cid-3ef6ksr2>
         <ul data-astro-cid-3ef6ksr2 class="dropmenu">
           <li data-astro-cid-3ef6ksr2>
             <a href="/" data-astro-cid-3ef6ksr2>TOP</a>

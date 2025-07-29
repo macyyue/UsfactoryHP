@@ -21,29 +21,26 @@
 /*テンプレート専用cssファイルの読み込み
 ---------------------------------------------------------------------------*/
 @import url("slide01.css");
+
 /* indexbannerタイル用 */
 @import url("inview.css");
 
-/* --------------------------------
-	body
--------------------------------- */
 html,
 body {
   background-color: var(--body-bg);
-  /* color: var(--common-text); */
   font-family: Noto Sans JP, sans-serif;
-  /* padding-top: 50px; */
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  /* background: linear-gradient(to bottom, #fafcff, #ecf3fd) */
 }
 
-/*opa1のキーフレーム設定（汎用的）
----------------------------------------------------------------------------*/
 @keyframes opa1 {
-	0% {opacity: 0;}
-	100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 :root {
@@ -58,8 +55,6 @@ body {
   --light-gray: #e6e6e6;
 }
 
-/*slide1のキーフレーム設定（footer背景に使用）
----------------------------------------------------------------------------*/
 @keyframes slide1 {
   0% {
     background-position: center bottom;
@@ -83,20 +78,12 @@ body {
   }
 }
 
-/* --------------------------------
-	コンテナ
--------------------------------- */
-
 article#all_container {
   height: 100%;
 }
 article#sub_container {
   height: 100%;
 }
-
-/* --------------------------------
-	ヘッダ
--------------------------------- */
 
 @import "https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Noto+Sans+JP:wght@100..900&display=swap";
 .fixed[data-astro-cid-3ef6ksr2] {
@@ -112,7 +99,6 @@ button[data-astro-cid-3ef6ksr2],
   cursor: pointer;
 }
 header {
-  /* overflow: hidden; */
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
@@ -125,8 +111,14 @@ header {
   gap: 3em;
   top: 0;
 }
+.main-nav {
+  justify-self: end;
+}
+.main-nav a:hover {
+  opacity: 0.7;
+}
 @media only screen and (max-width: 830px) {
-  header{
+  header {
     gap: 2.5vw;
     padding: 0 2.5vw;
   }
@@ -166,23 +158,22 @@ nav[data-astro-cid-3ef6ksr2] {
 
 ul[data-astro-cid-3ef6ksr2] {
   display: flex;
-  /* justify-content: center; */
   gap: 1em;
   align-items: center;
 }
 
-nav[data-astro-cid-3ef6ksr2] ul[data-astro-cid-3ef6ksr2] ul{
+nav[data-astro-cid-3ef6ksr2] ul[data-astro-cid-3ef6ksr2] ul {
   position: absolute;
   z-index: 100;
 }
 
 ul[data-astro-cid-3ef6ksr2] li:last-child {
-  margin-left: auto; 
+  margin-left: auto;
 }
 
 ul[data-astro-cid-3ef6ksr2] li[data-astro-cid-3ef6ksr2]:not(:last-child) {
   text-align: center;
-  margin: 0 2.5em;
+  margin: 0 1em;
 }
 
 @media screen and (max-width: 1241px) and (orientation: portrait) {
@@ -195,7 +186,6 @@ ul[data-astro-cid-3ef6ksr2] li[data-astro-cid-3ef6ksr2]:not(:last-child) {
   ul[data-astro-cid-3ef6ksr2] li[data-astro-cid-3ef6ksr2]:not(:last-of-type) {
     display: none;
   }
-  
 }
 
 @media screen and (max-width: 1241px) and (orientation: portrait) {
@@ -273,7 +263,6 @@ ul[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2].contact {
     justify-content: flex-end;
   }
 }
-
 ul[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2].contact:after {
   content: "";
   display: block;
@@ -336,7 +325,6 @@ ul[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2].contact:hover {
     object-fit: contain;
     object-position: center center;
   }
-
 }
 .nav_open_btn[data-astro-cid-3ef6ksr2]:hover {
   opacity: 0.5;
@@ -409,45 +397,35 @@ meter {
 :where(dialog:modal) {
   all: revert;
 }
-/*詳細ページのサムネイル切り替えブロック
+/*詳細スライドショー設定
 ---------------------------------------------------------------------------*/
 
-/*サムネイル画像*/
 .slick-slide img {
-  cursor: pointer; /*リンクタグではないが、クリックできる事をわかりやすくする為にリンクと同じポインターにしておきます。*/
-  transition: 0.5s; /*マウスオンまでにかける時間。3秒。*/
+  cursor: pointer;
+  transition: 0.5s;
+  width: 1906px;
 }
 .slick-slide img:hover {
-  opacity: 0.8; /*マウスオン時に80%だけ色を出す。つまり薄くなります。*/
+  opacity: 0.8;
 }
+
 /*スライドショー（slickを使用）
 ---------------------------------------------------------------------------*/
 .mainimg {
   position: relative;
   top: 20px;
-  margin: 0 0 81px;
+  z-index: 3;
+  background: var(--white);
 }
-@media screen and (max-width:1025px) {
-  .mainimg {
-    margin: 0 auto; 
-    width: 142%; 
-    left: 29%;
-    transform: translateX(-50%); 
-    position: relative; 
-    overflow-x: hidden;
-  }
-
+@media screen and (max-width: 1025px) {
   body {
     overflow-x: hidden;
   }
-
-  .slick-dots {
+  /* .slick-dots {
     left: 16%; 
-  }
-
+  } */
 }
 
-/*丸いページナビボタン全体を囲むブロック*/
 .slick-dots {
   text-align: center;
   width: 100%;
@@ -455,10 +433,9 @@ meter {
   padding: 0;
   line-height: 1;
   position: absolute;
-  bottom: 0px; /*下からの配置場所指定*/
+  bottom: 0px;
 }
 
-/*丸いページナビボタン１個あたりの設定*/
 .slick-dots li {
   display: inline-block;
   margin: 0 10px;
@@ -470,204 +447,160 @@ meter {
   display: block;
   padding: 0;
   border: none;
-  border: 1px solid #555; /*枠線の幅、線種、色*/
-  text-indent: -9999px; /*デフォルトで文字が出るので画面の外に追い出す指定*/
-  width: 12px; /*ボタンの幅*/
-  height: 12px; /*ボタンの高さ*/
-  border-radius: 50%; /*丸くする指定*/
-  background: #fff; /*背景色。白。*/
+  border: 1px solid #555;
+  text-indent: -9999px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
 }
 
-/*buttonのアクティブ時（現在表示されている画像を示すボタン）*/
 .slick-dots li.slick-active button {
-  background: #555; /*色*/
+  background: #555;
 }
 
-/* スローガン ループ Slogan Loop */
 .eng[data-astro-cid-utstonhj] {
   position: absolute;
   font-family: Barlow, sans-serif;
   font-weight: 700;
   font-size: 8.75em;
-  letter-spacing: .02em;
+  letter-spacing: 0.02em;
   color: var(--primary_blue);
-  opacity: .1;
+  opacity: 0.1;
   display: flex;
-  gap: .5em;
+  gap: 0.5em;
   width: 100%;
   height: 1.5em;
-  overflow: hidden
+  overflow: hidden;
 }
 
 .eng[data-astro-cid-utstonhj] span[data-astro-cid-utstonhj] {
   flex: 0 0 auto;
   white-space: nowrap;
-  overflow: hidden
+  overflow: hidden;
 }
 
 .eng[data-astro-cid-utstonhj] span[data-astro-cid-utstonhj]:nth-of-type(odd) {
   padding-left: 1em;
   padding-right: 1em;
-  animation: loop 50s -25s linear infinite
+  animation: loop 50s -25s linear infinite;
 }
 
 .eng[data-astro-cid-utstonhj] span[data-astro-cid-utstonhj]:nth-of-type(2n) {
   padding-right: 1em;
   padding-left: 1em;
-  animation: loop2 50s linear infinite
+  animation: loop2 50s linear infinite;
 }
 
 @keyframes loop {
   0% {
-      transform: translate(100%)
+    transform: translate(100%);
   }
 
   to {
-      transform: translate(-100%)
+    transform: translate(-100%);
   }
 }
 
 @keyframes loop2 {
   0% {
-      transform: translate(0)
+    transform: translate(0);
   }
 
   to {
-      transform: translate(-200%)
+    transform: translate(-200%);
   }
 }
 
-@media only screen and (max-width: 1025px)  {
-  .eng[data-astro-cid-utstonhj]  {
-      font-size: 80px;
+@media only screen and (max-width: 1025px) {
+  .eng[data-astro-cid-utstonhj] {
+    font-size: 80px;
   }
 }
 
-@media only screen and (max-width: 900px)  {
-  .eng[data-astro-cid-utstonhj]  {
-      font-size: 50px;
+@media only screen and (max-width: 900px) {
+  .eng[data-astro-cid-utstonhj] {
+    font-size: 50px;
   }
 }
 
 @media only screen and (max-width: 486px) {
-  .eng[data-astro-cid-utstonhj]  {
-      font-size: 40px;
+  .eng[data-astro-cid-utstonhj] {
+    font-size: 40px;
   }
 }
 
-/*containerブロック
----------------------------------------------------------------------------*/
-#container {
-  margin: 0 auto;
-  max-width: 1412px; /*最大幅。これ以上広がらない。*/
-}
-
-/*mainブロック設定
----------------------------------------------------------------------------*/
-/*mainブロックの設定*/
-main {
-  padding: 50px 0px; /*上下、左右へのブロック内の余白*/
-}
-
-/*mainブロック内のh2タグ*/
-main h2 {
+/* main h2 {
   position: relative;
   margin: 0;
-  margin: 0 0 20px; /*上、左右、下に空けるスペース*/
-  letter-spacing: 0.1em; /*文字間隔を少しだけ広くとる設定*/
-  font-size: 2.2em; /*文字サイズ。親要素の220%に。*/
-  /* border-bottom: 1px solid; */
+  margin: 0 0 20px;
+  letter-spacing: 0.1em;
+  font-size: 2.2em;
   color: var(--primary_blue);
-}
+} */
 
-/*h2タグ内のspaタグ。飾り文字用。*/
-main h2 span {
-  display: block;
-  font-size: 0.5em; /*文字サイズ。親要素の50%に。*/
-  color: #162f80; /*文字色*/
-}
-
-/*mainブロック内のh3タグ*/
-main h3 {
-  padding: 5px 20px; /*上下、左右への余白*/
-  margin: 0 0 20px; /*上、左右、下に空けるスペース*/
-  background: #f7f7f7; /*背景色*/
-  border-radius: 5px; /*角を丸くする指定*/
-  border: 1px solid #ddd; /*枠線の幅、線種、色*/
-}
-
-/*mainブロックのpタグ*/
 main p {
-  margin: 0 0 30px; /*上、左右、下へ空けるスペース*/
+  margin: 0 0 30px;
 }
 
 main p + p {
   margin-top: -10px;
 }
 
-/*.mainのsectionのpaddingを一旦リセット*/
 .main section {
   padding: 0;
 }
 
-/*１つ目以外のsectionの上部に空ける余白。section同士の上下間にとる余白です。*/
-.main section:not(:nth-of-type(1)) {
+/* .main section:not(:nth-of-type(1)) {
   padding-top: 3%;
-}
-
-/*main（※頭にドット「.」のない「main」とは全く異なります。）*/
-.main {
-  order: 2; /*表示させる順番。数字が小さい方が最初に表示されます。*/
-}
-/*listブロック
----------------------------------------------------------------------------*/
-/*listブロック全体を囲むブロック（※.list-squareでも使用しています）*/
-.list-container {
-  display: flex; /*flexボックスを使う指定*/
-  flex-wrap: wrap; /*折り返す指定*/
-}
-
-/*１個あたりのボックス設定*/
-.list {
-  display: flex; /*flexボックスを使う指定*/
-  flex-direction: column; /*子要素を縦並びにする*/
-  justify-content: space-between; /*並びかたの種類の指定*/
-  margin-bottom: 30px; /*ボックス同士の上下間に空けるスペース*/
-  padding: 20px; /*ボックス内の余白*/
-  background: #fff; /*背景色*/
-  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2); /*ボックスの影。右へ、下へ、ぼかし幅、0,0,0は黒の事で0.1は色が10%出た状態。*/
-  border-radius: 10px;
-  overflow: hidden;
-  width: 48%; /*幅*/
-  margin-right: 2%; /*右側に空けるスペース*/
-}
-@media screen and (max-width: 420px) {
-  .list{
-    width: auto;
-    margin: 15px;
-  } 
-  }
-/*２の倍数のlistブロックへの追加設定*/
-/* .list:nth-of-type(2n) {
-  margin-right: 0; 
 } */
 
-/*ボックス内のfigure画像*/
-.list figure {
-  margin: -20px -20px 0; /*上の.listで設定しているpadding分を相殺して画像をブロックいっぱいに出す*/
+.main {
+  order: 2;
 }
-.list figure img{
-  width: 100%;
 
+.list-container {
+  display: flex;
+  flex-wrap: wrap;
 }
-/*ボックス内のh4タグ*/
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 48%;
+  margin-right: 2%;
+}
+
+@media screen and (max-width: 420px) {
+  .list {
+    width: auto;
+    margin: 15px;
+  }
+}
+
+.list figure {
+  margin: -20px -20px 0;
+}
+
+.list figure img {
+  width: 100%;
+}
+
 .list h4 {
   font-weight: bold;
-  margin: 1em 0 0.5em; /*上、左右、下への余白*/
+  margin: 1em 0 0.5em;
 }
+
 .trademark {
-  font-size: 0.7em; /* 缩小符号 */
-  vertical-align: super; /* 向上对齐 */
+  font-size: 0.7em;
+  vertical-align: super;
 }
 /*ボックス内のtextブロック*/
 .list .text {
@@ -677,45 +610,40 @@ main p + p {
 /*ボックス内のpタグ*/
 .list p {
   margin: 0;
-  font-size: 0.8em; /*文字サイズを80%に*/
+  font-size: 0.8em;
 }
 
 /*list2ブロック
 ---------------------------------------------------------------------------*/
 .list2 {
-  display: flex; /*flexボックスを使う指定*/
-  margin-bottom: 30px; /*ボックス同士の上下間に空けるスペース*/
-  padding: 10px; /*ボックス内の余白*/
-  background: #fff; /*背景色*/
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1); /*ボックスの影。右へ、下へ、ぼかし幅、0,0,0は黒の事で0.1は色が10%出た状態。*/
+  display: flex;
+  margin-bottom: 30px;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
 }
 
-/*ボックス内のfigure画像*/
 .list2 figure {
-  width: 30%; /*幅*/
-  margin: -10px 10px -10px -10px; /*上の.list2で設定しているpadding分を相殺して画像をブロックいっぱいに出す*/
+  width: 30%;
+  margin: -10px 10px -10px -10px;
 }
 
-/*ボックス内のtextブロック*/
 .list2 .text {
   flex: 1;
-  display: flex; /*flexボックスを使う指定*/
-  flex-direction: column; /*子要素を縦並びにする*/
-  justify-content: space-between; /*並びかたの種類の指定*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-/*ボックス内のh4タグ*/
 .list2 h4 {
-  margin: 0 0 0.5em; /*上、左右、下への余白*/
+  margin: 0 0 0.5em;
 }
 
-/*ボックス内のpタグ*/
 .list2 p {
   margin: 0;
-  font-size: 0.8em; /*文字サイズを80%に*/
+  font-size: 0.8em;
 }
 
-/*list2内でのbtn*/
 .list2 p:not(.btn) {
   flex: 1;
 }
@@ -723,34 +651,27 @@ main p + p {
 /*list-squareブロック
 ---------------------------------------------------------------------------*/
 /*１個あたりのボックス設定*/
+
 .list-square {
   width: 33.3%; /*幅*/
 }
 
-/*ボックス内のtextブロック*/
 .list-square .text {
   position: absolute;
   left: 0px;
   bottom: 0px;
   width: 100%;
-  background: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /*背景色。0,0,0は黒の事で0.5は色が50%出た状態*/
-  color: #fff; /*文字色*/
-  padding: 10px 20px; /*上下、左右へのボックス内の余白*/
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px 20px;
 }
 
-/*ボックス内のh4タグとpタグ*/
 .list-square h4,
 .list-square p {
   margin: 0;
-  font-size: 0.8em; /*文字サイズを親要素の80%に*/
+  font-size: 0.8em;
 }
 
-/*小さな端末では説明文は非表示に。表示させてしまうと画像がかなり隠れてしまう可能性があります。*/
 .list-square p {
   display: none;
 }
@@ -760,29 +681,29 @@ main p + p {
 .list,
 .list2,
 .list-square {
-  position: relative; /*子要素でabsolute(絶対配置)を使うための指定*/
+  position: relative;
 }
 
-/*左上の丸いアイコン*/
 .list .icon,
 .list2 .icon,
 .list-square .icon {
-  display: flex; /*flexボックスを使う指定*/
-  justify-content: center; /*並びかたの種類の指定*/
-  align-items: center; /*垂直揃えの指定。上下中央に配置されるように。*/
-  font-size: 0.6em; /*文字サイズ*/
-  background: #ff0000; /*背景色*/
-  color: #fff; /*文字色*/
-  width: 60px; /*幅*/
-  height: 60px; /*高さ*/
-  line-height: 1.5; /*行間*/
-  border-radius: 50%; /*角丸のサイズ。円形になります。*/
-  text-align: center; /*テキストをセンタリング*/
-  position: absolute; /*親のrelativeに対して絶対配置させる指示*/
-  left: -10px; /*listブロックに対して左からの配置場所の指定*/
-  top: -10px; /*listブロックに対して上からの配置場所の指定*/
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /*ボックスの影。右へ、下へ、ぼかし幅。0,0,0は黒の事で0.3は色が30%出た状態。*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.6em;
+  background: #ff0000;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  line-height: 1.5;
+  border-radius: 50%;
+  text-align: center;
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
+
 /*btnの設定
 ---------------------------------------------------------------------------*/
 p.btn {
@@ -791,7 +712,7 @@ p.btn {
 
 /*ボタンを囲むブロック*/
 .btn {
-  text-align: center; /*内容をセンタリング*/
+  text-align: center;
 }
 
 /*ボタン*/
@@ -801,258 +722,165 @@ p.btn {
   border: none;
   display: block;
   font-size: 1em;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /*ボックスの影。右へ、下へ、ぼかし幅の順。0,0,0は黒の事で0.2は色が20%出た状態。*/
-  background: var(--primary_blue); /*背景色*/
-  letter-spacing: 0.1em; /*文字間隔を少し広くする指定*/
-  color: #fff; /*文字色*/
-  transition: 0.3s; /*hoverまでにかける時間。0.3秒。*/
-  padding: 0.7em 1em; /*上下、左右へのボタン内の余白*/
-  margin-top: 2em; /*ボタンの上に１文字分のスペースを空ける*/
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  background: var(--primary_blue);
+  letter-spacing: 0.1em;
+  color: #fff;
+  transition: 0.3s;
+  padding: 0.7em 1em;
+  margin-top: 2em;
   border-radius: 5px;
 }
 
-/*ボタンのマウスオン時*/
 .btn a:hover,
 .btn input:hover {
-  cursor: pointer; /*inputタグを使う場合に「手」のマークになるように。リンクと同じ表示になるようにという事です。*/
-  opacity: 1; /*一番上のリンク設定でhoverにopacityを指定しているので、適用されないようにする。*/
-  filter: brightness(1.2); /*少しだけ明るくする。*/
-  transform: scale(1.02); /*実寸の102%に拡大*/
+  cursor: pointer;
+  opacity: 1;
+  filter: brightness(1.2);
+  transform: scale(1.02);
 }
 
-/*ボタン内にiタグを使った場合*/
 .btn i {
-  margin-left: 15px; /*テキストとの間に空ける余白*/
-  opacity: 0.5; /*透明度。色が50%でた状態。*/
-  transform: scale(1.4); /*サイズを1.4倍にする*/
+  margin-left: 15px;
+  opacity: 0.5;
+  transform: scale(1.4);
 }
-/*---------------------------------------------------------------------------
-ここから下は画面幅400px以下の追加指定
-ハンバーガーメニューがコンテンツが少し重なってしまいますが、画面が狭いのでコンテンツが見える範囲を優先しました。
----------------------------------------------------------------------------*/
+
 @media screen and (max-width: 400px) {
-  /*sectionタグ、詳細ページ、２カラム利用時、フッターメニューブロックの共通設定
-  ---------------------------------------------------------------------------*/
   section,
   main > article,
   .c2,
   #footermenu {
-    padding: 3% 10px; /*上下、左右へのボックス内の余白*/
+    padding: 3% 10px;
   }
-
-  /*　※注意！　下の閉じカッコ　}　はこのブロックに必要なので、削除しないで下さい。　*/
 }
 
-/*---------------------------------------------------------------------------
-  ここから下は画面幅600px以上の追加指定
-  ---------------------------------------------------------------------------*/
 @media screen and (min-width: 600px) {
-  /*header（ロゴなどが入った最上段のブロック）
-  ---------------------------------------------------------------------------*/
-  /*トップページのロゴ*/
   .home header #logo {
-    width: 20%; /*ロゴの幅*/
-    bottom: -20%; /*ヘッダーに対して、下からの配置場所の指定*/
-    left: 40%; /*ヘッダーに対して、左からの配置場所の指定*/
+    width: 20%;
+    bottom: -20%;
+    left: 40%;
   }
 
-  /*ヘッダー下のメニュー
-  ---------------------------------------------------------------------------*/
-  /*メニューブロック全体*/
   #header-menu ul {
     font-size: 1em;
   }
 
-  /*トップページのみ。２つ目メニューの右側に余白を作る。ロゴとの横並びのバランスをここで調整して下さい。*/
   .home #header-menu ul li:nth-of-type(2) {
     margin-right: 20%;
   }
-
-
-  /*　※注意！　下の閉じカッコ　}　はこのブロックに必要なので、削除しないで下さい。　*/
 }
 
-/*---------------------------------------------------------------------------
-  ここから下は画面幅900px以上の追加指定
-  ---------------------------------------------------------------------------*/
 @media screen and (min-width: 900px) {
-  /*全体の設定
-  ---------------------------------------------------------------------------*/
-  /* html,
-  body {
-    font-size: 16px; 
-  } */
-
-  /*sectionタグ、詳細ページ、２カラム利用時、フッターメニューブロックの共通設定
-  ---------------------------------------------------------------------------*/
   section,
   main > article,
   .c2 {
-    padding: 3% 80px; /*上下、左右へのボックス内の余白*/
+    padding: 3% 80px;
   }
 
-  /*header（ロゴなどが入った最上段のブロック）
-  ---------------------------------------------------------------------------*/
-  /*ロゴ画像（※トップページ以外）*/
   body:not(.home) header #logo img {
-    height: 75px; /*画像の高さ。ハンバーガーメニューとの配置バランスがあるのでここでは高さで指定しました。*/
+    height: 75px;
   }
 
-  /*ヘッダー下のメニュー
-  ---------------------------------------------------------------------------*/
-  /*メニューブロック全体*/
   #header-menu ul {
-    font-size: 1.2em; /*文字サイズ。親要素の120%に。*/
+    font-size: 1.2em;
   }
 
-  /*メニューブロック設定
-  ---------------------------------------------------------------------------*/
   #menubar {
-    width: 40%; /*ブロックの幅。*/
+    width: 40%;
   }
 
-  /*３本バー（ハンバーガー）アイコン設定
-  ---------------------------------------------------------------------------*/
-  /*３本バーとMENUテキストを囲むブロック*/
   #menubar_hdr {
-    transform: scale(1); /*小さな端末用で60%にしているのを原寸大に戻す*/
+    transform: scale(1);
   }
 
-  /*「MENU」の文字*/
   #menubar_hdr p {
-    display: block; /*表示させる*/
-    margin: 10px 0 0; /*上、左右、下へのマージン*/
-    font-size: 0.7em; /*文字サイズ。親要素の70%に。*/
+    display: block;
+    margin: 10px 0 0;
+    font-size: 0.7em;
   }
 
-  /*「MENU」の文字をトップページ以外は非表示にする*/
   body:not(.home) #menubar_hdr p {
     display: none;
   }
 
-  /*h2タグの装飾（kazari1）*/
   main h2.flag::before,
   main h2.flag::after {
-    width: 150px; /*画像の幅*/
-    height: 150px; /*画像の高さ*/
+    width: 150px;
+    height: 150px;
   }
 
-  /*2カラムの場合
-  ---------------------------------------------------------------------------*/
-  /*2カラム（.mainと.sub）を囲むブロック*/
-  .c2 {
-    flex-direction: row; /*子要素を横並びにする*/
-    justify-content: space-between; /*並びかたの種類の指定*/
-  }
-
-  /*main（※頭にドット「.」のない「main」とは全く異なります。）*/
-  .main {
-    width: calc(
-      100% - 250px
-    ); /*幅。250pxというのは、下のsubのwidthの値に余白分を加えた数字です。ちょうど200pxにしてしまうとキツキツになるので。*/
-  }
-
-  /*sub*/
-  .sub {
-    width: 200px; /*幅。変更する際は上の.mainのwidthも調整して下さい。*/
-  }
-
-  /*「お知らせ」ブロック
-  ---------------------------------------------------------------------------*/
-  /*日付(dt)設定*/
   #new dt {
-    width: 14em; /*幅。14文字(em)分。*/
-    display: flex; /*flexボックスを使う指定*/
-    justify-content: space-between; /*日付とアイコンをそれぞれ端に寄せる*/
+    width: 14em;
+    display: flex;
+    justify-content: space-between;
   }
 
-  /*日付の横のマーク（共通設定）*/
   #new dt span {
-    display: inline-block; /*表示させる*/
-    width: 7.5em; /*幅。7.5文字(em)分。*/
-    background: #999; /*背景色*/
-    color: #fff; /*文字色*/
-    font-size: 0.8em; /*文字サイズを80%に。*/
-    text-align: center; /*文字をセンタリング*/
-    margin-right: 1em; /*アイコンの右側に空けるスペース*/
-    align-self: flex-start; /*高さを間延びさせない指定*/
-    line-height: 1.8; /*行間を少し狭く*/
+    display: inline-block;
+    width: 7.5em;
+    background: #999;
+    color: #fff;
+    font-size: 0.8em;
+    text-align: center;
+    margin-right: 1em;
+    align-self: flex-start;
+    line-height: 1.8;
     position: relative;
-    top: 0.4em; /*上下の配置バランスの微調整*/
+    top: 0.4em;
   }
 
-  /*icon-bg1設定。サンプルテンプレートでは「イベント」と書いてあるマーク*/
   #new dt span.icon-bg1 {
-    background: #162f80; /*背景色*/
+    background: #162f80;
   }
 
-  /*icon-bg2設定。サンプルテンプレートでは「お買い物」と書いてあるマーク*/
   #new dt span.icon-bg2 {
-    background: #c86e03; /*背景色*/
+    background: #c86e03;
   }
 
-  /*記事(dd)設定*/
   #new dd {
-    width: calc(100% - 14em); /*「14em」は上の「#new dt」のwidthの値です。*/
+    width: calc(100% - 14em);
   }
 
-  /*listブロック
-  ---------------------------------------------------------------------------*/
-  /*１個あたりのボックス設定*/
   .list {
-    width: 24%; /*幅*/
-    margin-right: 1.33%; /*右側に空けるスペース*/
+    width: 24%;
+    margin-right: 1.33%;
   }
 
-  /*２の倍数のlistブロックへの追加設定。小さな端末用で0と指定しているので、改めて大きな端末用のマージンを指定。*/
   .list:nth-of-type(2n) {
     margin-right: 1.33%;
   }
 
-  /*４の倍数のlistブロックへの追加設定*/
   .list:nth-of-type(4n) {
-    margin-right: 0; /*右側の余白をなくす*/
+    margin-right: 0;
   }
 
-  /*list2ブロック
-  ---------------------------------------------------------------------------*/
   .list2 {
-    padding: 30px; /*ボックス内の余白*/
+    padding: 30px;
   }
 
-  /*ボックス内のfigure画像*/
   .list2 figure {
-    width: 30%; /*幅*/
-    margin: -30px 30px -30px -30px; /*上の.listで設定しているpadding分を相殺して画像をブロックいっぱいに出す*/
+    width: 30%;
+    margin: -30px 30px -30px -30px;
   }
 
-  /*list-squareブロック
-  ---------------------------------------------------------------------------*/
-  /*小さな端末で非表示にした説明文を表示させる。*/
   .list-square p {
     display: block;
   }
 
-  /*テーブル
-  ---------------------------------------------------------------------------*/
-  /*テーブル１行目に入った見出し部分（※caption）*/
   .ta1 caption {
-    padding: 5px 15px; /*上下、左右へのボックス内の余白*/
+    padding: 5px 15px;
   }
 
-  /*th（左側）、td（右側）の共通設定*/
   .ta1 th,
   .ta1 td {
-    padding: 20px 15px; /*上下、左右へのボックス内の余白*/
+    padding: 20px 15px;
   }
 
-  /*th（左側）のみの設定*/
   .ta1 th {
-    width: 20%; /*幅*/
+    width: 20%;
   }
 
-  /*その他
-  ---------------------------------------------------------------------------*/
   .ws {
     width: 48%;
     display: inline;
@@ -1060,23 +888,763 @@ p.btn {
   .sh {
     display: none;
   }
-  /*　※注意！　下の閉じカッコ　}　はこのブロックに必要なので、削除しないで下さい。　*/
+}
+
+section[data-astro-cid-utstonhj] {
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  padding-bottom: 3em;
+}
+
+div[data-astro-cid-utstonhj].header {
+  margin: 0 auto;
+  display: block;
+  display: flex;
+  justify-content: center;
+  background-color: var(--white);
+}
+
+div[data-astro-cid-utstonhj].header .header__inner[data-astro-cid-utstonhj] {
+  width: 90vw;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 3em;
+  padding-top: 3.5%;
+}
+
+@media only screen and (max-width: 486px) {
+  div[data-astro-cid-utstonhj].header .header__inner[data-astro-cid-utstonhj] {
+    padding-top: 12.5vw;
+  }
+}
+
+div[data-astro-cid-utstonhj].header h2[data-astro-cid-utstonhj] {
+  display: block;
+  color: var(--white);
+  text-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 4px 8px,
+    rgba(0, 0, 0, 0.2) 0px 8px 16px;
+  font-size: 2.25em;
+  display: flex;
+  flex-direction: column;
+  font-feature-settings: "palt";
+  line-height: 1.5;
+}
+
+div[data-astro-cid-utstonhj].header
+  h2[data-astro-cid-utstonhj]
+  em[data-astro-cid-utstonhj] {
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 1199px) {
+  div[data-astro-cid-utstonhj].header h2[data-astro-cid-utstonhj] {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (max-width: 486px) and (max-width: 486px) {
+  div[data-astro-cid-utstonhj].header h2[data-astro-cid-utstonhj] {
+    font-size: 24px;
+    font-size: 6.1728395062vw;
+  }
+}
+
+@media only screen and (max-width: 486px) and (min-width: 487px) and (max-width: 768px) {
+  div[data-astro-cid-utstonhj].header h2[data-astro-cid-utstonhj] {
+    font-size: 24px;
+    font-size: 3.125vw;
+  }
+}
+
+@media only screen and (max-width: 486px) and (min-width: 769px) {
+  div[data-astro-cid-utstonhj].header h2[data-astro-cid-utstonhj] {
+    font-size: 24px;
+  }
+}
+
+div[data-astro-cid-utstonhj].header p[data-astro-cid-utstonhj] {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.25em;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--primary_blue);
+}
+
+@media only screen and (max-width: 486px) and (max-width: 486px) {
+  div[data-astro-cid-utstonhj].header p[data-astro-cid-utstonhj] {
+    font-size: 16px;
+    font-size: 4.1152263374vw;
+  }
+}
+
+@media only screen and (max-width: 486px) and (min-width: 487px) and (max-width: 768px) {
+  div[data-astro-cid-utstonhj].header p[data-astro-cid-utstonhj] {
+    font-size: 16px;
+    font-size: 2.0833333333vw;
+  }
+}
+
+@media only screen and (max-width: 486px) and (min-width: 769px) {
+  div[data-astro-cid-utstonhj].header p[data-astro-cid-utstonhj] {
+    font-size: 16px;
+  }
+}
+
+.content[data-astro-cid-k7dvyszk] img[data-astro-cid-utstonhj] {
+  position: relative;
+  z-index: 0;
+}
+
+.fixed[data-astro-cid-5d2te5s5] {
+  position: fixed;
+  top: var(--scroll-y);
+  left: 0;
+  width: 100%;
+  height: 110%;
+  overflow: hidden;
+}
+.content[data-astro-cid-k7dvyszk] {
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+@media screen and (max-width: 1241px) and (orientation: portrait) {
+  .content[data-astro-cid-k7dvyszk]:before {
+    height: 3em;
+  }
+}
+
+.content[data-astro-cid-k7dvyszk] article[data-astro-cid-k7dvyszk] {
+  width: 90vw;
+  max-width: 1440px;
+  margin: -50px auto;
+  display: block;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 2;
+}
+
+.content[data-astro-cid-k7dvyszk] ul[data-astro-cid-k7dvyszk] {
+  width: 85%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2em;
+  counter-reset: number 0;
+}
+
+@media screen and (max-width: 1241px) and (orientation: portrait) {
+  .content[data-astro-cid-k7dvyszk] ul[data-astro-cid-k7dvyszk] {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 1em;
+    max-width: 85%;
+  }
+}
+
+@media only screen and (max-width: 0px) {
+  .content[data-astro-cid-k7dvyszk] ul[data-astro-cid-k7dvyszk] {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 1em;
+    max-width: 55%;
+    max-width: 70%;
+  }
+}
+
+@media only screen and (max-width: 486px) {
+  .content[data-astro-cid-k7dvyszk] ul[data-astro-cid-k7dvyszk] {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 1em;
+    max-width: 85%;
+  }
+}
+
+.content[data-astro-cid-k7dvyszk] li[data-astro-cid-k7dvyszk] {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  border-radius: 0.5em;
+  filter: drop-shadow(0.5em 0.5em 0.5em rgba(14, 78, 154, 0.25));
+  overflow: hidden;
+}
+
+.content[data-astro-cid-k7dvyszk]
+  li[data-astro-cid-k7dvyszk]
+  figure[data-astro-cid-k7dvyszk] {
+  min-width: 0;
+  width: 100%;
+  grid-row: 1/2;
+  aspect-ratio: 4/3;
+  position: relative;
+}
+
+.content[data-astro-cid-k7dvyszk]
+  li[data-astro-cid-k7dvyszk]
+  figure[data-astro-cid-k7dvyszk]
+  img[data-astro-cid-k7dvyszk] {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content[data-astro-cid-k7dvyszk]
+  li[data-astro-cid-k7dvyszk]
+  figure[data-astro-cid-k7dvyszk]:after {
+  counter-increment: number 1;
+  content: "0" counter(number) " ";
+  position: absolute;
+  z-index: 2;
+  color: var(--white);
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  font-family: Barlow, sans-serif;
+  font-size: 600%;
+  right: 0.2em;
+  bottom: 0;
+  line-height: 0.8em;
+}
+
+@media only screen and (max-width: 1199px) {
+  .content[data-astro-cid-k7dvyszk]
+    li[data-astro-cid-k7dvyszk]
+    figure[data-astro-cid-k7dvyszk]:after {
+    font-size: 500%;
+  }
+}
+
+@media screen and (max-width: 1241px) and (orientation: portrait) {
+  .content[data-astro-cid-k7dvyszk]
+    li[data-astro-cid-k7dvyszk]
+    figure[data-astro-cid-k7dvyszk]:after {
+    font-size: 600%;
+  }
+}
+
+.content[data-astro-cid-k7dvyszk]
+  li[data-astro-cid-k7dvyszk]
+  div[data-astro-cid-k7dvyszk] {
+  grid-row: 2/3;
+  padding: 1.5em 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 0.5em;
+  background-color: var(--white);
+}
+
+@media screen and (max-width: 1241px) and (orientation: portrait) {
+  .content[data-astro-cid-k7dvyszk]
+    li[data-astro-cid-k7dvyszk]
+    div[data-astro-cid-k7dvyszk] {
+    padding: 1em 1em 1.5em;
+  }
+}
+
+.content[data-astro-cid-k7dvyszk]
+  li[data-astro-cid-k7dvyszk]
+  div[data-astro-cid-k7dvyszk]
+  h3[data-astro-cid-k7dvyszk] {
+  display: block;
+  font-size: 1em;
+  color: var(--primary_blue);
+  letter-spacing: 0.02em;
+}
+
+.content[data-astro-cid-k7dvyszk]
+  li[data-astro-cid-k7dvyszk]
+  div[data-astro-cid-k7dvyszk]
+  h3[data-astro-cid-k7dvyszk]
+  em[data-astro-cid-k7dvyszk] {
+  font-size: 1.5em;
+}
+
+@media only screen and (max-width: 486px) and (max-width: 486px) {
+  .content[data-astro-cid-k7dvyszk]
+    li[data-astro-cid-k7dvyszk]
+    div[data-astro-cid-k7dvyszk]
+    h3[data-astro-cid-k7dvyszk] {
+    font-size: 16px;
+    font-size: 4.1152263374vw;
+  }
+}
+
+@media only screen and (max-width: 486px) and (min-width: 487px) and (max-width: 768px) {
+  .content[data-astro-cid-k7dvyszk]
+    li[data-astro-cid-k7dvyszk]
+    div[data-astro-cid-k7dvyszk]
+    h3[data-astro-cid-k7dvyszk] {
+    font-size: 16px;
+    font-size: 2.0833333333vw;
+  }
+}
+
+@media only screen and (max-width: 486px) and (min-width: 769px) {
+  .content[data-astro-cid-k7dvyszk]
+    li[data-astro-cid-k7dvyszk]
+    div[data-astro-cid-k7dvyszk]
+    h3[data-astro-cid-k7dvyszk] {
+    font-size: 16px;
+  }
+}
+
+.content[data-astro-cid-k7dvyszk]
+  li[data-astro-cid-k7dvyszk]
+  div[data-astro-cid-k7dvyszk]
+  p[data-astro-cid-k7dvyszk] {
+  text-align: justify;
+  font-size: 0.9em;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+  border-left: 2px solid var(--primary_blue);
+  padding-left: 0.5em;
+}
+
+@media only screen and (max-width: 486px) and (max-width: 486px) {
+  .content[data-astro-cid-k7dvyszk]
+    li[data-astro-cid-k7dvyszk]
+    div[data-astro-cid-k7dvyszk]
+    p[data-astro-cid-k7dvyszk] {
+    font-size: 16px;
+    font-size: 4.1152263374vw;
+  }
+}
+
+@media only screen and (max-width: 486px) and (min-width: 487px) and (max-width: 768px) {
+  .content[data-astro-cid-k7dvyszk]
+    li[data-astro-cid-k7dvyszk]
+    div[data-astro-cid-k7dvyszk]
+    p[data-astro-cid-k7dvyszk] {
+    font-size: 16px;
+    font-size: 2.0833333333vw;
+  }
+}
+
+@media only screen and (max-width: 486px) and (min-width: 769px) {
+  .content[data-astro-cid-k7dvyszk]
+    li[data-astro-cid-k7dvyszk]
+    div[data-astro-cid-k7dvyszk]
+    p[data-astro-cid-k7dvyszk] {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1241px) and (orientation: portrait) {
+  .content[data-astro-cid-k7dvyszk]
+    li[data-astro-cid-k7dvyszk]
+    div[data-astro-cid-k7dvyszk]
+    p[data-astro-cid-k7dvyszk] {
+    border-left: 0;
+    padding-left: 0;
+    line-height: 1.5;
+  }
+}
+
+.bg[data-astro-cid-utstonhj] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.bg[data-astro-cid-utstonhj] img[data-astro-cid-utstonhj] {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* --------------------------------
+　サービス
+-------------------------------- */
+section[data-astro-cid-zzvl4fxx] {
+    position: relative;
+    z-index: 1;
+    background-color: var(--white)
+}
+
+section[data-astro-cid-zzvl4fxx]:before {
+    content: "";
+    display: block;
+    position: sticky;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #fafcff, #ecf3fd)
+}
+
+section[data-astro-cid-zzvl4fxx]:after {
+    content: "SERVICES";
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    font-size: 10em;
+    font-family: Barlow, sans-serif;
+    font-weight: 700;
+    letter-spacing: .02em;
+    color: var(--primary_blue);
+    opacity: .05;
+    max-width: 100%;
+    overflow: hidden
+}
+
+section[data-astro-cid-zzvl4fxx] .inner[data-astro-cid-zzvl4fxx] {
+    z-index: 2;
+    width: 90vw;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: block;
+    margin-top: -100vh;
+    padding-top: 5%;
+    padding-bottom: 7.5%;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: auto 65%;
+    gap: 1em;
+    position: relative
+}
+
+@media screen and (max-width: 1241px) and (orientation: portrait) {
+    section[data-astro-cid-zzvl4fxx] .inner[data-astro-cid-zzvl4fxx] {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        padding-top: 10%;
+        padding-bottom: 15%
+    }
+}
+
+@media only screen and (max-width: 0px) {
+    section[data-astro-cid-zzvl4fxx] .inner[data-astro-cid-zzvl4fxx] {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        padding-top: 10%;
+        padding-bottom: 15%
+    }
+}
+
+h2[data-astro-cid-zzvl4fxx] {
+    position: sticky;
+    top: calc(var(--header-height) + 1em)
+}
+
+@media screen and (max-width: 1241px) and (orientation: portrait) {
+    h2[data-astro-cid-zzvl4fxx] {
+        position: relative;
+        top: 0;
+        margin-bottom: 2em
+    }
+}
+
+@media only screen and (max-width: 486px) {
+    h2[data-astro-cid-zzvl4fxx] {
+        padding-bottom: 0;
+        margin-bottom: 1em
+    }
+}
+
+@media only screen and (max-width: 486px) and (max-width: 486px) {
+    h2[data-astro-cid-zzvl4fxx] {
+        font-size: 24px;
+        font-size: 6.1728395062vw
+    }
+}
+
+@media only screen and (max-width: 486px) and (min-width: 487px) and (max-width: 768px) {
+    h2[data-astro-cid-zzvl4fxx] {
+        font-size: 24px;
+        font-size: 3.125vw
+    }
+}
+
+@media only screen and (max-width: 486px) and (min-width: 769px) {
+    h2[data-astro-cid-zzvl4fxx] {
+        font-size: 24px
+    }
+}
+
+h2[data-astro-cid-zzvl4fxx] em[data-astro-cid-zzvl4fxx] {
+    display: flex;
+    flex-direction: column;
+    font-size: 2.25em;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--primary_blue)
+}
+
+@media only screen and (max-width: 1199px) {
+    h2[data-astro-cid-zzvl4fxx] em[data-astro-cid-zzvl4fxx] {
+        font-size: 1.875em
+    }
+}
+
+@media only screen and (max-width: 0px) {
+    h2[data-astro-cid-zzvl4fxx] em[data-astro-cid-zzvl4fxx] {
+        font-size: 1.5em
+    }
+}
+
+@media only screen and (max-width: 486px) and (max-width: 486px) {
+    h2[data-astro-cid-zzvl4fxx] em[data-astro-cid-zzvl4fxx] {
+        font-size: 24px;
+        font-size: 6.1728395062vw
+    }
+}
+
+@media only screen and (max-width: 486px) and (min-width: 487px) and (max-width: 768px) {
+    h2[data-astro-cid-zzvl4fxx] em[data-astro-cid-zzvl4fxx] {
+        font-size: 24px;
+        font-size: 3.125vw
+    }
+}
+
+@media only screen and (max-width: 486px) and (min-width: 769px) {
+    h2[data-astro-cid-zzvl4fxx] em[data-astro-cid-zzvl4fxx] {
+        font-size: 24px
+    }
+}
+
+h2[data-astro-cid-zzvl4fxx] span[data-astro-cid-zzvl4fxx].eng {
+    display: block;
+    font-family: Barlow, sans-serif;
+    font-size: 1.25em;
+    letter-spacing: .08em;
+    padding-top: .5em;
+    color: var(--primary_blue__50)
+}
+
+@media only screen and (max-width: 486px) and (max-width: 486px) {
+    h2[data-astro-cid-zzvl4fxx] span[data-astro-cid-zzvl4fxx].eng {
+        font-size: 14px;
+        font-size: 3.6008230453vw
+    }
+}
+
+@media only screen and (max-width: 486px) and (min-width: 487px) and (max-width: 768px) {
+    h2[data-astro-cid-zzvl4fxx] span[data-astro-cid-zzvl4fxx].eng {
+        font-size: 14px;
+        font-size: 1.8229166667vw
+    }
+}
+
+@media only screen and (max-width: 486px) and (min-width: 769px) {
+    h2[data-astro-cid-zzvl4fxx] span[data-astro-cid-zzvl4fxx].eng {
+        font-size: 14px
+    }
+}
+
+.cardList[data-astro-cid-zzvl4fxx] {
+    display: flex;
+    flex-direction: column;
+    gap: 2em
+}
+
+@media screen and (max-width: 1241px) and (orientation: portrait) {
+    .cardList[data-astro-cid-zzvl4fxx] {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1em
+    }
+}
+
+@media only screen and (max-width: 0px) {
+    .cardList[data-astro-cid-zzvl4fxx] {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1em
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .cardList[data-astro-cid-zzvl4fxx] {
+        display: flex;
+        flex-direction: column;
+        gap: 5vw;
+        max-width: 80vw;
+        margin: 0 auto
+    }
+}
+
+@media only screen and (max-width: 486px) {
+    .cardList[data-astro-cid-zzvl4fxx] {
+        max-width: 100%
+    }
+}
+article[data-astro-cid-5d2te5s5] {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background-color: var(--white);
+    align-items: center;
+    padding: 1.5em 0;
+    border-radius: 1em;
+    filter: drop-shadow(1em 1em 1.5em rgba(14, 78, 154, .1))
+}
+
+@media screen and (max-width: 1241px) and (orientation: portrait) {
+    article[data-astro-cid-5d2te5s5] {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 1em;
+        padding: 1em 0
+    }
+}
+
+@media only screen and (max-width: 0px) {
+    article[data-astro-cid-5d2te5s5] {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 1em;
+        padding: 1em 0
+    }
+}
+
+.text[data-astro-cid-5d2te5s5] {
+    padding: 0 2em;
+    border-left: 4px solid var(--primary_blue)
+}
+
+@media screen and (max-width: 1241px) and (orientation: portrait) {
+    .text[data-astro-cid-5d2te5s5] {
+        border-left: 2px solid var(--primary_blue);
+        padding: 0 1.2em
+    }
+}
+.text[data-astro-cid-5d2te5s5] h3[data-astro-cid-5d2te5s5] {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+    color: var(--primary_blue);
+    font-weight: 700;
+    line-height: 135%;
+    margin-bottom: .7em
+}
+
+@media only screen and (max-width: 1199px) {
+    .text[data-astro-cid-5d2te5s5] h3[data-astro-cid-5d2te5s5] {
+        font-size: 1.125em
+    }
+}
+
+@media only screen and (max-width: 486px) and (max-width: 486px) {
+    .text[data-astro-cid-5d2te5s5] h3[data-astro-cid-5d2te5s5] {
+        font-size: 20px;
+        font-size: 5.1440329218vw
+    }
+}
+
+@media only screen and (max-width: 486px) and (min-width: 487px) and (max-width: 768px) {
+    .text[data-astro-cid-5d2te5s5] h3[data-astro-cid-5d2te5s5] {
+        font-size: 20px;
+        font-size: 2.6041666667vw
+    }
+}
+
+@media only screen and (max-width: 486px) and (min-width: 769px) {
+    .text[data-astro-cid-5d2te5s5] h3[data-astro-cid-5d2te5s5] {
+        font-size: 20px
+    }
+}
+
+.text[data-astro-cid-5d2te5s5] ul[data-astro-cid-5d2te5s5] {
+    font-size: 1em;
+    font-weight: 400;
+    list-style-type: disc;
+    margin-left: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: .5em
+}
+
+@media only screen and (max-width: 1199px) {
+    .text[data-astro-cid-5d2te5s5] ul[data-astro-cid-5d2te5s5] {
+        font-size: .875em
+    }
+}
+
+@media only screen and (max-width: 486px) and (max-width: 486px) {
+    .text[data-astro-cid-5d2te5s5] ul[data-astro-cid-5d2te5s5] {
+        font-size: 14px;
+        font-size: 3.6008230453vw
+    }
+}
+
+@media only screen and (max-width: 486px) and (min-width: 487px) and (max-width: 768px) {
+    .text[data-astro-cid-5d2te5s5] ul[data-astro-cid-5d2te5s5] {
+        font-size: 14px;
+        font-size: 1.8229166667vw
+    }
+}
+
+@media only screen and (max-width: 486px) and (min-width: 769px) {
+    .text[data-astro-cid-5d2te5s5] ul[data-astro-cid-5d2te5s5] {
+        font-size: 14px
+    }
+}
+
+.text[data-astro-cid-5d2te5s5] li[data-astro-cid-5d2te5s5] {
+    text-align: justify
+}
+
+figure[data-astro-cid-5d2te5s5] {
+    width: 100%;
+    /* aspect-ratio: 3.2/2.37; */
+    max-width: 320px
+}
+
+@media screen and (max-width: 1241px) and (orientation: portrait) {
+    figure[data-astro-cid-5d2te5s5] {
+        width: 80%;
+        justify-self: end
+    }
+}
+
+@media only screen and (max-width: 0px) {
+    figure[data-astro-cid-5d2te5s5] {
+        width: 80%;
+        justify-self: end
+    }
+}
+
+figure[data-astro-cid-5d2te5s5] img[data-astro-cid-5d2te5s5] {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    min-height: 0
 }
 
 /* --------------------------------
 	グロナビ
 -------------------------------- */
-
 nav#gnav .mainNav li.gnav01 span {
   color: #0962a8;
   font-weight: 700;
   font-size: x-large;
 }
+
 nav#gnav .mainNav li.gnav02 span {
   color: #cc3a26;
   font-weight: 700;
   font-size: x-large;
 }
+
 nav#gnav {
   /* width: 1000px; */
   margin: 20px auto 0;
@@ -1128,7 +1696,6 @@ nav#gnav .mainNav li:hover span {
   background: #ffffff;
   color: #333333;
   font-size: 16px;
-  /* line-height: 40px; */
   padding: 10px 4px;
   text-decoration: none;
 }
@@ -1145,13 +1712,15 @@ nav#gnav .mainNav li:hover span {
   width: 140px;
   animation: opa1 0.5s 0.1s both;
 }
+
 .dropmenu li .dropmenuCon {
- left: 25%;
+  left: 25%;
 }
 
 .dropmenu li:hover ul {
   display: block;
 }
+
 nav#gnav .mainNav.dropmenu li ul li {
   width: 100%;
   margin: 0;
@@ -1159,20 +1728,21 @@ nav#gnav .mainNav.dropmenu li ul li {
 
 .dropmenu li ul li a {
   padding: 10px 20px;
-  /* border-radius: 100px; */
   border-top: 1px solid #eeeeee;
   background: #ffffff;
   text-align: left;
 }
-.dropmenu li ul li a:hover{
-  /* text-decoration: underline; */
+
+.dropmenu li ul li a:hover {
   opacity: 1;
   color: var(--primary_blue);
-  background: #ecf3fd; /*背景色*/
+  background: #ecf3fd;
 }
+
 nav#gnav .dropmenu li:hover > a {
   background: #ffffff;
 }
+
 #gnav .dropmenu li a:hover {
   background: #ffffff;
 }
@@ -1186,18 +1756,6 @@ nav#gnav .dropmenu li:hover > a {
 #dMenu li:hover ul li {
   overflow: visible;
   height: 40px;
-}
-/* --------------------------------
- ホームページ　タイトル
--------------------------------- */
-.topTitle {
-  text-align: center;
-
-}
-.topTitle h1 {
-  font-weight: bold;
-  font-size: 3em;
-  margin-top: 90px;
 }
 
 /* --------------------------------
@@ -1338,8 +1896,7 @@ ul[data-astro-cid-ttztgwaq]
   gap: 0.25em;
 }
 
-ul[data-astro-cid-ttztgwaq]
-  li[data-astro-cid-ttztgwaq] .dropdowns:after {
+ul[data-astro-cid-ttztgwaq] li[data-astro-cid-ttztgwaq] .dropdowns:after {
   content: "";
   display: block;
   width: 1em;
@@ -1420,21 +1977,7 @@ ul[data-astro-cid-ttztgwaq]
   a[data-astro-cid-ttztgwaq].contact:before {
   display: none;
 }
-@media screen and (max-width:1025px) {
-  .topTitle h1 {
-    font-size: 2em;
-  }
-}
-@media screen and (max-width:690px) {
-  .topTitle h1 {
-    font-size: 1.5em;
-  }
-}
-@media screen and (max-width:414px) {
-  .topTitle h1 {
-    font-size: 1em;
-  }
-}
+
 /* --------------------------------
 	サイドナビ
 -------------------------------- */
@@ -1452,16 +1995,15 @@ nav#snav dl {
 	メインラップ
 -------------------------------- */
 article#mainWrap {
+  position: relative;
   background-color: #fff;
 }
 article#mainVI {
-  /* width: 1000px; */
   max-width: 1000px;
   margin: 0 auto;
 }
 article#mainVI ul {
-  /* width: 1000px; */
-  display: flex; 
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
@@ -1498,14 +2040,8 @@ article#subWrap {
 }
 
 /* --------------------------------
-	topラップ
--------------------------------- */
-
-/* --------------------------------
-
 	コンテンツラップ 
 -------------------------------- */
-/* article#sub_container article#contentsWrap { width:1251px; clear:both;margin:0 auto 20px; } */
 article#contentsWrap #contents {
   display: flex;
   flex-direction: row;
@@ -1540,57 +2076,149 @@ article#contentsWrap #contents {
 .newsWrap,
 .releaseWrap,
 .medialistWrap {
-  /* background-color: #fff; */
   padding: 0em 0em 4px 0;
 }
+.infoWrap {
+  position: relative;
+  padding-bottom: 4em;
+}
+.infoWrap h2 {
+  color: #000;
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 0.2em;
+}
+.infoWrap p {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 2em;
+}
+.infoItem {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 0.5em;
+  align-items: center;
+  padding-bottom: 1.5em;
+  margin-bottom: 1.5em;
+  border-bottom: #ddd 1px solid;
+}
 
+.infoItem:hover {
+  border-bottom: #00339e 1px solid;
+}
+.infoItem a:hover {
+  color: #00339e;
+}
+.infoDate {
+  width: 120px;
+  font-size: 0.9em;
+  color: #333;
+  margin-right: 1em;
+  font-weight: 400;
+}
+/* .postLabel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #BDBFC4;
+  color: #00339E;
+  font-size: 0.75em;
+  padding: 0.2em 0.6em;
+  border-radius: 5px;
+  margin-right: 1.5em;
+  white-space: nowrap;
+} */
+.infoContent {
+  display: flex;
+  gap: 6em;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.categoryFilter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  min-width: 120px;
+}
+.categoryBtn {
+  background-color: #ddd;
+  color: #000;
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  width: 180px;
+  text-align: center;
+}
+.categoryBtn a {
+  transition: none;
+}
+.categoryBtn:hover {
+  background-color: #cc3a26;
+  color: #fff;
+}
+.categoryBtn.active {
+  background-color: #cc3a26;
+  color: #fff;
+}
+
+.infoList {
+  flex: 1;
+  min-width: 300px;
+}
+
+.infoLink {
+  color: #000;
+  text-decoration: none;
+  font-size: 1em;
+}
+.viewMore {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 0.9em;
+  margin: 0;
+}
 main #mainWrap {
   flex: 1;
+  margin: 0 auto;
+  max-width: 1200px;
 }
-/*ニュース sub 画面幅900px以上の追加指定*/
-@media screen and (min-width: 900px) {
-  /*カラムで使う為の指定*/
-  main #mainWrap {
-    display: flex; /*横並びにする*/
-    justify-content: space-between; /*並びかたの種類の指定*/
-    gap: 2rem; /*main-contentsとsub-contentsの間のマージン的な隙間*/
-  }
 
-  /*contentsブロック*/
+@media screen and (min-width: 900px) {
+  main #mainWrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
   article #contents {
     margin-bottom: 0;
     flex: 1;
   }
-
-  /*sub-contentsブロック共通*/
   .submenu {
     order: 1;
   }
-} 
-
-/*リンク（全般）設定
----------------------------------------------------------------------------*/
+}
+/* リンク（全般）設定 */
 a {
-  transition: 0.5s; /*マウスオン時の移り変わるまでの時間設定。0.5秒。*/
+  transition: 0.5s;
 }
-a:hover {
+/* a:hover {
   opacity: 0.7;
-}
-
+} */
 .submenu a:hover {
-  color: var(--primary_blue); /*マウスオン時の文字色*/
-  text-decoration: none; /*マウスオン時に下線を消す設定。残したいならこの１行削除。*/
+  color: var(--primary_blue);
+  text-decoration: none;
 }
-/*subコンテンツ
----------------------------------------------------------------------------*/
-/*subブロック全体の設定*/
 #sub {
-  font-size: 14px; /*文字サイズ*/
+  font-size: 14px;
   line-height: 1.5;
   width: 300px;
 }
 #sub h2 {
-  font-size: 18px; /*文字サイズ*/
+  font-size: 18px;
   color: #fff;
 }
 #sub h2::first-letter {
@@ -1600,9 +2228,7 @@ a:hover {
 #sub .box h2::first-letter {
   border-left: 3px solid #fff;
 }
-/*---------------------------------------------------------------------------
-  ここから下は画面幅900px以上の追加指定
-  ---------------------------------------------------------------------------*/
+
 @media screen and (max-width: 900px) {
   #sub {
     float: none;
@@ -1610,53 +2236,45 @@ a:hover {
     overflow: hidden;
   }
 }
-/*メニューブロック
----------------------------------------------------------------------------*/
-/*メニューブロック全体*/
+
 .submenu {
   overflow: hidden;
-  border-radius: 10px; /*角丸のサイズ*/
-  border: 5px solid var(--primary_blue); /*枠線の幅、線種、色*/
-  margin-bottom: 20px; /*ブロックの下に空けるスペース*/
+  border-radius: 10px;
+  border: 5px solid var(--primary_blue);
+  margin-bottom: 20px;
 }
-/*メニュー１個あたりの設定*/
 .submenu li {
-  text-align: center; /*文字をセンタリング*/
-  border-top: 1px solid #ccc; /*上の線の幅、線種、色*/
-  font-size: 18px; /*文字サイズ*/
+  text-align: center;
+  border-top: 1px solid #ccc;
+  font-size: 18px;
 }
 .submenu li a {
   display: block;
   text-decoration: none;
-  padding: 15px 5px; /*上下、左右へのメニュー内の余白*/
-  background: #fff; /*背景色*/
+  padding: 15px 5px;
+  background: #fff;
 }
-/*マウスオン時*/
 .submenu li a:hover {
-  background: #ecf3fd; /*背景色*/
+  background: #ecf3fd;
 }
-/*１つ目のメニューへの追加指定*/
 .submenu li:first-child {
-  border: none; /*上の線を消す*/
+  border: none;
 }
-/*飾り文字*/
 .submenu li span {
   display: block;
-  font-size: 11px; /*文字サイズ*/
-  font-weight: normal; /*文字を太字でなく標準に戻す設定*/
-  letter-spacing: 0.2em; /*文字間隔を少しあける設定*/
-  color: var(--primary_blue); /*文字色*/
+  font-size: 11px;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  color: var(--primary_blue);
 }
-/*sidebarコンテンツ内のbox
----------------------------------------------------------------------------*/
+
 #sidebar .box {
-  background: var(--primary_blue); /*背景色*/
-  color: #fff; /*文字色*/
-  padding: 20px; /*ボックス内の余白*/
-  border-radius: 10px; /*角丸の指定*/
-  margin-bottom: 20px; /*ボックスの下(外側)に空けるスペース*/
+  background: var(--primary_blue);
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
-/*リンクテキストの文字色*/
 #sidebar .box a {
   color: #fff;
   display: block;
@@ -1665,10 +2283,9 @@ a:hover {
 #sidebar .box img {
   max-width: 100%;
 }
-/*sidebarコンテンツ内のaddress
----------------------------------------------------------------------------*/
+
 #sidebar address {
-  font-style: normal; /*デフォルトで斜体になるのでノーマルに*/
+  font-style: normal;
 }
 .releaseWrap .sectionHeader span,
 .newsWrap .sectionHeader span,
@@ -1685,20 +2302,12 @@ a:hover {
   font-weight: bold;
   padding: 0.55em 0.5em;
 }
-
 * html .topLinkBox {
   height: 1em;
   overflow: visible;
 }
-/**/
 
-/* --------------------------------
-	ページラップ
--------------------------------- */
 .mainContents {
-  /* width: 760px;
-  margin: 0 0; */
-  /* float: right; */
   width: 100%;
   max-width: 760px;
 }
@@ -1723,15 +2332,10 @@ a:hover {
   max-width: 640px;
   margin: 0 auto;
 }
-
 .sideWrap {
-  /* width: 200px;
-  margin: 0 0;
-  float: left; */
-  width: 100%; 
+  width: 100%;
   max-width: 200px;
   margin: 0 10px 0 10px;
-
 }
 .sideWrap dl {
   width: 100%;
@@ -1748,21 +2352,19 @@ a:hover {
   border-top-right-radius: 5px;
   position: relative;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 6px 12px rgba(0, 0, 0, 0.3);
-
 }
-.sideWrap dl .biforacTitle{
+.sideWrap dl .biforacTitle {
   background-color: #cc3a26;
   border-top: 10px solid #cc3a26;
 }
-.sideWrap dl dd , .sideWrap ul li{
+.sideWrap dl dd,
+.sideWrap ul li {
   border: 1px solid #dddddd;
   line-height: 2.5em;
   padding: 0 0;
   font-size: 87.5%;
   background: #ffffff; /* Old browsers */
-
   background: -moz-linear-gradient(top, #ffffff 0%, #e8e8e8 100%); /* FF3.6+ */
-
   background: -webkit-gradient(
     linear,
     left top,
@@ -1784,9 +2386,7 @@ a:hover {
   ); /* Opera 11.10+ */
 
   background: -ms-linear-gradient(top, #ffffff 0%, #e8e8e8 100%); /* IE10+ */
-
   background: linear-gradient(to bottom, #ffffff 0%, #e8e8e8 100%); /* W3C */
-
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-9 */
 }
 .sideWrap dl dd a {
@@ -1794,7 +2394,7 @@ a:hover {
   padding: 0 10px;
   text-decoration: none;
 }
-.sideWrap ul .newTitle{
+.sideWrap ul .newTitle {
   border-top: 1px solid #eeeeee;
   border-radius: 10px 10px 0 0;
 }
@@ -1803,14 +2403,13 @@ a:hover {
   padding: 0 10px;
   display: block;
 }
-
 @media (max-width: 1040px) {
-
   .sideWrap {
     max-width: 760px;
-    /* margin: 0; */
   }
-  .sideWrap dl dt , .sideWrap dl dd ,.sideWrap ul li{
+  .sideWrap dl dt,
+  .sideWrap dl dd,
+  .sideWrap ul li {
     text-align: center;
   }
 }
@@ -1818,13 +2417,10 @@ a:hover {
   .mainContents {
     padding: 0 10px;
   }
-
   .sideWrap {
     max-width: 100%;
-    /* margin: 0; */
   }
 }
-
 @media (max-width: 480px) {
   .mainContents p {
     font-size: 85%;
@@ -1834,8 +2430,8 @@ a:hover {
   width: 100%;
   padding: 0 0 0;
 }
-@media screen and (max-width:1024px) {
-  .subWrap h2 img{
+@media screen and (max-width: 1024px) {
+  .subWrap h2 img {
     display: none;
   }
 }
@@ -1855,7 +2451,6 @@ a:hover {
   padding: 5px 20px 5px 10px;
   font-size: 125%;
 }
-
 .companyWrap dl {
   width: 100%;
   font-size: 87.5%;
@@ -1872,7 +2467,6 @@ a:hover {
 .companyWrap dl {
   overflow: hidden;
 }
-
 .companyWrap dl :after {
   content: "";
   display: block;
@@ -1880,14 +2474,12 @@ a:hover {
   height: 1px;
   overflow: hidden;
 }
-
 /*\*/
 * html .companyWrap dl {
   height: 1em;
   overflow: visible;
 }
 /**/
-
 .recruitWrap h2 {
   font-size: 125%;
   font-weight: bold;
@@ -1905,7 +2497,7 @@ a:hover {
   margin: 0 0 0;
   line-height: 1.2em;
 }
-@media screen and (max-width:480px) {
+@media screen and (max-width: 480px) {
   .recruitWrap h3 {
     font-size: 80%;
   }
@@ -1953,18 +2545,16 @@ a:hover {
 }
 @media screen and (max-width: 1040px) {
   .recruitContent {
-    width: 100%; 
+    width: 100%;
     padding: 0 10px;
   }
 }
-
 @media screen and (max-width: 480px) {
   .recruitContent {
-    width: 100%; 
+    width: 100%;
     padding: 0 5px;
   }
 }
-
 .recruitWrap table th {
   width: 12em;
   padding: 15px 0 15px 15px;
@@ -2001,7 +2591,6 @@ a:hover {
 .recruitWrap dl {
   overflow: hidden;
 }
-
 .recruitWrap dl :after {
   content: "";
   display: block;
@@ -2009,18 +2598,15 @@ a:hover {
   height: 1px;
   overflow: hidden;
 }
-@media screen and (max-width:430px) {
-  .recruitWrap table th{
+@media screen and (max-width: 430px) {
+  .recruitWrap table th {
     width: 8em;
   }
 }
-/*　採用情報ページ詳細設定*/
 * html .recruitWrap dl {
   height: 1em;
   overflow: visible;
 }
-/**/
-
 .recruitHead {
   width: 100%;
   clear: both;
@@ -2076,8 +2662,6 @@ a:hover {
   border-radius: 5px;
   font-size: 125%;
 }
-.inquiryWrap {
-}
 .inquiryWrap dl.formList {
   padding: 0 0 10px;
 }
@@ -2130,7 +2714,6 @@ a:hover {
   background: #428ec9;
   border-radius: 5px;
   font-size: 125%;
-
   /* Webkit */
   background: -webkit-gradient(
     linear,
@@ -2146,13 +2729,11 @@ a:hover {
   background: -moz-linear-gradient(top, #99c9e5, #428ec9);
   -moz-border-radius: 5px;
   -moz-box-shadow: 1px 1px 1px #fff;
-
   /* IE */
   filter: progid:DXImageTransform.Microsoft.gradient
         (startColorstr=#ff99c9e5,endColorstr=#ff428ec9);
   zoom: 1;
 }
-
 .inquiryWrap input[type="button"] {
   border: 1px solid #777;
   padding: 4px 10px;
@@ -2161,7 +2742,6 @@ a:hover {
   background: #428ec9;
   border-radius: 5px;
   font-size: 125%;
-
   /* Webkit */
   background: -webkit-gradient(
     linear,
@@ -2196,13 +2776,11 @@ a:hover {
   padding: 30px 0 5px;
   clear: both;
 }
-
 .robotWrap iframe {
   text-align: center;
   margin: 0 auto;
   display: block;
 }
-
 .biWrap iframe {
   text-align: center;
   margin: 0 auto;
@@ -2219,10 +2797,6 @@ a:hover {
   margin: 0 auto;
 }
 
-.interview {
-}
-.interview .intTitle {
-}
 .interview .intTitleL {
   width: 340px;
   float: left;
@@ -2247,7 +2821,6 @@ a:hover {
   padding: 10px 1em 30px;
   border-bottom: 1px dotted #dddddd;
 }
-
 .linkBtn {
   margin: 20px auto;
   padding: 0 0;
@@ -2360,9 +2933,7 @@ a:hover {
   padding: 20px;
   margin-bottom: 20px;
 }
-/* 追加 */
-.releaselistWrap {
-}
+/* リリースブロック設定 */
 .releaselistWrap h2 {
   font-size: 125%;
   font-weight: bold;
@@ -2386,8 +2957,7 @@ a:hover {
   padding: 20px;
   margin-bottom: 20px;
 }
-.pdflistWrap {
-}
+
 .pdflistWrap h2 {
   font-size: 125%;
   font-weight: bold;
@@ -2450,8 +3020,6 @@ a:hover {
   background-color: #116cb5;
   border-radius: 3px;
 }
-.bloglistWrap {
-}
 .bloglistWrap h2 {
   font-size: 125%;
   font-weight: bold;
@@ -2510,7 +3078,7 @@ a:hover {
     width: 90%;
   }
 }
-/* 画面サイズが480px以下の場合に適用 */
+
 @media only screen and (max-width: 480px) {
   .inquiryWrap dl.formList dd {
     width: 90%;
@@ -2540,17 +3108,9 @@ a.page-numbers,
   color: rgba(255, 255, 255, 1);
 }
 
-/* --------------------------------
-	パンくず
--------------------------------- */
-
 div#bread {
   padding: 21px 0 0 23px;
 }
-
-/* --------------------------------
-	アンカー
--------------------------------- */
 
 article#content .rel {
   margin: 11px 0 0 0;
@@ -2575,10 +3135,6 @@ article#content .pdf a {
   background: url(../img/ancr_pdf_01.gif) no-repeat top right;
 }
 
-/* --------------------------------
-	ページトップ
--------------------------------- */
-
 article#content section#cnt_pagetop {
   clear: both;
   padding: 18px 39px 0 39px;
@@ -2591,10 +3147,6 @@ article#content section#cnt_pagetop p a:hover img {
   -moz-opacity: 0.6;
   opacity: 0.6;
 }
-
-/* --------------------------------
-	ページャ
--------------------------------- */
 
 section#pager {
   clear: both;
@@ -2645,10 +3197,6 @@ section#pager p.next a {
   background: url(../img/arrow_02.gif) no-repeat right 0.25em;
 }
 
-/* --------------------------------
-	フッタ
--------------------------------- */
-
 footer {
   clear: both;
   padding-top: 50px;
@@ -2665,10 +3213,10 @@ footer p.credit {
   grid-row: 2 / 3;
   text-align: center;
   padding: 1em;
-  font-size: .75em;
-  letter-spacing: .05em;
+  font-size: 0.75em;
+  letter-spacing: 0.05em;
 }
-/* 追加 */
+
 footer .footerItem {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2681,19 +3229,11 @@ footer .footerItem {
   padding-top: 20px;
   border-top: 1px dotted #333;
   margin: 0 auto;
-  /* width: 1000px; */
 }
-/* div.ftBox {
-  margin: 0 0 0 0;
-  padding: 20px 0 40px;
-} */
+
 div.ftBoxL {
   width: 300px;
   float: left;
-  /* grid-column: 1 / 2;
-  grid-row: 1 / 2;
-  align-self: center;
-  padding: 2em 0; */
 }
 div.ftBoxL h6 {
   font-size: 75%;
@@ -2706,13 +3246,9 @@ div.ftBoxL p.time {
   font-size: 75%;
 }
 div.ftBoxR {
-  /* width: 680px;
-  float: right;
-  margin-top: 0; */
   grid-column: 2 / 3;
   grid-row: 1 / 2;
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   gap: 1em;
 }
@@ -2748,12 +3284,11 @@ div.ftBox:after {
   overflow: hidden;
 }
 
-/*\*/
 * html div.ftBox {
   height: 1em;
   overflow: visible;
 }
-/**/
+
 @media screen and (max-width: 1241px) and (orientation: portrait) {
   footer .footerItem {
     display: flex;
@@ -2762,7 +3297,7 @@ div.ftBox:after {
     max-width: 100%;
   }
 
-  .ftBoxL{
+  .ftBoxL {
     width: 100%;
     text-align: center;
     margin-bottom: 1.5em;
@@ -2776,7 +3311,7 @@ div.ftBox:after {
     margin-bottom: 1em;
   }
 }
-/* --- ページトップ ------ */
+
 #page-top {
   opacity: 0;
   visibility: hidden;
@@ -2798,7 +3333,7 @@ div.ftBox:after {
   justify-content: center;
   align-items: center;
 }
-#page-top a img{
+#page-top a img {
   width: 100%;
   flex-basis: 100%;
   height: 100%;
@@ -2810,7 +3345,6 @@ footer article#ftr_pagetop p a:hover {
   opacity: 0.6;
 }
 
-/* --- クレジット ------ */
 footer article#ftr_credit {
   margin: 20px 0 20px 0;
   text-align: right;
@@ -2846,10 +3380,6 @@ footer article#ftr_credit p.copy {
   display: block;
 }
 
-/* --------------------------------
-	GET ADOBE READER
--------------------------------- */
-
 #get_reader {
   margin: 30px 0 0 0;
   padding: 12px 2em 12px 2em;
@@ -2864,8 +3394,7 @@ footer article#ftr_credit p.copy {
   width: 158px;
   float: left;
 }
-#get_reader .sub p {
-}
+
 #get_reader .main {
   float: left;
 }
@@ -2915,10 +3444,6 @@ ul.sitemap li.low {
   text-indent: 20px;
 }
 
-/* --------------------------------
-	ブログ
--------------------------------- */
-
 .blog p {
   padding: 0 0;
 }
@@ -2946,23 +3471,15 @@ ul.sitemap li.low {
   overflow: hidden;
 }
 
-/*\*/
 * html .columnList {
   height: 1em;
   overflow: visible;
 }
-/**/
 
-/* --------------------------------
-	ギャラリー
--------------------------------- */
 #galleria {
   height: 660px;
 }
 
-/* --------------------------------
-	イメージ
--------------------------------- */
 .aboutBox {
   width: 660px;
   margin-top: 20px;
@@ -2982,8 +3499,6 @@ ul.sitemap li.low {
   margin-right: 0;
 }
 
-.intWrap {
-}
 .intHeadWrap {
   width: 100%;
 }
@@ -2998,7 +3513,6 @@ ul.sitemap li.low {
   color: #ffffff;
   font-size: 150%;
 }
-
 figure.intTitle {
   width: 100%;
   position: relative;
@@ -3024,7 +3538,6 @@ figure.intTitle figcaption p {
   padding: 0 0 0 0;
   line-height: 1.8em;
 }
-
 .beforeAfter {
   background: #fafafa;
   margin: 20px 0;

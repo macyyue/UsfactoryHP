@@ -42,7 +42,7 @@
   }
 }
 /*３枚目*/
-@keyframes slide3 {
+/* @keyframes slide3 {
   0% {
     opacity: 0;
   }
@@ -61,7 +61,7 @@
   100% {
     opacity: 0;
   }
-}
+} */
 
 /*mainimg
 ---------------------------------------------------------------------------*/
@@ -73,8 +73,7 @@
 
 
 .slide1,
-.slide2,
-.slide3 {
+.slide2 {
   animation-duration: 15s; /*アニメーションを実行する時間。「s」は秒の事。*/
   animation-iteration-count: infinite; /* アニメーションの反復回数:無限 */
   position: absolute;
@@ -96,6 +95,6 @@
 .slide2 {
   animation-name: slide2;
 }
-.slide3 {
+/* .slide3 {
   animation-name: slide3;
-}
+} */

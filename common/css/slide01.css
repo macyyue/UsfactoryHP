@@ -1,75 +1,59 @@
 @charset "utf-8";
 
-
-
-/*スライドショー（cssでのbackground使用）
-ここでは、2:1の画像比率（1÷2=0.5）を読み込む指定を行なっています。
-異なる画像比率にしたい場合、#mainimgのpadding-topの数字を変更します。
----------------------------------------------------------------------------*/
-/*3枚の画像を囲むブロック*/
+/* mainimg 容器：设置 2:1 的比例 */
 #mainimg {
-	width: 100%;
-	height: 0;
-	padding-top: 50%;
-	position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 50%; /* 2:1 比例 */
+  position: relative;
+  overflow: hidden;
 }
 
-/*３枚の画像の共通設定*/
+/* 所有 slide 通用样式 */
 .slide {
-	width: 100%;height: 100%;
-	position: absolute;right: 0px;top: 0px;
-	display: flex;
-	align-items: center;
-	opacity: 0;
-	transition: opacity 1s;	/*ここの1s（＝1秒）を変更すると、フェードのスピードを変更できます。*/
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 1s;
+  background-size: cover;
+  background-position: center;
 }
 
-/*１枚目画像*/
+/* 每张 slide 的背景图 */
 .slide1 {
-	background: url('/common/img/homepage/point_group.png') no-repeat center center / cover;	/*１枚目の背景画像の読み込み*/
+  background-image: url('/common/img/homepage/top-page_01.png');
 }
-
-/*２枚目画像*/
 .slide2 {
-	background: url('/common/img/homepage/point_group_main.jpg') no-repeat center center / cover;	/*２枚目の背景画像の読み込み*/
-	justify-content: flex-end;	/*テキストブロックを右側に*/
-	text-align: right;			/*テキストを右寄せ*/
+  background-image: url('/common/img/homepage/top-page_02.png');
 }
-
-/*３枚目画像*/
 .slide3 {
-	background: url('/common/img/homepage/firstview.D9f4NgkX_Z1thaf8.webp') no-repeat center center / cover;	/*３枚目の背景画像の読み込み*/
-	justify-content: center;	/*テキストブロックを中央に*/
-	text-align: center;			/*テキストをセンタリング*/
+  background-image: url('/common/img/homepage/top-page_03.png');
 }
 
-
-/*現在表示されているスライドのみをクリック可能にする設定（変更不要）
----------------------------------------------------------------------------*/
-.slide {
-	pointer-events: none; /* デフォルトでクリックを無効にする */
-}
-
+/* 显示中的 slide */
 .slide.active {
-	pointer-events: auto; /* 表示中のスライドのみクリックを有効にする */
+  opacity: 1;
+  pointer-events: auto;
 }
 
-
-/*スライドショー上のテキスト
----------------------------------------------------------------------------*/
+/* 文字样式 */
 #mainimg p {
-	display: block;
-	line-height: 1;
-	font-size: 2.8vw;	/*文字サイズ。100vwは画面幅100%のことです*/
-	font-weight: 400;	/*文字の太さ。100から900まで指定可能*/
+  line-height: 1.4;
+  font-size: 2.8vw;
+  font-weight: 400;
+  text-align: center;
+  z-index: 2;
+  color: white;
 }
-
-/*テキストに合わせて背景色をつける為の指定*/
 #mainimg p span {
-	display: inline-block;
-	padding: 0.4em 1em 0.3em;	/*テキストと背景色との余白調整。上、左右、下への順番です。お好みで。*/
-	background: #000;	/*背景色*/
-	color: #fff;		/*文字色*/
-	margin: 0.5em 0;	/*２行のテキストの間のマージン*/
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0.4em 1em;
+  display: inline-block;
+  margin: 0.3em 0;
 }
-
