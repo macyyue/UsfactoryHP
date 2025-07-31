@@ -89,7 +89,7 @@ get_header(); ?>
                 </div>
               <?php endforeach; ?>
             </div>
-            
+
             <div class="viewMore">
               <a href="<?php echo esc_url(home_url('release')); ?>">もっと見る</a>
             </div>
@@ -221,14 +221,14 @@ get_header(); ?>
                 </h3>
                 <p data-astro-cid-k7dvyszk>
                   高精度点群で現場を丸ごと可視化<br
-                    data-astro-cid-k7dvyszk />BIM×CADで設計・施工を効率化
+                  data-astro-cid-k7dvyszk />BIM×CADで設計・施工を効率化
                 </p>
               </div>
               <figure data-astro-cid-k7dvyszk>
                 <img
                   src="/common/img/homepage/service-point.png"
                   srcset="
-                      /common/img/homepage/service-point.png 389w,
+                      /common/img/homepage/service-point.png  389w,
                       /common/img/homepage/service-point.png  615w,
                       /common/img/homepage/service-point.png  839w,
                       /common/img/homepage/service-point.png  500w
@@ -246,184 +246,243 @@ get_header(); ?>
         </article>
       </div>
     </section>
-          <section id="function" data-astro-cid-zzvl4fxx>
-        <div class="inner" data-astro-cid-zzvl4fxx>
-          <div class="header" data-astro-cid-zzvl4fxx>
-            <h2
-              data-aos="fade-right"
-              data-aos-easing="ease-in-out-sine"
-              data-astro-cid-zzvl4fxx>
-              <em data-astro-cid-zzvl4fxx>
-                <span data-astro-cid-zzvl4fxx>サービス情報</span>
-              </em>
-              <span class="eng" data-astro-cid-zzvl4fxx>SERVICES</span>
-            </h2>
-          </div>
-          <div class="cardList" data-astro-cid-zzvl4fxx>
-            <article
-              data-aos="fade-up"
-              data-aos-easing="ease-in-out-sine"
-              data-aos-duration="400"
-              data-astro-cid-5d2te5s5>
-              <div class="text" data-astro-cid-5d2te5s5>
-                <h3 data-astro-cid-5d2te5s5>
-                  <span data-astro-cid-5d2te5s5>BI for AC®</span>
-                </h3>
-                <ul data-astro-cid-5d2te5s5>
-                  <li data-astro-cid-5d2te5s5>
-                    BI for AC®を使うことで、建材の自動発生・集計が可能
-                  </li>
-                  <li data-astro-cid-5d2te5s5>
-                    施工検討や工程シミュレーションも行える
-                  </li>
-                  <li data-astro-cid-5d2te5s5>
-                    操作を簡素化し、省人化・効率化をサポート
-                  </li>
-                  <li data-astro-cid-5d2te5s5>
-                    自動モデリング・最適化機能で、圧倒的な効率化を実現
-                  </li>
-                </ul>
-              </div>
-              <figure data-astro-cid-5d2te5s5>
-                <img
-                  src="/common/img/homepage/services-biforac.png"
-                  srcset="
+    <section id="function" data-astro-cid-zzvl4fxx>
+      <div class="inner" data-astro-cid-zzvl4fxx>
+        <div class="header" data-astro-cid-zzvl4fxx>
+          <h2 
+            data-aos="fade-right"
+            data-aos-easing="ease-in-out-sine"
+            data-astro-cid-zzvl4fxx>
+            <em data-astro-cid-zzvl4fxx>
+              <span data-astro-cid-zzvl4fxx>サービス情報</span>
+            </em>
+            <span class="eng" data-astro-cid-zzvl4fxx>SERVICES</span>
+          </h2>
+        </div>
+        <div class="cardList" data-astro-cid-zzvl4fxx>
+          <article
+            data-aos="fade-up"
+            data-aos-easing="ease-in-out-sine"
+            data-aos-duration="400"
+            data-astro-cid-5d2te5s5>
+            <div class="text" data-astro-cid-5d2te5s5>
+              <h3 data-astro-cid-5d2te5s5>
+                <span data-astro-cid-5d2te5s5>BI for AC®</span>
+              </h3>
+              <ul data-astro-cid-5d2te5s5>
+                <li data-astro-cid-5d2te5s5>
+                  BI for AC®を使うことで、建材の自動発生・集計が可能
+                </li>
+                <li data-astro-cid-5d2te5s5>
+                  施工検討や工程シミュレーションも行える
+                </li>
+                <li data-astro-cid-5d2te5s5>
+                  操作を簡素化し、省人化・効率化をサポート
+                </li>
+                <li data-astro-cid-5d2te5s5>
+                  自動モデリング・最適化機能で、圧倒的な効率化を実現
+                </li>
+              </ul>
+            </div>
+            <figure data-astro-cid-5d2te5s5>
+              <img
+                src="/common/img/homepage/services-biforac.png"
+                srcset="
                     /common/img/homepage/services-biforac.png   389w,
                     /common/img/homepage/services-biforac.png   615w,
                     /common/img/homepage/services-biforac.png   839w,
                     /common/img/homepage/services-biforac.png   700w
                   "
-                  alt=""
-                  sizes="(max-width: 486px) 389px, (max-width: 768px) 615px, (max-width: 830px) 664px, (min-width: 831px) 320px, 700px"
-                  data-astro-cid-5d2te5s5
-                  width="700"
-                  height="480"
-                  loading="lazy"
-                  decoding="async"/>
-              </figure>
-            </article>
-            <article
-              data-aos="fade-up"
-              data-aos-easing="ease-in-out-sine"
-              data-aos-duration="400"
-              data-astro-cid-5d2te5s5>
-              <div class="text" data-astro-cid-5d2te5s5>
-                <h3 data-astro-cid-5d2te5s5>
-                  <span data-astro-cid-5d2te5s5>BI for AC® x 木造住宅</span>
-                </h3>
-                <ul data-astro-cid-5d2te5s5>
-                  <li data-astro-cid-5d2te5s5>
+                alt=""
+                sizes="(max-width: 486px) 389px, (max-width: 768px) 615px, (max-width: 830px) 664px, (min-width: 831px) 320px, 700px"
+                data-astro-cid-5d2te5s5
+                width="700"
+                height="480"
+                loading="lazy"
+                decoding="async" />
+            </figure>
+          </article>
+          <article
+            data-aos="fade-up"
+            data-aos-easing="ease-in-out-sine"
+            data-aos-duration="400"
+            data-astro-cid-5d2te5s5>
+            <div class="text" data-astro-cid-5d2te5s5>
+              <h3 data-astro-cid-5d2te5s5>
+                <span data-astro-cid-5d2te5s5>BI for AC® x 木造住宅</span>
+              </h3>
+              <ul data-astro-cid-5d2te5s5>
+                <li data-astro-cid-5d2te5s5>
                   CEDXMデータの読込で建物モデルを自動作成
-                  </li>
-                  <li data-astro-cid-5d2te5s5>
+                </li>
+                <li data-astro-cid-5d2te5s5>
                   構造金物を自動で発生
-                  </li>
-                  <li data-astro-cid-5d2te5s5>
+                </li>
+                <li data-astro-cid-5d2te5s5>
                   木造住宅に特化した専用機能を搭載
-                  </li>
-                </ul>
-              </div>
-              <figure data-astro-cid-5d2te5s5>
-                <img
-                  src="/common/img/homepage/services-mokuzou.png"
-                  srcset="
+                </li>
+              </ul>
+            </div>
+            <figure data-astro-cid-5d2te5s5>
+              <img
+                src="/common/img/homepage/services-mokuzou.png"
+                srcset="
                     /common/img/homepage/services-mokuzou.png  389w,
                     /common/img/homepage/services-mokuzou.png  615w,
                     /common/img/homepage/services-mokuzou.png  839w,
                     /common/img/homepage/services-mokuzou.png  640w
                   "
-                  alt=""
-                  sizes="(max-width: 486px) 389px, (max-width: 768px) 615px, (max-width: 830px) 664px, (min-width: 831px) 320px, 640px"
-                  data-astro-cid-5d2te5s5
-                  width="640"
-                  height="480"
-                  loading="lazy"
-                  decoding="async"/>
-              </figure>
-            </article>
-            <article
-              data-aos="fade-up"
-              data-aos-easing="ease-in-out-sine"
-              data-aos-duration="400"
-              data-astro-cid-5d2te5s5>
-              <div class="text" data-astro-cid-5d2te5s5>
-                <h3 data-astro-cid-5d2te5s5>
-                  <span data-astro-cid-5d2te5s5>Info360®</span>
-                </h3>
-                <ul data-astro-cid-5d2te5s5>
-                  <li data-astro-cid-5d2te5s5>
-                    点群データやIFCモデルなどの3DをWEBで表示・共有
-                  </li>
-                  <li data-astro-cid-5d2te5s5>
-                    図面などの資料もブラウザ上で一元管理
-                  </li>
-                  <li data-astro-cid-5d2te5s5>
-                    BCF対応で現場管理に活用可能
-                  </li>
-                  <li data-astro-cid-5d2te5s5>
-                    デジタルツインによるスマートな情報共有
-                  </li>
-                </ul>
-              </div>
-              <figure data-astro-cid-5d2te5s5>
-                <img
-                  src="/common/img/homepage/services-info360.png"
-                  srcset="
+                alt=""
+                sizes="(max-width: 486px) 389px, (max-width: 768px) 615px, (max-width: 830px) 664px, (min-width: 831px) 320px, 640px"
+                data-astro-cid-5d2te5s5
+                width="640"
+                height="480"
+                loading="lazy"
+                decoding="async" />
+            </figure>
+          </article>
+          <article
+            data-aos="fade-up"
+            data-aos-easing="ease-in-out-sine"
+            data-aos-duration="400"
+            data-astro-cid-5d2te5s5>
+            <div class="text" data-astro-cid-5d2te5s5>
+              <h3 data-astro-cid-5d2te5s5>
+                <span data-astro-cid-5d2te5s5>Info360®</span>
+              </h3>
+              <ul data-astro-cid-5d2te5s5>
+                <li data-astro-cid-5d2te5s5>
+                  点群データやIFCモデルなどの3DをWEBで表示・共有
+                </li>
+                <li data-astro-cid-5d2te5s5>
+                  図面などの資料もブラウザ上で一元管理
+                </li>
+                <li data-astro-cid-5d2te5s5>
+                  BCF対応で現場管理に活用可能
+                </li>
+                <li data-astro-cid-5d2te5s5>
+                  デジタルツインによるスマートな情報共有
+                </li>
+              </ul>
+            </div>
+            <figure data-astro-cid-5d2te5s5>
+              <img
+                src="/common/img/homepage/services-info360.png"
+                srcset="
                     /common/img/homepage/services-info360.png  389w,
                     /common/img/homepage/services-info360.png  615w,
                     /common/img/homepage/services-info360.png  839w,
                     /common/img/homepage/services-info360.png  700w
                   "
-                  alt=""
-                  sizes="(max-width: 486px) 389px, (max-width: 768px) 615px, (max-width: 830px) 664px, (min-width: 831px) 320px, 700px"
-                  data-astro-cid-5d2te5s5
-                  width="700"
-                  height="480"
-                  loading="lazy"
-                  decoding="async"/>
-              </figure>
-            </article>
-                        <article
-              data-aos="fade-up"
-              data-aos-easing="ease-in-out-sine"
-              data-aos-duration="400"
-              data-astro-cid-5d2te5s5>
-              <div class="text" data-astro-cid-5d2te5s5>
-                <h3 data-astro-cid-5d2te5s5>
-                  <span data-astro-cid-5d2te5s5>点群計測サービス</span>
-                </h3>
-                <ul data-astro-cid-5d2te5s5>
-                  <li data-astro-cid-5d2te5s5>
-                    高精度3Dレーザー測量による建築物の計測
-                  </li>
-                  <li data-astro-cid-5d2te5s5>
-                    点群データの合成からBIM作成まで一貫対応
-                  </li>
-                  <li data-astro-cid-5d2te5s5>
-                    測量機のレンタルサービスも提供
-                  </li>
-                </ul>
-              </div>
-              <figure data-astro-cid-5d2te5s5>
-                <img
-                  src="/common/img/homepage/services-point-model.png"
-                  srcset="
+                alt=""
+                sizes="(max-width: 486px) 389px, (max-width: 768px) 615px, (max-width: 830px) 664px, (min-width: 831px) 320px, 700px"
+                data-astro-cid-5d2te5s5
+                width="700"
+                height="480"
+                loading="lazy"
+                decoding="async" />
+            </figure>
+          </article>
+          <article
+            data-aos="fade-up"
+            data-aos-easing="ease-in-out-sine"
+            data-aos-duration="400"
+            data-astro-cid-5d2te5s5>
+            <div class="text" data-astro-cid-5d2te5s5>
+              <h3 data-astro-cid-5d2te5s5>
+                <span data-astro-cid-5d2te5s5>点群計測サービス</span>
+              </h3>
+              <ul data-astro-cid-5d2te5s5>
+                <li data-astro-cid-5d2te5s5>
+                  高精度3Dレーザー測量による建築物の計測
+                </li>
+                <li data-astro-cid-5d2te5s5>
+                  点群データの合成からBIM作成まで一貫対応
+                </li>
+                <li data-astro-cid-5d2te5s5>
+                  測量機のレンタルサービスも提供
+                </li>
+              </ul>
+            </div>
+            <figure data-astro-cid-5d2te5s5>
+              <img
+                src="/common/img/homepage/services-point-model.png"
+                srcset="
                     /common/img/homepage/services-point-model.png  389w,
                     /common/img/homepage/services-point-model.png  615w,
                     /common/img/homepage/services-point-model.png  839w,
                     /common/img/homepage/services-point-model.png  700w"
-                  alt=""
-                  sizes="(max-width: 486px) 389px, (max-width: 768px) 615px, (max-width: 830px) 664px, (min-width: 831px) 320px, 700px"
-                  data-astro-cid-5d2te5s5
-                  width="700"
-                  height="480"
-                  loading="lazy"
-                  decoding="async"/>
-              </figure>
-            </article>
-          </div>
+                alt=""
+                sizes="(max-width: 486px) 389px, (max-width: 768px) 615px, (max-width: 830px) 664px, (min-width: 831px) 320px, 700px"
+                data-astro-cid-5d2te5s5
+                width="700"
+                height="480"
+                loading="lazy"
+                decoding="async" />
+            </figure>
+          </article>
         </div>
-      </section>
+      </div>
+    </section>
+    <section id="seminar" data-astro-cid-abc999xx>
+      <div class="inner" data-astro-cid-abc999xx>
+      <div class="header" data-astro-cid-abc999xx>
+        <h2 data-aos="fade-right" data-aos-easing="ease-in-out-sine" data-astro-cid-abc999xx>
+          <em data-astro-cid-abc999xx><span data-astro-cid-abc999xx>無料オンラインセミナー開催中</span></em>
+          <span class="eng" data-astro-cid-abc999xx>Seminar</span>
+        </h2>
+      </div>
+      <div class="seminarList" data-astro-cid-abc999xx>
+        <!-- セミナー1（受付中） -->
+        <article class="seminar-card open" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-duration="400" data-astro-cid-abc999xx>
+          <figure>
+            <img src="/common/img/homepage/seminar01.png" alt="セミナー画像" />
+          </figure>
+          <div class="text" data-astro-cid-abc999xx>
+            <p class="target">【対象者】設計・構造担当者様、施工関係者様、積算事務所様、鉄筋工事会社様、型枠工事会社様</p>
+            <ul class="links">
+              <li><a href="#">2025.05.27(火)15:00〜16:00</a></li>
+              <li><a href="#">Teams Web Seminar</a></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- セミナー2（開催終了） -->
+        <article class="seminar-card closed" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-duration="400" data-astro-cid-abc999xx>
+          <figure>
+            <img src="/common/img/homepage/seminar02.png" alt="セミナー画像" />
+          </figure>
+          <div class="text" data-astro-cid-abc999xx>
+            <p class="desc">BI For ACにおける作業手順や復習できるチャンス</p>
+            <ul class="links">
+              <li><a href="#">2025.02.10(月)15:00〜16:00</a></li>
+              <li><a href="#">Teams Web Seminar</a></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- セミナー3（開催終了・初心者向け） -->
+        <article class="seminar-card closed" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-duration="400" data-astro-cid-abc999xx>
+          <figure>
+            <img src="/common/img/homepage/seminar03.png" alt="セミナー画像" />
+          </figure>
+          <div class="text" data-astro-cid-abc999xx>
+            <p class="desc">初心者向けの講習BI FOR ACの内装仕上げ積算を紹介</p>
+            <ul class="links">
+              <li><a href="#">2024.11.28(水)15:00〜16:00</a></li>
+              <li><a href="#">Teams Web Seminar</a></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+      <!-- 一覧ボタン -->
+      <div class="btnWrap" data-astro-cid-abc999xx>
+        <a class="btn" href="/seminar/" data-astro-cid-abc999xx>
+          <em data-astro-cid-abc999xx>セミナー開催情報一覧</em>
+        </a>
+      </div>
+      </div>
+    </section>
   </main>
 </div>
 <?php get_footer(); ?>
@@ -443,31 +502,28 @@ get_header(); ?>
   });
 </script>
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function() {
     const buttons = document.querySelectorAll(".categoryBtn");
     const items = document.querySelectorAll(".infoItem");
 
     buttons.forEach(button => {
-      button.addEventListener("click", function (e) {
-        e.preventDefault(); // 链接无效化（防止跳转）
+      button.addEventListener("click", function(e) {
+        e.preventDefault();
 
-        // 切换按钮样式
         buttons.forEach(btn => btn.classList.remove("active"));
         button.classList.add("active");
 
-        // 获取类型
         const type = button.getAttribute("data-type");
 
-        // 过滤显示
+
         items.forEach(item => {
           if (item.getAttribute("data-type") === type) {
-            item.style.display = "grid"; // 或 "block"，取决于你 CSS
+            item.style.display = "grid";
           } else {
             item.style.display = "none";
           }
         });
 
-        // 更新「もっと見る」链接（可选）
         const viewMore = document.querySelector(".viewMore a");
         if (viewMore) {
           if (type === "news") {
@@ -481,7 +537,6 @@ get_header(); ?>
       });
     });
 
-    // 默认显示第一个类别
     buttons[0].click();
   });
 </script>

@@ -1286,7 +1286,7 @@ section[data-astro-cid-zzvl4fxx]:before {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to bottom, #fafcff, #ecf3fd)
+    /* background: linear-gradient(to bottom, #fafcff, #ecf3fd) */
 }
 
 section[data-astro-cid-zzvl4fxx]:after {
@@ -1488,6 +1488,7 @@ h2[data-astro-cid-zzvl4fxx] span[data-astro-cid-zzvl4fxx].eng {
         max-width: 100%
     }
 }
+
 article[data-astro-cid-5d2te5s5] {
     display: grid;
     grid-template-columns: 60% 40%;
@@ -1527,6 +1528,7 @@ article[data-astro-cid-5d2te5s5] {
         padding: 0 1.2em
     }
 }
+
 .text[data-astro-cid-5d2te5s5] h3[data-astro-cid-5d2te5s5] {
     display: flex;
     flex-direction: column;
@@ -1629,10 +1631,139 @@ figure[data-astro-cid-5d2te5s5] img[data-astro-cid-5d2te5s5] {
     max-height: 100%;
     min-height: 0
 }
+section[data-astro-cid-abc999xx] {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(to bottom, #fafcff, #ecf3fd);
+}
+section[data-astro-cid-abc999xx] .inner[data-astro-cid-abc999xx] {
+    z-index: 2;
+    width: 90vw;
+    max-width: 1440px;
+    padding-top: 5%;
+    padding-bottom: 7.5%;
+    margin: 0 auto;
+}
+h2[data-astro-cid-abc999xx] {
+    position: sticky;
+    top: calc(var(--header-height) + 1em);
+}
+h2[data-astro-cid-abc999xx] em[data-astro-cid-abc999xx] {
+    display: flex;
+    flex-direction: column;
+    font-size: 2.25em;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--primary_blue);
+}
+h2[data-astro-cid-abc999xx] span[data-astro-cid-abc999xx].eng {
+    display: block;
+    font-family: Barlow, sans-serif;
+    font-size: 1.25em;
+    letter-spacing: .08em;
+    padding-top: .5em;
+    color: var(--primary_blue__50);
+}
+.seminarList[data-astro-cid-abc999xx] {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
 
+.seminar-card[data-astro-cid-abc999xx] {
+  width: 300px;
+  /* text-align: center; */
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.seminar-card[data-astro-cid-abc999xx]:hover {
+  transform: translateY(-4px);
+}
+
+.seminar-card[data-astro-cid-abc999xx] figure {
+  margin: 0;
+}
+
+.seminar-card[data-astro-cid-abc999xx] img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.seminar-card[data-astro-cid-abc999xx] .text {
+  padding: 1em;
+}
+
+.seminar-card[data-astro-cid-abc999xx] .text p {
+  margin: 0.5em 0;
+  font-size: 0.95em;
+  color: #333;
+}
+
+.seminar-card[data-astro-cid-abc999xx] .links {
+  list-style: none;
+  padding: 0;
+  margin: 0.5em 0 0;
+}
+
+.seminar-card[data-astro-cid-abc999xx] .links li {
+  margin: 0.25em 0;
+}
+
+.seminar-card[data-astro-cid-abc999xx] .links a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+.btnWrap[data-astro-cid-abc999xx] {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 300px;
+    min-width: 0;
+    min-height: 0;
+    padding-top: 5%;}
+.btn[data-astro-cid-abc999xx] {
+    overflow: hidden;
+    border-radius: 999px;
+    background: linear-gradient(to bottom, #1e86ff, #125099);
+    flex-basis: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    position: relative;
+}
+.btnWrap[data-astro-cid-abc999xx] a[data-astro-cid-abc999xx] em[data-astro-cid-abc999xx] {
+    position: relative;
+    z-index: 2;
+    display: block;
+    flex-basis: 100%;
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: var(--white);
+    text-align: center;
+}
+.btn[data-astro-cid-abc999xx]:hover {
+  transition: opacity 0.3s ease-in-out;
+  background: linear-gradient(to bottom, #125099, #1e86ff);
+}
 /* --------------------------------
 	グロナビ
 -------------------------------- */
+
 nav#gnav .mainNav li.gnav01 span {
   color: #0962a8;
   font-weight: 700;
@@ -1667,8 +1798,10 @@ nav#gnav .mainNav li:hover span {
   transition: opacity 0.5s ease;
 }
 
-/*ドロップメニュー設定
----------------------------------------------------------------------------*/
+/* ------------------------------------
+ドロップメニュー設定
+---------------------------------------*/
+
 .dropmenu {
   list-style-type: none;
 }
@@ -1987,6 +2120,7 @@ nav#snav {
   float: right;
   margin-top: 20px;
 }
+
 nav#snav dl {
   padding: 0 0 20px;
 }
@@ -1994,14 +2128,17 @@ nav#snav dl {
 /* --------------------------------
 	メインラップ
 -------------------------------- */
+
 article#mainWrap {
   position: relative;
   background-color: #fff;
 }
+
 article#mainVI {
   max-width: 1000px;
   margin: 0 auto;
 }
+
 article#mainVI ul {
   display: flex;
   flex-wrap: wrap;
@@ -2009,19 +2146,23 @@ article#mainVI ul {
   width: 100%;
   margin: 0 auto;
 }
+
 article#mainVI ul li {
   flex: 1;
   float: left;
   margin-bottom: 20px;
 }
+
 article#mainVI ul li:hover a {
   opacity: 0.5;
   transition: opacity 0.5s ease;
 }
+
 article#mainVI ul li:nth-child(2) {
   width: 490px;
   float: right;
 }
+
 /* 追加 */
 .service__list li:nth-child(2n) {
   margin: 0 10px;
@@ -2034,6 +2175,7 @@ article#mainVI ul li:nth-child(2) {
 /* --------------------------------
 	サブラップ
 -------------------------------- */
+
 article#subWrap {
   margin: 20px 0 40px;
   clear: both;
@@ -2042,6 +2184,7 @@ article#subWrap {
 /* --------------------------------
 	コンテンツラップ 
 -------------------------------- */
+
 article#contentsWrap #contents {
   display: flex;
   flex-direction: row;
@@ -2054,20 +2197,25 @@ article#contentsWrap #contents {
 /* 追加 */
 .newsWrap dl,
 .releaseWrap dl,
-.medialistWrap dl {
+.medialistWrap dl,
+.seminarlistWrap dl {
   padding: 5.8px 10px;
   clear: both;
   border-bottom: 1px solid #ccc;
 }
+
 .newsWrap dl dt,
 .releaseWrap dl dt,
-.medialistWrap dl dt {
+.medialistWrap dl dt,
+.seminarlistWrap dl dt {
   display: inline-block;
   margin-right: 10px;
 }
+
 .newsWrap dl dd,
 .releaseWrap dl dd,
-.medialistWrap dl dd {
+.medialistWrap dl dd,
+.seminarlistWrap dl dd {
   display: inline-block;
   text-decoration: none;
 }
@@ -2075,24 +2223,29 @@ article#contentsWrap #contents {
 /* 追加 */
 .newsWrap,
 .releaseWrap,
-.medialistWrap {
+.medialistWrap,
+.seminarlistWrap {
   padding: 0em 0em 4px 0;
 }
+
 .infoWrap {
   position: relative;
   padding-bottom: 4em;
 }
+
 .infoWrap h2 {
   color: #000;
   font-weight: bold;
   font-size: 2em;
   margin-bottom: 0.2em;
 }
+
 .infoWrap p {
   font-size: 0.9em;
   color: #666;
   margin-bottom: 2em;
 }
+
 .infoItem {
   display: grid;
   grid-template-columns: 120px 1fr;
@@ -2106,9 +2259,11 @@ article#contentsWrap #contents {
 .infoItem:hover {
   border-bottom: #00339e 1px solid;
 }
+
 .infoItem a:hover {
   color: #00339e;
 }
+
 .infoDate {
   width: 120px;
   font-size: 0.9em;
@@ -2116,6 +2271,7 @@ article#contentsWrap #contents {
   margin-right: 1em;
   font-weight: 400;
 }
+
 /* .postLabel {
   display: inline-flex;
   align-items: center;
@@ -2128,6 +2284,7 @@ article#contentsWrap #contents {
   margin-right: 1.5em;
   white-space: nowrap;
 } */
+
 .infoContent {
   display: flex;
   gap: 6em;
@@ -2135,12 +2292,14 @@ article#contentsWrap #contents {
   align-items: flex-start;
   flex-wrap: wrap;
 }
+
 .categoryFilter {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
   min-width: 120px;
 }
+
 .categoryBtn {
   background-color: #ddd;
   color: #000;
@@ -2152,13 +2311,16 @@ article#contentsWrap #contents {
   width: 180px;
   text-align: center;
 }
+
 .categoryBtn a {
   transition: none;
 }
+
 .categoryBtn:hover {
   background-color: #cc3a26;
   color: #fff;
 }
+
 .categoryBtn.active {
   background-color: #cc3a26;
   color: #fff;
@@ -2174,6 +2336,7 @@ article#contentsWrap #contents {
   text-decoration: none;
   font-size: 1em;
 }
+
 .viewMore {
   position: absolute;
   bottom: 0;
@@ -2181,6 +2344,7 @@ article#contentsWrap #contents {
   font-size: 0.9em;
   margin: 0;
 }
+
 main #mainWrap {
   flex: 1;
   margin: 0 auto;
@@ -2201,6 +2365,7 @@ main #mainWrap {
     order: 1;
   }
 }
+
 /* リンク（全般）設定 */
 a {
   transition: 0.5s;
@@ -2289,7 +2454,8 @@ a {
 }
 .releaseWrap .sectionHeader span,
 .newsWrap .sectionHeader span,
-.medialistWrap .sectionHeader span {
+.medialistWrap .sectionHeader span,
+.seminarlistWrap .sectionHeader span {
   margin-left: -6px;
   padding: 5px 10px;
   font-weight: bold;
@@ -2297,7 +2463,8 @@ a {
 }
 .newsWrap .viewMore,
 .releaseWrap .viewMore,
-.medialistWrap .viewMore {
+.medialistWrap .viewMore,
+.seminarlistWrap .viewMore {
   text-align: right;
   font-weight: bold;
   padding: 0.55em 0.5em;
@@ -2883,8 +3050,6 @@ a {
   color: #116cb5;
 }
 
-.newslistWrap {
-}
 .newslistWrap h2 {
   font-size: 125%;
   font-weight: bold;
@@ -2908,8 +3073,7 @@ a {
   padding: 20px;
   margin-bottom: 20px;
 }
-.mediaWrap {
-}
+
 .mediaWrap h2 {
   font-size: 125%;
   font-weight: bold;
@@ -2952,6 +3116,30 @@ a {
   color: #116cb5;
 }
 .releaselistWrap .releaselistBox {
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+/* セミナーブロック設定 */
+.seminarlistWrap h2 {
+  font-size: 125%;
+  font-weight: bold;
+  background: #116cb5;
+  border-radius: 5px;
+  line-height: 2em;
+  text-indent: 0.5em;
+  color: #ffffff;
+}
+.seminarlistWrap h4 {
+  font-size: 125%;
+  font-weight: bold;
+  color: #116cb5;
+}
+.seminarlistWrap h4 a {
+  color: #116cb5;
+}
+.seminarlistWrap .seminarlistBox {
   border: 1px solid #cccccc;
   border-radius: 5px;
   padding: 20px;
@@ -3053,7 +3241,6 @@ a {
   padding: 20px;
   margin-bottom: 20px;
 }
-
 .inquiryWrap dl.formList dd {
   width: 90%;
 }

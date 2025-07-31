@@ -274,9 +274,22 @@ function create_custom_post_types()
       'rewrite' => array('slug' => 'media'),
       'supports' => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields'),
       'menu_position' => 8,
+    )
+  );
+  register_post_type(
+    'seminar',
+    array(
+      'labels' => array(
+        'name' => __('セミナー'),
+        'singular_name' => __('Seminar'),
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'seminar'),
+      'supports' => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields'),
+      'menu_position' => 8,
 
     )
   );
 }
-
 add_action('init', 'create_custom_post_types');
